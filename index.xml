@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stuart&#39;s Blog</title>
+    <title>stuart&#39;s blog</title>
     <link>http://stuartnelson3.github.io/</link>
-    <description>Recent content on Stuart&#39;s Blog</description>
+    <description>Recent content on stuart&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 27 Aug 2020 11:17:49 +0200</lastBuildDate>
@@ -12,7 +12,17 @@
     
     
     <item>
-      <title>My First Post</title>
+      <title>About</title>
+      <link>http://stuartnelson3.github.io/about/</link>
+      <pubDate>Thu, 27 Aug 2020 11:58:09 +0200</pubDate>
+      
+      <guid>http://stuartnelson3.github.io/about/</guid>
+      <description>This is my about me page.
+I&amp;rsquo;m going to be traveling for a bit, so I&amp;rsquo;ll write down my thoughts here.</description>
+    </item>
+    
+    <item>
+      <title>my first post</title>
       <link>http://stuartnelson3.github.io/posts/my-first-post/</link>
       <pubDate>Thu, 27 Aug 2020 11:17:49 +0200</pubDate>
       
