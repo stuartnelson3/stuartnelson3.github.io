@@ -3,15 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://stuartnelson3.github.io/categories/</loc>
+    <loc>http://stuartnelson3.github.io/tags/bored/</loc>
+    <lastmod>2020-08-27T11:17:49+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://stuartnelson3.github.io/posts/my-first-post/</loc>
+    <lastmod>2020-08-27T11:17:49+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://stuartnelson3.github.io/tags/post/</loc>
+    <lastmod>2020-08-27T11:17:49+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://stuartnelson3.github.io/posts/</loc>
+    <lastmod>2020-08-27T11:17:49+02:00</lastmod>
   </url>
   
   <url>
     <loc>http://stuartnelson3.github.io/</loc>
+    <lastmod>2020-08-27T11:17:49+02:00</lastmod>
   </url>
   
   <url>
     <loc>http://stuartnelson3.github.io/tags/</loc>
+    <lastmod>2020-08-27T11:17:49+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://stuartnelson3.github.io/tags/test/</loc>
+    <lastmod>2020-08-27T11:17:49+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://stuartnelson3.github.io/categories/</loc>
   </url>
   
 </urlset>
