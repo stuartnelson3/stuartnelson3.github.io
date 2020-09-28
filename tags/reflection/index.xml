@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>reflection on stuart&#39;s blog</title>
+    <link>http://stuartnelson3.github.io/tags/reflection/</link>
+    <description>Recent content in reflection on stuart&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Sep 2020 10:52:06 +0200</lastBuildDate>
+    
+	<atom:link href="http://stuartnelson3.github.io/tags/reflection/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>First Day Homeless</title>
+      <link>http://stuartnelson3.github.io/posts/first-day-homeless/</link>
+      <pubDate>Tue, 08 Sep 2020 10:52:06 +0200</pubDate>
+      
+      <guid>http://stuartnelson3.github.io/posts/first-day-homeless/</guid>
+      <description>Location: Berlin
+Officially I&amp;rsquo;ve been unemployed for one week. Because I was still in my apartment, still working (small project generating sales reports for bräugier), still leading my normal life, it didn&amp;rsquo;t really feel like anything had changed.
+Yesterday evening I handed over my keys to my apartment, put my bags on my bike, and became homeless.
+(I&amp;rsquo;m staying two nights with Lukas, but officially, I have no place of my own)</description>
+    </item>
+    
+  </channel>
+</rss>
