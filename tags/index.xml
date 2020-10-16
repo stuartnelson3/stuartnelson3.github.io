@@ -6,24 +6,15 @@
     <description>Recent content in Tags on stuart&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Sep 2020 09:50:16 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2020 13:15:39 +0200</lastBuildDate>
     
 	<atom:link href="http://stuartnelson3.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>biketrip</title>
-      <link>http://stuartnelson3.github.io/tags/biketrip/</link>
-      <pubDate>Wed, 16 Sep 2020 09:50:16 +0200</pubDate>
-      
-      <guid>http://stuartnelson3.github.io/tags/biketrip/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>journal</title>
       <link>http://stuartnelson3.github.io/tags/journal/</link>
-      <pubDate>Wed, 16 Sep 2020 09:50:16 +0200</pubDate>
+      <pubDate>Thu, 17 Sep 2020 13:15:39 +0200</pubDate>
       
       <guid>http://stuartnelson3.github.io/tags/journal/</guid>
       <description></description>
@@ -32,9 +23,18 @@
     <item>
       <title>reflection</title>
       <link>http://stuartnelson3.github.io/tags/reflection/</link>
-      <pubDate>Tue, 15 Sep 2020 12:36:28 +0200</pubDate>
+      <pubDate>Thu, 17 Sep 2020 13:15:39 +0200</pubDate>
       
       <guid>http://stuartnelson3.github.io/tags/reflection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>biketrip</title>
+      <link>http://stuartnelson3.github.io/tags/biketrip/</link>
+      <pubDate>Wed, 16 Sep 2020 09:50:16 +0200</pubDate>
+      
+      <guid>http://stuartnelson3.github.io/tags/biketrip/</guid>
       <description></description>
     </item>
     
