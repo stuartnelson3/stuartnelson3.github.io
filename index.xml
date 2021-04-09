@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>stuart&#39;s blog</title>
+    <title>stuart nelson</title>
     <link>http://stuartnelson3.github.io/</link>
-    <description>Recent content on stuart&#39;s blog</description>
+    <description>Recent content on stuart nelson</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Oct 2020 10:47:52 +0100</lastBuildDate><atom:link href="http://stuartnelson3.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Apr 2021 10:09:34 +0200</lastBuildDate><atom:link href="http://stuartnelson3.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paycheck Disconnect</title>
+      <link>http://stuartnelson3.github.io/posts/paycheck-disconnect/</link>
+      <pubDate>Fri, 09 Apr 2021 10:09:34 +0200</pubDate>
+      
+      <guid>http://stuartnelson3.github.io/posts/paycheck-disconnect/</guid>
+      <description>This post was inspired by Future100: Design Students Rethink the Commons.
+Background As I finished reading the above post, I reached the final section that was listing the architects who had been mentioned, and where they hailed from. At that moment, when I thought about life as a professor at a university (not that any of the people mentioned are professors, it&amp;rsquo;s just the idea as it occurred to me), I was thinking about how they feel about their salary.</description>
+    </item>
+    
     <item>
       <title>Tattoo Day</title>
       <link>http://stuartnelson3.github.io/posts/tattoo-day/</link>
@@ -262,11 +272,12 @@ Yesterday evening I handed over my keys to my apartment, put my bags on my bike,
     <item>
       <title>About</title>
       <link>http://stuartnelson3.github.io/about/</link>
-      <pubDate>Thu, 27 Aug 2020 11:58:09 +0200</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://stuartnelson3.github.io/about/</guid>
       <description>This is my about me page.
-I&amp;rsquo;m going to be traveling for a bit, so I&amp;rsquo;ll write down my thoughts here.</description>
+I very rarely write things, and never about technology.
+I work as a software developer, but prefer skiing.</description>
     </item>
     
   </channel>

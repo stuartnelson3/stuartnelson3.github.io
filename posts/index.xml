@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on stuart&#39;s blog</title>
+    <title>Posts on stuart nelson</title>
     <link>http://stuartnelson3.github.io/posts/</link>
-    <description>Recent content in Posts on stuart&#39;s blog</description>
+    <description>Recent content in Posts on stuart nelson</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Oct 2020 10:47:52 +0100</lastBuildDate><atom:link href="http://stuartnelson3.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Apr 2021 10:09:34 +0200</lastBuildDate><atom:link href="http://stuartnelson3.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paycheck Disconnect</title>
+      <link>http://stuartnelson3.github.io/posts/paycheck-disconnect/</link>
+      <pubDate>Fri, 09 Apr 2021 10:09:34 +0200</pubDate>
+      
+      <guid>http://stuartnelson3.github.io/posts/paycheck-disconnect/</guid>
+      <description>This post was inspired by Future100: Design Students Rethink the Commons.
+Background As I finished reading the above post, I reached the final section that was listing the architects who had been mentioned, and where they hailed from. At that moment, when I thought about life as a professor at a university (not that any of the people mentioned are professors, it&amp;rsquo;s just the idea as it occurred to me), I was thinking about how they feel about their salary.</description>
+    </item>
+    
     <item>
       <title>Tattoo Day</title>
       <link>http://stuartnelson3.github.io/posts/tattoo-day/</link>

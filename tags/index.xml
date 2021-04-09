@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on stuart&#39;s blog</title>
+    <title>Tags on stuart nelson</title>
     <link>http://stuartnelson3.github.io/tags/</link>
-    <description>Recent content in Tags on stuart&#39;s blog</description>
+    <description>Recent content in Tags on stuart nelson</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Oct 2020 10:47:52 +0100</lastBuildDate><atom:link href="http://stuartnelson3.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Apr 2021 10:09:34 +0200</lastBuildDate><atom:link href="http://stuartnelson3.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>reflection</title>
+      <link>http://stuartnelson3.github.io/tags/reflection/</link>
+      <pubDate>Fri, 09 Apr 2021 10:09:34 +0200</pubDate>
+      
+      <guid>http://stuartnelson3.github.io/tags/reflection/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>journal</title>
       <link>http://stuartnelson3.github.io/tags/journal/</link>
@@ -31,15 +40,6 @@
       <pubDate>Thu, 24 Sep 2020 13:49:45 +0100</pubDate>
       
       <guid>http://stuartnelson3.github.io/tags/biketrip/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>reflection</title>
-      <link>http://stuartnelson3.github.io/tags/reflection/</link>
-      <pubDate>Sat, 19 Sep 2020 13:03:05 +0200</pubDate>
-      
-      <guid>http://stuartnelson3.github.io/tags/reflection/</guid>
       <description></description>
     </item>
     
