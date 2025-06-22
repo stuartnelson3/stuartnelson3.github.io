@@ -1,11 +1,8 @@
 ---
-title: "STUART NELSON"
 type: "pages"
 layout: "simple-static"
 date: 2025-06-19T12:36:28+02:00
 ---
-
-https://github.com/stuartnelson3
 
 **profile**
 

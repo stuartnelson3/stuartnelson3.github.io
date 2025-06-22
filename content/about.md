@@ -1,5 +1,4 @@
 ---
-title: "About"
 type: "pages"
 layout: "simple-static"
 date: 2025-06-22
