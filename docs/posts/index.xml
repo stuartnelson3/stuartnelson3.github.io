@@ -6,14 +6,7 @@
     <description>Recent content in Posts on stuart nelson</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Apr 2022 18:33:51 +0200</lastBuildDate>
+    <lastBuildDate></lastBuildDate>
     <atom:link href="https://stuartnelson.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hello</title>
-      <link>https://stuartnelson.xyz/posts/hello/</link>
-      <pubDate>Mon, 04 Apr 2022 18:33:51 +0200</pubDate>
-      <guid>https://stuartnelson.xyz/posts/hello/</guid>
-      <description>&lt;p&gt;test test what&amp;rsquo;s going on&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>

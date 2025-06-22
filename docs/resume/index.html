@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<style type=text/css>body{font-family:monospace;}</style>
+	<title>STUART NELSON</title>
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	
+</head>
+<body>
+	<header>
+	===================<br>
+	== <a href="https://stuartnelson.xyz/">stuart nelson</a> ==<br>
+	===================
+	<div style="float: right;"></div><br>
+	<p>
+	<nav>
+			<a href="/"><b>Start</b></a>.
+			
+			
+			<a href="/about/"><b>about</b></a>.
+			
+			<a href="/resume/"><b>resume</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>STUART NELSON</h1>
+			<b><time>2025.06.19</time></b>
+		       
+
+			<div>
+				<p><a href="mailto:hi@stuartnelson.xyz">hi@stuartnelson.xyz</a>
+github.com/stuartnelson3</p>
+<p><strong>profile</strong></p>
+<p>My goal is to create reliable, well monitored, auditable processes that simply, efficiently, and flexibly provide value to the business and its customers. If it fails, fail visibly and explicitly for the engineers, and gracefully with minimal impact to the customers.</p>
+<p><strong>tools</strong></p>
+<ul>
+<li>languages (descending by experience): golang, ruby, node/js, rust, typescript</li>
+<li>os: linux (debian+friends)</li>
+<li>orchestration/containerization/provisioning: kubernetes, docker, chef</li>
+<li>observability: prometheus, alertmanager</li>
+<li>storage (as a user): kafka, postgres</li>
+</ul>
+<p><strong>experience</strong></p>
+<p><strong>SWAN BITCOIN – berlin, de</strong> <em>(remote)</em></p>
+<p><strong>senior risk/platform engineer</strong> <em>(2022 - current)</em></p>
+<ul>
+<li>created automated system for managing receiving, storing, uploading, and tracking customer documents (passport/license, ssn card, proof of address, proof of funds)
+<ul>
+<li>receive and store documents in s3</li>
+<li>track individual user document upload requirements and status for swan&rsquo;s partner bitcoin custodians</li>
+<li>automatically upload documents to custodians</li>
+<li>allow swan agents to manually trigger uploads to custodians via admin backend</li>
+<li>monitor and alert on per-custodian upload metrics</li>
+</ul>
+</li>
+<li>research, plan, and implement projects to decrease financial and privacy risk to swan bitcoin and its customers</li>
+<li>re-designed customer onboarding
+<ul>
+<li>managed + implemented integration between swan and external identity verification vendor</li>
+<li>securely store customers&rsquo; personal information and id documents</li>
+<li>transmit documents and customer information to open accounts at bitcoin custodians</li>
+</ul>
+</li>
+<li>created withdrawals queue for managing btc withdrawals
+<ul>
+<li>asynchronously validate user, bitcoin wallet, and withdrawal information</li>
+<li>a failed validation triggers a manual review by a human risk agent; they approve or block the withdrawal</li>
+<li>all steps create an auditable event stream for each individual withdrawal</li>
+</ul>
+</li>
+<li>converted synchronous handling of incoming 3rd party webhooks (bitcoin custodians, risk services vendors) to operating on auditable database-persisted representations of the webhooks
+<ul>
+<li>webhooks are parsed and relevant information is stored, along with raw webhook json</li>
+<li>asynchronous jobs handle and store processing results</li>
+<li>error handling differentiates between retryable and non-retryable processing failures</li>
+</ul>
+</li>
+<li>lead bi-weekly conference talk + programming video club. example topics include:
+<ul>
+<li>programming principles (eg. OO patterns, SOLID, etc)</li>
+<li>technical fundamentals (eg. kademlia, CRUSH, consistent hashing)</li>
+<li>anything with john carmack or john romero</li>
+</ul>
+</li>
+</ul>
+<p><strong>ELASTIC – berlin, de</strong> <em>(remote)</em></p>
+<p><strong>senior software engineer</strong> <em>(2021 - 2022)</em></p>
+<ul>
+<li>created kubernetes mutating webhook + helmchart for auto-instrumentation of customer deployments</li>
+<li>developed core observability products: apm-server, apm-agent-go, elastic-agent, and libbeat</li>
+</ul>
+<p><strong>SOUNDCLOUD – berlin, de</strong></p>
+<p><strong>anti-abuse team lead</strong> <em>(2019 - 2020)</em></p>
+<ul>
+<li>created async services and batch jobs that consume data from bigquery and kafka, calculated thresholds across moving time windows, and identified and blocked bots</li>
+<li>added &ldquo;shadow mode&rdquo; to all anti-abuse services to compare results from new rules sets to old that would not block users</li>
+<li>advocated for introducing anti-abuse protections to increase overall user experience and user quality at the cost of increased signup friction</li>
+</ul>
+<p><strong>SOUNDCLOUD – berlin, de</strong></p>
+<p><strong>senior production engineer</strong> <em>(2018-2019)</em></p>
+<p><strong>production engineer</strong> <em>(2014-2017)</em></p>
+<ul>
+<li>created first bare kubernetes soundcloud cluster in aws</li>
+<li>introduced horizontal kubernetes pod and node autoscaling for on-prem and aws kubernetes clusters</li>
+<li>created machine image provisioning service using hashicorp packer
+<ul>
+<li>single &ldquo;golden image&rdquo; was created and used by both aws and bare-metal machines</li>
+</ul>
+</li>
+<li>assisted teams in prometheus-based service instrumentation, alerting, and grafana dashboarding</li>
+<li>developed golang services to limit logged-in users to one active audio stream</li>
+</ul>
+<p><strong>DIGITALOCEAN – berlin, de</strong> <em>(remote)</em></p>
+<p><strong>senior software engineer</strong> <em>(2017-2018)</em></p>
+<ul>
+<li>worked on virtual machine monitoring and alerting product for end-users</li>
+</ul>
+<p><strong>NEO INNOVATION – columbus, oh</strong></p>
+<p><strong>software engineer</strong> <em>(2013-2014)</em></p>
+<ul>
+<li>consultant working on projects in ruby, golang, and javascript</li>
+</ul>
+<p><strong>SPORTNGIN – minneapolis, mn</strong></p>
+<p><strong>software engineer</strong> <em>(2012-2013)</em></p>
+<ul>
+<li>worked on monolithic rails app</li>
+</ul>
+<p><strong>QUINCY APPAREL – new york city, ny</strong></p>
+<p><strong>software engineer</strong> <em>(2012)</em></p>
+<ul>
+<li>created ruby/sinatra web app to extend functionality of shopify e-commerce site</li>
+</ul>
+<p><strong>open source</strong></p>
+<p><strong>ALERTMANAGER – <a href="http://github.com/prometheus/alertmanager">github.com/prometheus/alertmanager</a></strong></p>
+<p><strong>maintainer</strong> <em>(2017-2020)</em></p>
+<p><em>conference talk:<a href="https://youtu.be/PUdjca23Qa4">PromCon 2018: Life of an Alert</a></em></p>
+<p><strong>education</strong></p>
+<p><strong>ST. OLAF COLLEGE – northfield, mn</strong>
+bachelors of arts, chemistry; bachelors of arts, classics <em>(2006-2010)</em></p>
+<p><strong>personal</strong></p>
+<ul>
+<li>american citizen (birth)</li>
+<li>german citizen (naturalized)</li>
+</ul>
+
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>&copy; 2025 <a href="https://stuartnelson.xyz/"><b>stuart nelson</b></a>.
+	<a href="https://github.com/stuartnelson3"><b>github</b></a>.
+	<a href="mailto:this.address.is@garbage.com"><b>hi [@] stuartnelson [.] xyz</b></a>.
+	</p>
+</footer>
+
+</body>
+</html>

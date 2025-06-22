@@ -6,14 +6,14 @@
     <description>Recent content on stuart nelson</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Apr 2022 18:33:51 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 19 Jun 2025 12:36:28 +0200</lastBuildDate>
     <atom:link href="https://stuartnelson.xyz/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello</title>
-      <link>https://stuartnelson.xyz/posts/hello/</link>
-      <pubDate>Mon, 04 Apr 2022 18:33:51 +0200</pubDate>
-      <guid>https://stuartnelson.xyz/posts/hello/</guid>
-      <description>&lt;p&gt;test test what&amp;rsquo;s going on&lt;/p&gt;</description>
+      <title>STUART NELSON</title>
+      <link>https://stuartnelson.xyz/resume/</link>
+      <pubDate>Thu, 19 Jun 2025 12:36:28 +0200</pubDate>
+      <guid>https://stuartnelson.xyz/resume/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;mailto:hi@stuartnelson.xyz&#34;&gt;hi@stuartnelson.xyz&lt;/a&gt;&#xA;github.com/stuartnelson3&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;profile&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;My goal is to create reliable, well monitored, auditable processes that simply, efficiently, and flexibly provide value to the business and its customers. If it fails, fail visibly and explicitly for the engineers, and gracefully with minimal impact to the customers.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;tools&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;languages (descending by experience): golang, ruby, node/js, rust, typescript&lt;/li&gt;&#xA;&lt;li&gt;os: linux (debian+friends)&lt;/li&gt;&#xA;&lt;li&gt;orchestration/containerization/provisioning: kubernetes, docker, chef&lt;/li&gt;&#xA;&lt;li&gt;observability: prometheus, alertmanager&lt;/li&gt;&#xA;&lt;li&gt;storage (as a user): kafka, postgres&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;experience&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>
