@@ -21,7 +21,7 @@ My goal is to create reliable, well monitored, auditable processes that simply, 
 
 **experience**
 
-**SWAN BITCOIN – berlin, de** *(remote)*
+### **SWAN BITCOIN**
 
 **senior risk/platform engineer** *(2022 \- current)*
 
@@ -57,14 +57,14 @@ My goal is to create reliable, well monitored, auditable processes that simply, 
   * technical fundamentals (eg. kademlia, CRUSH, consistent hashing)
   * anything with john carmack or john romero
 
-**ELASTIC – berlin, de** *(remote)*
+### **ELASTIC**
 
 **senior software engineer** *(2021 \- 2022\)*
 
 * created kubernetes mutating webhook \+ helmchart for auto-instrumentation of customer deployments
 * developed core observability products: apm-server, apm-agent-go, elastic-agent, and libbeat
 
-**SOUNDCLOUD – berlin, de**
+### **SOUNDCLOUD**
 
 **anti-abuse team lead** *(2019 \- 2020\)*
 
@@ -72,7 +72,7 @@ My goal is to create reliable, well monitored, auditable processes that simply, 
 * added "shadow mode" to all anti-abuse services to compare results from new rules sets to old that would not block users
 * advocated for introducing anti-abuse protections to increase overall user experience and user quality at the cost of increased signup friction
 
-**SOUNDCLOUD – berlin, de**
+### **SOUNDCLOUD**
 
 **senior production engineer** *(2018-2019)*
 
@@ -85,25 +85,25 @@ My goal is to create reliable, well monitored, auditable processes that simply, 
 * assisted teams in prometheus-based service instrumentation, alerting, and grafana dashboarding
 * developed golang services to limit logged-in users to one active audio stream
 
-**DIGITALOCEAN – berlin, de** *(remote)*
+### **DIGITALOCEAN**
 
 **senior software engineer** *(2017-2018)*
 
 * worked on virtual machine monitoring and alerting product for end-users
 
-**NEO INNOVATION – columbus, oh**
+### **NEO INNOVATION**
 
 **software engineer** *(2013-2014)*
 
 * consultant working on projects in ruby, golang, and javascript
 
-**SPORTNGIN – minneapolis, mn**
+### **SPORTNGIN**
 
 **software engineer** *(2012-2013)*
 
 * worked on monolithic rails app
 
-**QUINCY APPAREL – new york city, ny**
+### **QUINCY APPAREL**
 
 **software engineer** *(2012)*
 
@@ -111,7 +111,7 @@ My goal is to create reliable, well monitored, auditable processes that simply, 
 
 **open source**
 
-**ALERTMANAGER – [github.com/prometheus/alertmanager](http://github.com/prometheus/alertmanager)**
+### **ALERTMANAGER – [github.com/prometheus/alertmanager](http://github.com/prometheus/alertmanager)**
 
 **maintainer** *(2017-2020)*
 
@@ -119,7 +119,7 @@ My goal is to create reliable, well monitored, auditable processes that simply, 
 
 **education**
 
-**ST. OLAF COLLEGE – northfield, mn**
+### **ST. OLAF COLLEGE**
 
 bachelors of arts, chemistry; bachelors of arts, classics *(2006-2010)*
 

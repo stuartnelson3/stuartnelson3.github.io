@@ -2,12 +2,15 @@
 title: "About"
 type: "pages"
 layout: "simple-static"
+date: 2025-06-22
 ---
-
-<img style="max-width: 30%; width: auto; height: auto;" src="/images/headshot_pixelized.png" alt="headshot">
 
 This is my about me page.
 
-I very rarely write things, and never about technology.
+I currently work as a software developer.
 
-I work as a software developer, but prefer ski touring.
+I'm based in central europe.
+
+My focus is on backend development.
+
+I've lately been specializing in anti-fraud / anti-abuse programming.
