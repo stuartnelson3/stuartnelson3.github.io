@@ -9,18 +9,18 @@
     <lastBuildDate>Sun, 22 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://stuartnelson.xyz/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>About</title>
+      <title></title>
       <link>https://stuartnelson.xyz/about/</link>
       <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
       <guid>https://stuartnelson.xyz/about/</guid>
       <description>&lt;p&gt;This is my about me page.&lt;/p&gt;&#xA;&lt;p&gt;I currently work as a software developer.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m based in central europe.&lt;/p&gt;&#xA;&lt;p&gt;My focus is on backend development.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve lately been specializing in anti-fraud / anti-abuse programming.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>STUART NELSON</title>
+      <title></title>
       <link>https://stuartnelson.xyz/resume/</link>
       <pubDate>Thu, 19 Jun 2025 12:36:28 +0200</pubDate>
       <guid>https://stuartnelson.xyz/resume/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/stuartnelson3&#34;&gt;https://github.com/stuartnelson3&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;profile&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;My goal is to create reliable, well monitored, auditable processes that simply, efficiently, and flexibly provide value to the business and its customers. If it fails, fail visibly and explicitly for the engineers, and gracefully with minimal impact to the customers.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;tools&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;languages (descending by experience): golang, ruby, node/js, rust, typescript&lt;/li&gt;&#xA;&lt;li&gt;os: linux (debian+friends)&lt;/li&gt;&#xA;&lt;li&gt;orchestration/containerization/provisioning: kubernetes, docker, chef&lt;/li&gt;&#xA;&lt;li&gt;observability: prometheus, alertmanager&lt;/li&gt;&#xA;&lt;li&gt;storage (as a user): kafka, postgres&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;experience&lt;/strong&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;profile&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;My goal is to create reliable, well monitored, auditable processes that simply, efficiently, and flexibly provide value to the business and its customers. If it fails, fail visibly and explicitly for the engineers, and gracefully with minimal impact to the customers.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;tools&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;languages (descending by experience): golang, ruby, node/js, rust, typescript&lt;/li&gt;&#xA;&lt;li&gt;os: linux (debian+friends)&lt;/li&gt;&#xA;&lt;li&gt;orchestration/containerization/provisioning: kubernetes, docker, chef&lt;/li&gt;&#xA;&lt;li&gt;observability: prometheus, alertmanager&lt;/li&gt;&#xA;&lt;li&gt;storage (as a user): kafka, postgres&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;experience&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;swan-bitcoin&#34;&gt;&lt;strong&gt;SWAN BITCOIN&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;senior risk/platform engineer&lt;/strong&gt; &lt;em&gt;(2022 - current)&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
