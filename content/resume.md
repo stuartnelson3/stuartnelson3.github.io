@@ -5,8 +5,7 @@ layout: "simple-static"
 date: 2025-06-19T12:36:28+02:00
 ---
 
-hi@stuartnelson.xyz
-github.com/stuartnelson3
+https://github.com/stuartnelson3
 
 **profile**
 
@@ -26,13 +25,21 @@ My goal is to create reliable, well monitored, auditable processes that simply, 
 
 **senior risk/platform engineer** *(2022 \- current)*
 
+* integrated [have i been pwned](https://haveibeenpwned.com) service to monitor ongoing breaches
+  * monitor api for new breaches
+  * scan for and store new breaches involving individual users
+  * make breaches visible from user's admin backend page for agents making account take-over (ATO) assessments
+* developed system to calculate user funds allowed to leave swan platform
+  * single unified concept "withdrawal energy"
+  * control amount of money available to leave platform to protect swan from loss of funds via ach reversal
+  * translates to both usd and btc currencies
+  * allow users to convert freely between btc + usd on-platform
 * created automated system for managing receiving, storing, uploading, and tracking customer documents (passport/license, ssn card, proof of address, proof of funds)
   * receive and store documents in s3
   * track individual user document upload requirements and status for swan's partner bitcoin custodians
   * automatically upload documents to custodians
   * allow swan agents to manually trigger uploads to custodians via admin backend
   * monitor and alert on per-custodian upload metrics
-* research, plan, and implement projects to decrease financial and privacy risk to swan bitcoin and its customers
 * re-designed customer onboarding
   * managed \+ implemented integration between swan and external identity verification vendor
   * securely store customers' personal information and id documents
@@ -113,6 +120,7 @@ My goal is to create reliable, well monitored, auditable processes that simply, 
 **education**
 
 **ST. OLAF COLLEGE – northfield, mn**
+
 bachelors of arts, chemistry; bachelors of arts, classics *(2006-2010)*
 
 **personal**
