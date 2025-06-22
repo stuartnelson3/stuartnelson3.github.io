@@ -22,11 +22,6 @@ unsafe= true
         url = "/about/"
         weight = 1
   [[menu.main]]
-        identifier = "cv"
-        name = "cv"
-        url = "/cv/"
-        weight = 1
-  [[menu.main]]
         identifier = "resume"
         name = "resume"
         url = "/resume/"
