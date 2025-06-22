@@ -3,6 +3,7 @@ baseURL = "https://stuartnelson.xyz"
 languageCode = "en-us"
 title = "stuart nelson"
 theme = "smol"
+publishDir="docs"
 [pagination]
 pagerSize = 25
 
