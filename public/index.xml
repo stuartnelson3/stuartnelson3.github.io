@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stuart&#39;s Blog</title>
-    <link>http://stuartnelson3.github.io/</link>
-    <description>Recent content on Stuart&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://stuartnelson3.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <title>stuart nelson</title>
+    <link>https://stuartnelson.xyz/</link>
+    <description>Recent content on stuart nelson</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 04 Apr 2022 18:33:51 +0200</lastBuildDate>
+    <atom:link href="https://stuartnelson.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello</title>
+      <link>https://stuartnelson.xyz/posts/hello/</link>
+      <pubDate>Mon, 04 Apr 2022 18:33:51 +0200</pubDate>
+      <guid>https://stuartnelson.xyz/posts/hello/</guid>
+      <description>&lt;p&gt;test test what&amp;rsquo;s going on&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://stuartnelson.xyz/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://stuartnelson.xyz/about/</guid>
+      <description>&lt;img style=&#34;max-width: 30%; width: auto; height: auto;&#34; src=&#34;https://stuartnelson.xyz/images/headshot_pixelized.png&#34; alt=&#34;headshot&#34;&gt;&#xA;&lt;p&gt;This is my about me page.&lt;/p&gt;&#xA;&lt;p&gt;I very rarely write things, and never about technology.&lt;/p&gt;&#xA;&lt;p&gt;I work as a software developer, but prefer ski touring.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

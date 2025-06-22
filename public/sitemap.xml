@@ -2,10 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://stuartnelson3.github.io/categories/</loc>
+    <loc>https://stuartnelson.xyz/posts/hello/</loc>
+    <lastmod>2022-04-04T18:33:51+02:00</lastmod>
   </url><url>
-    <loc>http://stuartnelson3.github.io/</loc>
+    <loc>https://stuartnelson.xyz/posts/</loc>
+    <lastmod>2022-04-04T18:33:51+02:00</lastmod>
   </url><url>
-    <loc>http://stuartnelson3.github.io/tags/</loc>
+    <loc>https://stuartnelson.xyz/</loc>
+    <lastmod>2022-04-04T18:33:51+02:00</lastmod>
+  </url><url>
+    <loc>https://stuartnelson.xyz/about/</loc>
+  </url><url>
+    <loc>https://stuartnelson.xyz/categories/</loc>
+  </url><url>
+    <loc>https://stuartnelson.xyz/tags/</loc>
   </url>
 </urlset>

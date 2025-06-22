@@ -1,47 +1,33 @@
 # Update this
-baseURL = "http://stuartnelson3.github.io"
+baseURL = "https://stuartnelson.xyz"
 languageCode = "en-us"
-title = "Stuart's Blog"
+title = "stuart nelson"
 theme = "smol"
+[pagination]
+pagerSize = 25
+
+[markup.goldmark.renderer]
+unsafe= true
 
 # Parameters
 [params]
-    subtitle = "Your blog subtitle goes here!"
-    dateFmt = "02.01.2006 15:04"
+    # subtitle = "be excellent to each other."
+    dateFmt = "2006.01.02"
 
 # Header
 [menu]
   [[menu.main]]
-        identifier = "posts"
-        name = "Posts"
-        url = "/posts/"
+        identifier = "about"
+        name = "about"
+        url = "/about/"
         weight = 1
-
-  [[menu.main]]
-        identifier = "categories"
-        name = "Categories"
-        url = "/categories/"
-        weight = 2
-
-  [[menu.main]]
-        identifier = "tags"
-        name = "Tags"
-        url = "/tags/"
-        weight = 3
 
 # Footer
   [[menu.footer]]
-        name = "Github"
-        url = "https://github.com/example"
-        weight = 1
-
-    [[menu.footer]]
-        name = "Mastodon"
-        url = "https://example.com/@user"
+        name = "github"
+        url = "https://github.com/stuartnelson3"
         weight = 2
-
-    [[menu.footer]]
-        name = "Imprint"
-        url = "/imprint"
-        weight = 3
-
+  [[menu.footer]]
+        name = "hi [@] stuartnelson [.] xyz"
+        url = "mailto:this.address.is@garbage.com"
+        weight = 2

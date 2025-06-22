@@ -1,3 +1,7 @@
+setup
+
+# git submodule update --init
+
 create new post
 
 # hugo new posts/my-first-post.md

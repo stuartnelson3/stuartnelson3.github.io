@@ -3,6 +3,11 @@
 # If a command fails then the deploy stops
 set -e
 
+if ! command -v hugo 2>/dev/null; then
+  echo "install hugo: https://github.com/gohugoio/hugo/releases"
+  exit 1
+fi
+
 printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 
 # Build the project.

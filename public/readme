@@ -1,0 +1,5 @@
+create new post
+
+# hugo new posts/my-first-post.md
+
+theme: https://themes.gohugo.io/smol/
