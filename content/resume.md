@@ -10,7 +10,7 @@ My goal is to create reliable, well monitored, auditable processes that simply, 
 
 **tools**
 
-- languages (descending by experience): golang, ruby, node/js, rust, typescript
+- languages (descending by experience): golang, ruby, typescript, rust
 - os: linux (debian+friends)
 - orchestration/containerization/provisioning: kubernetes, docker, chef
 - observability: prometheus, alertmanager
