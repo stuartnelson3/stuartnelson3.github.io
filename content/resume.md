@@ -22,24 +22,28 @@ My goal is to create reliable, well monitored, auditable processes that simply, 
 
 **senior risk/platform engineer** *(2022 \- current)*
 
+* re-designed risk classification system for pull payments
+  * signals sent to external vendors are aggregated and returned to platform as a risk classification
+  * classification influences all aspects of the platform related to pull payments: daily/monthly limits, funds hold periods, progressive fund unlock schedules
+* developed system to calculate user funds allowed to leave swan platform
+  * single unified concept "withdrawal energy"
+  * control amount of money available to leave platform to protect swan from loss of funds via pull payment
+  * money available based on re-designed risk classification system
+  * translate funds to both usd and btc currencies
+  * allow users to convert freely between btc \+ usd on-platform
 * integrated [have i been pwned](https://haveibeenpwned.com) service to monitor ongoing breaches
   * monitor api for new breaches
   * scan for and store new breaches involving individual users
   * make breaches visible from user's admin backend page for agents making account take-over (ATO) assessments
-* developed system to calculate user funds allowed to leave swan platform
-  * single unified concept "withdrawal energy"
-  * control amount of money available to leave platform to protect swan from loss of funds via ach reversal
-  * translates to both usd and btc currencies
-  * allow users to convert freely between btc + usd on-platform
 * created automated system for managing receiving, storing, uploading, and tracking customer documents (passport/license, ssn card, proof of address, proof of funds)
   * receive and store documents in s3
   * track individual user document upload requirements and status for swan's partner bitcoin custodians
   * automatically upload documents to custodians
   * allow swan agents to manually trigger uploads to custodians via admin backend
   * monitor and alert on per-custodian upload metrics
-* re-designed customer onboarding
-  * managed \+ implemented integration between swan and external identity verification vendor
-  * securely store customers' personal information and id documents
+* re-designed private customer and business onboarding
+  * managed \+ implemented integrations between swan and external identity verifications vendors
+  * securely store clients' personal information and id documents
   * transmit documents and customer information to open accounts at bitcoin custodians
 * created withdrawals queue for managing btc withdrawals
   * asynchronously validate user, bitcoin wallet, and withdrawal information
