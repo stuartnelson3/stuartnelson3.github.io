@@ -2,46 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on stuart nelson</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://stuartnelson.xyz/tags/</link>
     <description>Recent content in Tags on stuart nelson</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 May 2021 22:03:48 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Dream</title>
-      <link>http://localhost:1313/tags/dream/</link>
-      <pubDate>Mon, 03 May 2021 22:03:48 +0200</pubDate>
-      <guid>http://localhost:1313/tags/dream/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Reflection</title>
-      <link>http://localhost:1313/tags/reflection/</link>
-      <pubDate>Mon, 12 Apr 2021 11:59:23 +0200</pubDate>
-      <guid>http://localhost:1313/tags/reflection/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Journal</title>
-      <link>http://localhost:1313/tags/journal/</link>
-      <pubDate>Fri, 09 Oct 2020 10:47:52 +0100</pubDate>
-      <guid>http://localhost:1313/tags/journal/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Warsaw</title>
-      <link>http://localhost:1313/tags/warsaw/</link>
-      <pubDate>Fri, 09 Oct 2020 10:47:52 +0100</pubDate>
-      <guid>http://localhost:1313/tags/warsaw/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Biketrip</title>
-      <link>http://localhost:1313/tags/biketrip/</link>
-      <pubDate>Thu, 24 Sep 2020 13:49:45 +0100</pubDate>
-      <guid>http://localhost:1313/tags/biketrip/</guid>
-      <description></description>
-    </item>
+    <atom:link href="https://stuartnelson.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
