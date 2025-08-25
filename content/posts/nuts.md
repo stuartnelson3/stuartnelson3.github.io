@@ -1,10 +1,10 @@
 ---
 title: "Nuts!"
 date: 2020-09-23T14:00:32+01:00
-draft: true
+draft: false
 tags:
-  - journal
-  - biketrip
+    - journal
+    - biketrip
 ---
 
 **Location:** Bastogne
@@ -85,7 +85,7 @@ Bus 1011 8:03 - 9:31 (Liege)<br>
 IC 507 10:03 - 10:33 (Welkenraedt)<br>
 8min xfer<br>
 
-***Welkenraedt**<br>
+**\*Welkenraedt**<br>
 L5009 10:41 - 10:56 (Aachen)<br>
 
 **Aachen HBF**<br>

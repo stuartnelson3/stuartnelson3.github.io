@@ -1,10 +1,10 @@
 ---
 title: "Reconnecting With a Friend"
 date: 2020-09-19T13:03:05+02:00
-draft: true
+draft: false
 tags:
-  - journal
-  - reflection
+    - journal
+    - reflection
 ---
 
 **Location:** Charleville-Mézière -> Reims

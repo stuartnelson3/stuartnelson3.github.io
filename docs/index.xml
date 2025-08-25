@@ -2,25 +2,200 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>stuart nelson</title>
-    <link>https://stuartnelson.xyz/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on stuart nelson</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 22 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://stuartnelson.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://stuartnelson.xyz/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://stuartnelson.xyz/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;p&gt;This is my about me page.&lt;/p&gt;&#xA;&lt;p&gt;I currently work as a software developer.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m based in central europe.&lt;/p&gt;&#xA;&lt;p&gt;My focus is on backend development.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve lately been specializing in anti-fraud / anti-abuse programming.&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>https://stuartnelson.xyz/resume/</link>
+      <link>http://localhost:1313/resume/</link>
       <pubDate>Thu, 19 Jun 2025 12:36:28 +0200</pubDate>
-      <guid>https://stuartnelson.xyz/resume/</guid>
+      <guid>http://localhost:1313/resume/</guid>
       <description>&lt;p&gt;&lt;strong&gt;profile&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;My goal is to create reliable, well monitored, auditable processes that simply, efficiently, and flexibly provide value to the business and its customers. If it fails, fail visibly and explicitly for the engineers, and gracefully with minimal impact to the customers.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;tools&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;languages (descending by experience): golang, ruby, typescript, rust&lt;/li&gt;&#xA;&lt;li&gt;os: linux (debian+friends)&lt;/li&gt;&#xA;&lt;li&gt;orchestration/provisioning: kubernetes, chef&lt;/li&gt;&#xA;&lt;li&gt;observability: prometheus, alertmanager&lt;/li&gt;&#xA;&lt;li&gt;storage (as a user): kafka, postgres&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;experience&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;swan-bitcoin&#34;&gt;&lt;strong&gt;SWAN BITCOIN&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;senior risk/platform engineer&lt;/strong&gt; &lt;em&gt;(2022 - current)&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Had a Dream</title>
+      <link>http://localhost:1313/posts/had-a-dream/</link>
+      <pubDate>Mon, 03 May 2021 22:03:48 +0200</pubDate>
+      <guid>http://localhost:1313/posts/had-a-dream/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m going to try something new.&lt;/p&gt;&#xA;&lt;p&gt;I tend to have fairly vivid dreams. They also can be pretty crazy. So I&amp;rsquo;m going&#xA;to attempt to write them down and maybe throw out a little analysis. Some of&#xA;them are pretty clear; some are not.&lt;/p&gt;&#xA;&lt;p&gt;My goal is two-fold:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Remember some of these dreams and what my subconscious was going through at&#xA;the time&lt;/li&gt;&#xA;&lt;li&gt;Be able to come back to perhaps come up with a better interpretation.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;the-dream&#34;&gt;The Dream&lt;/h1&gt;&#xA;&lt;p&gt;The first dream in this series is pretty straight forward, as far as I can tell.&#xA;I was in my family&amp;rsquo;s cabin up in northern Minnesota with a good friend, and we&#xA;were hanging out watching tv or something.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; It was the middle of the day and&#xA;sunny outside, but the windows were mostly covered with cobwebs and dust. The&#xA;light still managed to show through into the cabin. Outside, after I brushed&#xA;away some of the dust and cobwebs, I could see on either side of the cabin a&#xA;young family playing in the sun. Something like a standard&#xA;father/mother/children setup.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Self Pressure</title>
+      <link>http://localhost:1313/posts/self-pressure/</link>
+      <pubDate>Mon, 12 Apr 2021 11:59:23 +0200</pubDate>
+      <guid>http://localhost:1313/posts/self-pressure/</guid>
+      <description>&lt;p&gt;It seems like all the things I want are the primary causes of stress in my&#xA;life.&lt;/p&gt;&#xA;&lt;p&gt;If I just didn&amp;rsquo;t try for these things, I&amp;rsquo;d have a much simpler and less&#xA;stressful life. It&amp;rsquo;s definitely taking me from what I would rather be doing,&#xA;but I think the &amp;ldquo;things&amp;rdquo; I&amp;rsquo;d rather be doing in Berlin are a local maximum&#xA;for what I could be doing with my time, vs. what I&amp;rsquo;m hoping will be a higher&#xA;level of happiness.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Paycheck Disconnect</title>
+      <link>http://localhost:1313/posts/paycheck-disconnect/</link>
+      <pubDate>Fri, 09 Apr 2021 10:09:34 +0200</pubDate>
+      <guid>http://localhost:1313/posts/paycheck-disconnect/</guid>
+      <description>&lt;p&gt;This post was inspired by &lt;a href=&#34;https://www.metropolismag.com/homepage/future100-commons/&#34;&gt;Future100: Design Students Rethink the&#xA;Commons&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h1 id=&#34;background&#34;&gt;Background&lt;/h1&gt;&#xA;&lt;p&gt;As I finished reading the above post, I reached the final section that was&#xA;listing the architects who had been mentioned, and where they hailed from. At&#xA;that moment, when I thought about life as a professor at a university (not&#xA;that any of the people mentioned are professors, it&amp;rsquo;s just the idea as it&#xA;occurred to me), I was thinking about how they feel about their salary.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Many Meetings</title>
+      <link>http://localhost:1313/posts/many-meetings/</link>
+      <pubDate>Fri, 09 Oct 2020 10:47:52 +0100</pubDate>
+      <guid>http://localhost:1313/posts/many-meetings/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location:&lt;/strong&gt; Warsaw&lt;/p&gt;&#xA;&lt;p&gt;I had two things on my mind waking up:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Coffee with Weronika&lt;/li&gt;&#xA;&lt;li&gt;Tattoo with Aleksandra (who is actually Ola)&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;I matched with Weronika on bumble the preceding morning. I mentioned&#xA;immediately that I was getting a tattoo the next day, she asked what shop,&#xA;and was super excited when I said Caffeine Tattoo. She had a half sleeve done&#xA;there by the shop owner (not Ola).&lt;/p&gt;&#xA;&lt;p&gt;We hit it off immediately and texted for a couple hours, and then scheduled&#xA;coffee before my tattoo. She had to work, but that night we ended up texting&#xA;for another few hours, and seemed to be having a good time. So, naturally, I&#xA;was looking forward to meeting her.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Warsaw Uprising Museum</title>
+      <link>http://localhost:1313/posts/warsaw-uprising-museum/</link>
+      <pubDate>Thu, 08 Oct 2020 11:38:02 +0100</pubDate>
+      <guid>http://localhost:1313/posts/warsaw-uprising-museum/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location:&lt;/strong&gt; Warsaw&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Note to the reader:&lt;/strong&gt; I only wrote a single sentence for this day&amp;rsquo;s entry,&#xA;despite having gone to the Warsaw Uprising museum. I&amp;rsquo;ve included that&#xA;sentence, but this is a post almost entirely of pictures.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;You can miss something but not want it.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;photos&#34;&gt;Photos&lt;/h2&gt;&#xA;&lt;div style=&#34;text-align:center; margin-bottom:1em;&#34;&gt;&#xA;&lt;img style=&#34;max-width: 90%; width: auto; height: auto;&#34; src=&#34;http://localhost:1313/images/warsaw_uprising_entrance.jpg&#34; alt=&#34;sign over the entrance to the warsaw uprising museum&#34; &gt;&#xA;&lt;figcaption&gt;&lt;small&gt;Sign hanging over the entrance into the museum.&lt;/small&gt;&lt;/figcaption&gt;&#xA;&lt;/div&gt;&#xA;&lt;div style=&#34;text-align:center; margin-bottom:1em;&#34;&gt;&#xA;&lt;img style=&#34;max-width: 90%; width: auto; height: auto;&#34; src=&#34;http://localhost:1313/images/warsaw_uprising_deutsche.jpg&#34; alt=&#34;nur fuer deutsche&#34;&gt;&#xA;&lt;figcaption&gt;&lt;small&gt;This sign was used to separate poles from germans. the nazis had studied the jim crow south to learn how to segregate people, so seeing the equivalent of &#34;whites only&#34; was poignant for me.&lt;/small&gt;&lt;/figcaption&gt;&#xA;&lt;/div&gt;&#xA;&lt;div style=&#34;text-align:center; margin-bottom:1em;&#34;&gt;&#xA;&lt;img style=&#34;max-width: 90%; width: auto; height: auto;&#34; src=&#34;http://localhost:1313/images/warsaw_uprising_rebels.jpg&#34; alt=&#34;polish resistance fighters&#34;&gt;&#xA;&lt;figcaption&gt;&lt;small&gt;Polish resistance fighters. The single man smiling in the front row was unexpected.&lt;/small&gt;&lt;/figcaption&gt;&#xA;&lt;/div&gt;&#xA;&lt;div style=&#34;text-align:center; margin-bottom:1em;&#34;&gt;&#xA;&lt;img style=&#34;max-width: 90%; width: auto; height: auto;&#34; src=&#34;http://localhost:1313/images/warsaw_uprising_polish_blood.jpg&#34; alt=&#34;sign about supplies from england&#34;&gt;&#xA;&lt;figcaption&gt;&lt;small&gt;Description for supplies that had been sent to aid the uprising. Putting myself in this situation, receiving supplies from a foreign country in the middle of a war, it must have been incredibly powerful to know that your countrymen a world away were bleeding for you.&lt;/small&gt;&lt;/figcaption&gt;&#xA;&lt;/div&gt;&#xA;&lt;div style=&#34;text-align:center; margin-bottom:1em;&#34;&gt;&#xA;&lt;img style=&#34;max-width: 90%; width: auto; height: auto;&#34; src=&#34;http://localhost:1313/images/warsaw_uprising_like_you.jpg&#34; alt=&#34;entrance to the rotating art installation&#34;&gt;&#xA;&lt;figcaption&gt;&lt;small&gt;This was a rotating exhibit that, should you choose to participate, will scan your face and compare it to records from poles who fought in the uprising to find one that resembles you.&lt;/small&gt;&lt;/figcaption&gt;&#xA;&lt;/div&gt;&#xA;&lt;div style=&#34;text-align:center; margin-bottom:1em;&#34;&gt;&#xA;&lt;img style=&#34;max-width: 70%; width: auto; height: auto;&#34; src=&#34;http://localhost:1313/images/warsaw_uprising_soldier.jpg&#34; alt=&#34;polish soldier who resembled me&#34;&gt;&#xA;&lt;figcaption&gt;&lt;small&gt;This is the soldier whom I resemble. This is up for debate. You stand in front of the reflective pillar, position your face according to the prompts, and then it shows you a face. I did it twice and got to different results.&lt;/small&gt;&lt;/figcaption&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Walking Tour</title>
+      <link>http://localhost:1313/posts/walking-tour/</link>
+      <pubDate>Wed, 07 Oct 2020 10:33:59 +0100</pubDate>
+      <guid>http://localhost:1313/posts/walking-tour/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location:&lt;/strong&gt; Warsaw&lt;/p&gt;&#xA;&lt;p&gt;There&amp;rsquo;s an awesome market hall right by my airbnb, Hala Mirowska. I grabbed a&#xA;large rectangular pastry filled with cheese and spinach for breakfast. They&#xA;had about 8 different kinds, and I want to try tme all.&lt;/p&gt;&#xA;&lt;div style=&#34;text-align:center;&#34;&gt;&#xA;&lt;img style=&#34;max-width: 90%; width: auto; height: auto;&#34; src=&#34;http://localhost:1313/images/warsaw_hala_mirowska.jpg&#34; alt=&#34;outside of hala mirowska&#34;&gt;&#xA;&lt;figcaption&gt;&lt;small&gt;The market hall. It was open every day and always full of people shopping.&lt;/small&gt;&lt;/figcaption&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;I took a long walk to the reconstructed old town, and walked from its&#xA;southernmost end up to the northernmost, then headed back south on a path&#xA;along the river. The original old town was razed by the nazis as punishment&#xA;for the warsaw uprising. The reconstruction is charming and great to walk&#xA;through. Within the old town, only polish citizens are allowed to own&#xA;property (as I was told). There are enough restaurants to keep someone busy&#xA;for weeks. It&amp;rsquo;s definitely the highest density tourist area. Other than&#xA;polish, the language I heard most often was german (guided tours).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Warsaw Calling</title>
+      <link>http://localhost:1313/posts/warsaw-calling/</link>
+      <pubDate>Tue, 06 Oct 2020 16:33:17 +0100</pubDate>
+      <guid>http://localhost:1313/posts/warsaw-calling/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location:&lt;/strong&gt; Berlin -&amp;gt; Warsaw&lt;/p&gt;&#xA;&lt;p&gt;The train from Berlin to Warsaw was less than eventful. The train was direct,&#xA;I had some music, and they were handing out free water. Couldn&amp;rsquo;t be easier.&lt;/p&gt;&#xA;&lt;p&gt;After a simple airbnb check-in, I scoped out a route to the tourist area full&#xA;of restaurants I remembered from my previous trip, and headed out to find&#xA;some dinner.&lt;/p&gt;&#xA;&lt;p&gt;Poland has this concept called a &amp;ldquo;milk bar&amp;rdquo;. Originally serving dairy&#xA;products, they now (and for a long time) serve all sorts of traditional&#xA;polish foods &amp;ndash; cabbage, potatoes, breaded fried pork cutlets, pierogi &amp;ndash; at&#xA;a crazy low, government-subsidized, cost.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Rescue From Without</title>
+      <link>http://localhost:1313/posts/rescue-from-without/</link>
+      <pubDate>Thu, 24 Sep 2020 13:49:45 +0100</pubDate>
+      <guid>http://localhost:1313/posts/rescue-from-without/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location:&lt;/strong&gt; Bastogne -&amp;gt; Liege -&amp;gt; Aachen -&amp;gt; Berlin&lt;/p&gt;&#xA;&lt;p&gt;I got to the bus station to buy a ticket, only to discover that the machine&#xA;requires a certain MoBIB membership card, which you load trips on. Sounds&#xA;more or less like an oyster card in london. Because of covid, buses aren&amp;rsquo;t&#xA;accepting cash. Frantically, with time ticking down, I attempted to register&#xA;online for one of these cards. Once you register and order a card, you can&#xA;start putting trips onto your account, and then ride. I registered and then&#xA;searched the site in vain, finding no way to order a card. With 5min to go&#xA;before the bus showed up, I died to throw myself at the driver&amp;rsquo;s mercy.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nuts!</title>
+      <link>http://localhost:1313/posts/nuts/</link>
+      <pubDate>Wed, 23 Sep 2020 14:00:32 +0100</pubDate>
+      <guid>http://localhost:1313/posts/nuts/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location:&lt;/strong&gt; Bastogne&lt;/p&gt;&#xA;&lt;p&gt;I woke up feeling like something was off.&lt;/p&gt;&#xA;&lt;p&gt;Not so much wanderlust as much as fernweh, despite being away from &amp;ldquo;home&amp;rdquo;.&#xA;When I left the house last night for dinner, my hostess was watching tv on&#xA;the couch. Maybe it&amp;rsquo;s the fact that I&amp;rsquo;m simply in a home that&amp;rsquo;s bothering me.&#xA;Which is a weird thing to contemplate.&lt;/p&gt;&#xA;&lt;p&gt;I walked to the bastogne war museum. I thought it was about the battle of the&#xA;bulge, but it covered the run up to WW2, starting with the end of WW1, and&#xA;all the way through to the war&amp;rsquo;s end.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>No More Camping</title>
+      <link>http://localhost:1313/posts/no-more-camping/</link>
+      <pubDate>Tue, 22 Sep 2020 13:43:40 +0100</pubDate>
+      <guid>http://localhost:1313/posts/no-more-camping/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location:&lt;/strong&gt; Ochamp -&amp;gt; Bastogne&lt;/p&gt;&#xA;&lt;p&gt;Not much to say about today. I woke up around 8am. My destination was only 2&#xA;hours away, and the check-in time was 5pm.&lt;/p&gt;&#xA;&lt;p&gt;I hung out at my &amp;ldquo;campsite&amp;rdquo; reading and watching &amp;ldquo;no reservations&amp;rdquo; until noon&#xA;or so. I had three pints left over from the previous day, and I didn&amp;rsquo;t want&#xA;to bike with that with me. So there was some morning drinking.&lt;/p&gt;&#xA;&lt;p&gt;The ride followed a &amp;ldquo;pre&amp;rdquo; ravel route. It was well defined, followed an old&#xA;train line, and went straight to Bastogne. The designation &amp;ldquo;pre&amp;rdquo; meant that&#xA;it was gravel or packed earth, unlike an official route which would have been&#xA;paved. It was kind of boring, to be honest. There was no turning for 35km.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Back to Belgium</title>
+      <link>http://localhost:1313/posts/back-to-belgium/</link>
+      <pubDate>Mon, 21 Sep 2020 13:01:22 +0100</pubDate>
+      <guid>http://localhost:1313/posts/back-to-belgium/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location:&lt;/strong&gt; Reims -&amp;gt; Charleville-Mézière -&amp;gt; Fumay -&amp;gt; Ochamp&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m returning to camping today. And biking. I&amp;rsquo;ve literally only been away&#xA;from it for two days, but the whole idea already seems weird. And I had been&#xA;camping for two weeks.&lt;/p&gt;&#xA;&lt;p&gt;Rain and storms are coming in the rest of the week, starting in a day or two.&#xA;At great financial cost (comparatively .. 40EUR/night vs. camping for&#xA;~5EUR/night) I took a room in Bastogne for the remainder of the trip. There&amp;rsquo;s&#xA;a lot of history there. Also, with the rain coming and no real destination&#xA;beyond that, having a warm room and being able to liesurely visit the town&#xA;for a few days sounds nice. Frank arrives friday, and then we head to the&#xA;netherlands (and the bismut concert) on saturday.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Day in Reims</title>
+      <link>http://localhost:1313/posts/a-day-in-reims/</link>
+      <pubDate>Sun, 20 Sep 2020 11:54:23 +0100</pubDate>
+      <guid>http://localhost:1313/posts/a-day-in-reims/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;: Reims&lt;/p&gt;&#xA;&lt;p&gt;I woke up and had coffee in the airbnb. That was a delightful way to start the&#xA;day. It&amp;rsquo;s going to be interesting going back to camping, albeit for only one&#xA;night.&lt;/p&gt;&#xA;&lt;p&gt;I started considering my next residence after this bike trip. I was planning&#xA;on Warsaw / Krakow, but actually a month rental in Paris is under 1000EUR,&#xA;and pretty centrally located. It&amp;rsquo;s definitely something to consider, but the&#xA;cost of everything will be a lot more &amp;ndash; probably 2-3x more than Poland. Just&#xA;the airbnb rental in warsaw is half of the cost of one in Paris, not even&#xA;considering food and beer.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Reconnecting With a Friend</title>
+      <link>http://localhost:1313/posts/reconnecting-with-a-friend/</link>
+      <pubDate>Sat, 19 Sep 2020 13:03:05 +0200</pubDate>
+      <guid>http://localhost:1313/posts/reconnecting-with-a-friend/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location:&lt;/strong&gt; Charleville-Mézière -&amp;gt; Reims&lt;/p&gt;&#xA;&lt;p&gt;First, Reims is pronounced like &amp;ldquo;Raas&amp;rdquo;. Or so. Knowing that would have been&#xA;helpful when telling people where I was going. &amp;ldquo;Remmes&amp;rdquo;, as I had been&#xA;pronouncing it, does not exist.&lt;/p&gt;&#xA;&lt;p&gt;I had a very slow start to the day. My bus to Reims left at 15:27, and there&#xA;wasn&amp;rsquo;t much going on in CM on a saturday morning.&lt;/p&gt;&#xA;&lt;p&gt;The bus to Reims was uneventful. I listened to, for the umpteenth time, Colour&#xA;Haze&amp;rsquo;s self-titled album. It was as always a treat.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Taste of Civilization</title>
+      <link>http://localhost:1313/posts/taste-of-civilization/</link>
+      <pubDate>Fri, 18 Sep 2020 11:39:44 +0200</pubDate>
+      <guid>http://localhost:1313/posts/taste-of-civilization/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location:&lt;/strong&gt; Revin -&amp;gt; Charleville-Mézière&lt;/p&gt;&#xA;&lt;p&gt;The ride today was a non-event. It was 44km of, again, pristine paved voie&#xA;verte. I reached my destination very quickly. Along the way I passed several&#xA;little pillboxes facing north upriver. I&amp;rsquo;m guessing it was to harass an attempt&#xA;at nazi incursion into france.&lt;/p&gt;&#xA;&lt;img style=&#34;max-width: 100%; width: auto; height: auto;&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/voie_verte_pillbox.jpg&#34; alt=&#34;a pillbox along the river&#34;&gt;&#xA;&lt;figcaption&gt;&lt;small&gt;At most soldiers stationed inside could have harried incoming transports. I&#39;m guessing they were primarily there to inform of an invasion.&lt;/small&gt;&lt;/figcaption&gt;&#xA;&lt;p&gt;By noon I was in Charleville-Mézière. I had a whole day to be in the city. It&#xA;was by far the largest place I had been in for almost two weeks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Another Rest Day</title>
+      <link>http://localhost:1313/posts/another-rest-day/</link>
+      <pubDate>Thu, 17 Sep 2020 13:15:39 +0200</pubDate>
+      <guid>http://localhost:1313/posts/another-rest-day/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location:&lt;/strong&gt; Revin -&amp;gt; Monthermé -&amp;gt; Tournavaux -&amp;gt; Revin&lt;/p&gt;&#xA;&lt;p&gt;Today I was going to stay in the area and go for a hike. The river was flanked&#xA;by fantastically forested hills, the sky was clear, and the temperature peaked&#xA;at 24C (sweet, sweet respite).&lt;/p&gt;&#xA;&lt;p&gt;The original path I looked at turned out to be for mountain bikes. And, at&#xA;20km, it was more than I wanted to hike on a day off.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Travel Companion</title>
+      <link>http://localhost:1313/posts/travel-companion/</link>
+      <pubDate>Wed, 16 Sep 2020 09:50:16 +0200</pubDate>
+      <guid>http://localhost:1313/posts/travel-companion/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;: Givet -&amp;gt; Revin&lt;/p&gt;&#xA;&lt;p&gt;Today was planned as an easy day. The voie verte route starts in Givet and&#xA;passes right through Revin. In total, I was going to bike about 35km of the&#xA;route to reach my destination.&lt;/p&gt;&#xA;&lt;p&gt;Within about 20min of leaving, I rode past a guy with a touring setup similar&#xA;to mine while he was having some water. A bit later I stopped to take a picture&#xA;and he rolled past me.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Friendly Detour</title>
+      <link>http://localhost:1313/posts/a-friendly-detour/</link>
+      <pubDate>Tue, 15 Sep 2020 12:36:28 +0200</pubDate>
+      <guid>http://localhost:1313/posts/a-friendly-detour/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;: Jemelle -&amp;gt; Houyot -&amp;gt; Beauraing -&amp;gt; Givet&lt;/p&gt;&#xA;&lt;p&gt;I woke up to being a little cold and it being mostly dark. How? But how? It&amp;rsquo;s&#xA;17C! I checked my phone: 6:30am. Ah, well I still got 8 hours of sleep. I&#xA;snoozed until 8:30am. The bike repair shop (remember I had unhooked my front&#xA;brakes?) didn&amp;rsquo;t open until 9:30am.&lt;/p&gt;&#xA;&lt;p&gt;I got up and packed. My breakfast was 3 belgian waffles and the remaining brown&#xA;beer from Saint Monon. They went together really well. I tried to find the guy&#xA;running the junkyard/campsite, but he was nowhere to be found. I&amp;rsquo;m now probably&#xA;wanted in the area for not paying the one euro for the campsite.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Off to the Brewery</title>
+      <link>http://localhost:1313/posts/off-to-the-brewery/</link>
+      <pubDate>Mon, 14 Sep 2020 11:41:07 +0200</pubDate>
+      <guid>http://localhost:1313/posts/off-to-the-brewery/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;: La Roche-en-Ardenne -&amp;gt; Hotton -&amp;gt; Jemelle&lt;/p&gt;&#xA;&lt;p&gt;I originally had scheduled 90 km for today. Then, upon seeing the high temp for&#xA;the day (32C), I scaled it back to 50km. I arrived in Jemelle feeling good. I&#xA;even did another 15km rountrip to get beer from Saint Monon Brewery, but now&#xA;I can feel the ride.&lt;/p&gt;&#xA;&lt;p&gt;I followed the EV5 bike route the entire way, an international European route.&#xA;Well marked, well maintained, it was good riding. After the first 10km I&#xA;noticed my front tire was low. Nothing to be alarmed about, as I had&#xA;redistributed my gear to put more weight over the front tire.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Going for a Hike</title>
+      <link>http://localhost:1313/posts/going-for-a-hike/</link>
+      <pubDate>Sun, 13 Sep 2020 10:31:56 +0200</pubDate>
+      <guid>http://localhost:1313/posts/going-for-a-hike/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location:&lt;/strong&gt; La Roche-en-Ardenne&lt;/p&gt;&#xA;&lt;p&gt;After yesterday&amp;rsquo;s complete rest day, I found a &amp;ldquo;challenging&amp;rdquo; hike in the area&#xA;using &lt;a href=&#34;https://www.komoot.com/discover&#34;&gt;komoot&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Either their algorithm for calculting difficulty is off&#xA;(probable) or I&amp;rsquo;ve gotten in a lot better shape (less likely). The 10-ish km I&#xA;hiked were not challenging; I hardly broke a sweat. It was all in the&#xA;forest, which was nice, but absent more than the occasional hilly view, not&#xA;much was going on. I didn&amp;rsquo;t have to shower after the hike.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Rest Day</title>
+      <link>http://localhost:1313/posts/rest-day/</link>
+      <pubDate>Sat, 12 Sep 2020 16:13:52 +0200</pubDate>
+      <guid>http://localhost:1313/posts/rest-day/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location:&lt;/strong&gt; La Roche-en-Ardenne&lt;/p&gt;&#xA;&lt;p&gt;Corneal and Joke left before I woke up. They were super nice; I was bummed I&#xA;didn&amp;rsquo;t get to say goodbye.&lt;/p&gt;&#xA;&lt;p&gt;The night before they told me to go to the tourist center and grab a RAVeL map,&#xA;short for route à vélo longue. I had been following some of these routes&#xA;without knowing it, and having an official map sounded like a good idea.&lt;/p&gt;&#xA;&lt;p&gt;La Roche-en-Ardenne is such a cute town. I paid for two more nights at the&#xA;campsite, planning to rest in town today and hike in the area tomorrow.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Overloaded</title>
+      <link>http://localhost:1313/posts/overloaded/</link>
+      <pubDate>Fri, 11 Sep 2020 19:15:50 +0200</pubDate>
+      <guid>http://localhost:1313/posts/overloaded/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;: Viersalm -&amp;gt; La Roche-en-Ardenne&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;Jettison some weight, or I&amp;rsquo;ll never make it to Cybertron!&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;Astrotrain couldn&amp;rsquo;t have been more right.&lt;/p&gt;&#xA;&lt;p&gt;The day started well, despite a 9C night that woke me up cold. Tonight it will&#xA;be cold again, but the nights get warmer after that. I&amp;rsquo;ll try stuffing extra&#xA;clothing into my sleeping bag tonight to keep warm. Like a hobo.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;My plan for today was to head to&#xA;&lt;a href=&#34;https://goo.gl/maps/8nqAhSxQXtDZ2f6G6&#34;&gt;Saint-Hubert&lt;/a&gt;. My exact route was&#xA;unknown, but early in the day I passed a sign for the Lupulus brewery. It was&#xA;too early to go, but I felt inspired, and searched for other breweries in the&#xA;area. I found another about an hour away on the way to Saint-Hubert.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Smoother Path</title>
+      <link>http://localhost:1313/posts/a-smoother-path/</link>
+      <pubDate>Thu, 10 Sep 2020 15:08:27 +0200</pubDate>
+      <guid>http://localhost:1313/posts/a-smoother-path/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;: Sourbrodt -&amp;gt; Viersalm&lt;/p&gt;&#xA;&lt;p&gt;It rained several times in the night. Despite my inability as an outdoorsman,&#xA;my tarp kept me dry. Except for waking up cold between 5am and 7am (cf. previous&#xA;comment on bivouac sacks), I slept well.&lt;/p&gt;&#xA;&lt;p&gt;I broke camp around 9:30am. I had only drunk two of the three beers from the&#xA;previous night, so I had a Leffe with breakfast. Breakfast was a bit of peanut&#xA;butter with some dried cranberries.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Rough Going</title>
+      <link>http://localhost:1313/posts/rough-going/</link>
+      <pubDate>Wed, 09 Sep 2020 14:16:23 +0200</pubDate>
+      <guid>http://localhost:1313/posts/rough-going/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;: Lac Gileppe -&amp;gt; Sourbrodt&lt;/p&gt;&#xA;&lt;p&gt;I broke camp early and ate my leftover sandwich that I bought in Aachen HBF. It&#xA;was bread and camembert, and would become my diet for the next three weeks&#xA;(although I did not know this at the time).&lt;/p&gt;&#xA;&lt;p&gt;The biking was brutal uphill. I had been &amp;ldquo;training&amp;rdquo; in the previous months, but&#xA;15 sets of 3min hill runs do not come close to preparing you for a 2.5 hour&#xA;uphill grind. Looking back, maybe this would have been fine if I had known&#xA;better how to shift my gears. It almost certainly would have been better if I&#xA;hadn&amp;rsquo;t overpacked. These were lessons that I learned, but looking back, I was&#xA;always going to make this first mistake. Having gone backpacking several times&#xA;I tried to pack light but felt overconfident in how much my bike could hold.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Adventure Begins</title>
+      <link>http://localhost:1313/posts/the-adventure-begins/</link>
+      <pubDate>Tue, 08 Sep 2020 11:24:04 +0200</pubDate>
+      <guid>http://localhost:1313/posts/the-adventure-begins/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;: Berlin -&amp;gt; Aachen -&amp;gt; Lac Gileppe&lt;/p&gt;&#xA;&lt;p&gt;Long travel day. After a tearful goodbye with my hetero life partner Lukas, we&#xA;were off to the races. Berlin HBF to be exact.&lt;/p&gt;&#xA;&lt;p&gt;The train from HBF to Bad Oeynhausen (yeah, seriously) was easy. From there,&#xA;transfer to a regional train to Düsseldorf HBF. This is where it got&#xA;interesting.&lt;/p&gt;&#xA;&lt;p&gt;Halfway through the three or so hour ride, there was a train blocking the track&#xA;(between Oelde and Neubeckum). We got off a stop before Oelde, in&#xA;Rheda-Wiedenbrück, for the replacement bus that would take us two stops further&#xA;down the line, where we could catch the train and continue our journey.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>First Day Homeless</title>
+      <link>http://localhost:1313/posts/first-day-homeless/</link>
+      <pubDate>Mon, 07 Sep 2020 10:52:06 +0200</pubDate>
+      <guid>http://localhost:1313/posts/first-day-homeless/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Location:&lt;/strong&gt; Berlin&lt;/p&gt;&#xA;&lt;p&gt;Officially I&amp;rsquo;ve been unemployed for one week. Because I was still in my&#xA;apartment, still working (small project generating sales reports for bräugier),&#xA;still leading my normal life, it didn&amp;rsquo;t really feel like anything had changed.&lt;/p&gt;&#xA;&lt;p&gt;Yesterday evening I handed over my keys to my apartment, put my bags on my bike, and became homeless.&lt;/p&gt;&#xA;&lt;p&gt;(I&amp;rsquo;m staying two nights with Lukas, but officially, I have no place of my own)&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

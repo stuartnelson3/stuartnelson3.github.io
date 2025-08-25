@@ -1,11 +1,11 @@
 ---
 title: "A Friendly Detour"
 date: 2020-09-15T12:36:28+02:00
-draft: true
+draft: false
 tags:
-  - journal
-  - biketrip
-  - reflection
+    - journal
+    - biketrip
+    - reflection
 ---
 
 **Location**: Jemelle -> Houyot -> Beauraing -> Givet
@@ -91,7 +91,7 @@ follows the river, winding village to village.
 
 I rolled into the campsite at around 1:30pm, peak heat, and no shade. It felt
 like every scene in "For a Few Dollars More". The owner sat facing the river
-and fortress rising high up over Givet on the opposite bank.  He was eating
+and fortress rising high up over Givet on the opposite bank. He was eating
 lunch with his wife. He's shirtless under the veranda.
 
 <img style="max-width: 100%; width: auto; height: auto;" loading="lazy" src="/images/givet_river.jpg" alt="a view on givet from across the river">
@@ -130,7 +130,8 @@ I don't think I'm going to find a job I'm excited about.
 But I think I have a career where I can work and take unpaid leave and still
 come out ahead.
 
-[^1]: Ok, I'm listening to music on my phone and streaming tv shows at night,
-  but that's it. And relying heavily on GPS. But I've been using mostly marked
-  routes on a map and road signs the last couple days, so I could probably
-  survive without GPS.
+[^1]:
+    Ok, I'm listening to music on my phone and streaming tv shows at night,
+    but that's it. And relying heavily on GPS. But I've been using mostly marked
+    routes on a map and road signs the last couple days, so I could probably
+    survive without GPS.

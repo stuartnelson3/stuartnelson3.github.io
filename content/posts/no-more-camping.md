@@ -1,10 +1,10 @@
 ---
 title: "No More Camping"
 date: 2020-09-22T13:43:40+01:00
-draft: true
+draft: false
 tags:
-  - journal
-  - biketrip
+    - journal
+    - biketrip
 ---
 
 **Location:** Ochamp -> Bastogne

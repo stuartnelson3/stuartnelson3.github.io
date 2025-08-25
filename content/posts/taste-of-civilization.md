@@ -1,10 +1,10 @@
 ---
 title: "Taste of Civilization"
 date: 2020-09-18T11:39:44+02:00
-draft: true
+draft: false
 tags:
-  - journal
-  - reflection
+    - journal
+    - reflection
 ---
 
 **Location:** Revin -> Charleville-Mézière
@@ -39,7 +39,7 @@ that it was early afternoon on a friday.
 
 A group of three girls in their seemingly early 20s walked by. I didn't think
 anything of it. Then another group of girls about the same age walked by. Then
-another.  At this point I thought to myself, something is going on. Looking to
+another. At this point I thought to myself, something is going on. Looking to
 the right I saw a mass of kids hanging out and talking. At this point I
 realized that they probably aren't in their early 20s, but they're
 highschoolers in their late teens, and they're congregating for some unknown
@@ -61,4 +61,3 @@ my chair to keep from falling out.
 
 I asked the bartender if I could pay. He looked at me and said "that's probably
 a good idea." I retired to my campsite for dinner.
-

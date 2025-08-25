@@ -1,7 +1,7 @@
 ---
 title: "Had a Dream"
 date: 2021-05-03T22:03:48+02:00
-draft: true
+draft: false
 tags:
     - dream
 ---
@@ -15,7 +15,7 @@ them are pretty clear; some are not.
 My goal is two-fold:
 
 - Remember some of these dreams and what my subconscious was going through at
-the time
+  the time
 - Be able to come back to perhaps come up with a better interpretation.
 
 # The Dream
@@ -64,5 +64,6 @@ in relation to this dream, but I'm thinking I'll just leave this here for now as
 it is. Maybe the analysis is enough, and I can come back and re-read it later to
 see how I feel about it in the future.
 
-[^1]: I actually had this dream a few days (maybe even a week) ago, so this detail
-is a bit hazy at this point.
+[^1]:
+    I actually had this dream a few days (maybe even a week) ago, so this detail
+    is a bit hazy at this point.

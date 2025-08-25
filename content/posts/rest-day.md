@@ -1,10 +1,10 @@
 ---
 title: "Rest Day"
 date: 2020-09-12T16:13:52+02:00
-draft: true
+draft: false
 tags:
-  - journal
-  - reflection
+    - journal
+    - reflection
 ---
 
 **Location:** La Roche-en-Ardenne
@@ -20,7 +20,7 @@ La Roche-en-Ardenne is such a cute town. I paid for two more nights at the
 campsite, planning to rest in town today and hike in the area tomorrow.
 
 I sat in the cafe at the foot of the castle and read "Men without Women", by
-Hemingway.  I took a break while drinking my third chouffe to sketch out a
+Hemingway. I took a break while drinking my third chouffe to sketch out a
 rough plan (on smooth roads) for the next bit of my trip, and realized I had
 been imposing someone else's bikepacking itinerary on my trip to Belgium.
 
@@ -52,7 +52,7 @@ relationship as anything else.
 
 As I sat, drank, read, wrote, and reflected, I realized how this trip was
 exactly what my ex-girlfriend from two attempts ago wanted: learn some french,
-go biking/vacationing, and be adventurous (but not *too* adventurous).
+go biking/vacationing, and be adventurous (but not _too_ adventurous).
 
 We were together for five years, so something must have been working, but it
 fell apart. What if we met now? Would we be mature enough that the current

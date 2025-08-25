@@ -1,10 +1,10 @@
 ---
 title: "The Adventure Begins"
 date: 2020-09-08T11:24:04+02:00
-draft: true
+draft: false
 tags:
-  - journal
-  - biketrip
+    - journal
+    - biketrip
 ---
 
 **Location**: Berlin -> Aachen -> Lac Gileppe
@@ -68,17 +68,19 @@ The hammock does not insulate. I had all my layers on and still I was cold.[^2]
 It was about 8C. I inflated Fabian's Thermarest and put it under me in the
 hammock. Instantly I felt warmer and was able to fall asleep.
 
-[^1]: At this point, I was still getting to know my bike. The gears, in
+[^1]:
+    At this point, I was still getting to know my bike. The gears, in
     particular, are a bit finicky. Some combinations between the front chain
     rings and the rear cogset work wonderfully. Some do not work at all -- as in,
     the chain never settles in and pedaling results in awkwardly skipping over
-    teeth or something.  Because shifting to the lowest gear in the front and a
+    teeth or something. Because shifting to the lowest gear in the front and a
     middle gear in the back had this issue, I (incorrectly) assumed that shifting
     the back gears down further would suffer from the same problem.
 
     Whether this is an issue with my equipment, or its calibration, I do not know.
 
-[^2]: While the hammock was never going to keep me warm, I probably would have
-  been fine if I had not been in my bivouac sack, or was [using it
-  correctly](https://stuartnelson3.github.io/posts/rest-day/#on-bivy-sacks). I
-  learned in the following days what I should have done.
+[^2]:
+    While the hammock was never going to keep me warm, I probably would have
+    been fine if I had not been in my bivouac sack, or was [using it
+    correctly](https://stuartnelson3.github.io/posts/rest-day/#on-bivy-sacks). I
+    learned in the following days what I should have done.

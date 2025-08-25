@@ -3,9 +3,13 @@ title: "Tattoo Day"
 date: 2020-10-09T10:47:52+01:00
 draft: true
 tags:
-  - journal
-  - warsaw
+    - journal
+    - warsaw
 ---
+
+<!-- This is an edited version of "Many Meetings", which I wrote at Wero's behest. -->
+<!-- I've since decided to publish the original version, but I am keeping this one -->
+<!-- around for .. some reason. Not sure why. -->
 
 **Location:** Warsaw
 
@@ -114,7 +118,7 @@ arm free in the air.
 She asked me how old I was. I said 32. I asked her how old she was.
 
 "You can't ask that! You can guess. But be nice."<br>
-*Ola waves tattoo machine threateningly*<br>
+_Ola waves tattoo machine threateningly_<br>
 "If I don't like your guess, I draw sad little dick next to Snufkin."<br>
 "Erm, 27?"<br>
 
@@ -164,9 +168,12 @@ cool. It was steampunk-themed. The cocktails were excellent.
 
 After a couple exceedingly good drinks, I headed back to my airbnb.
 
-[^1]: I had even found and contacted an artist on [instagram](https://www.instagram.com/black.fishhh/). His stuff looks
-awesome, and I'm still hoping to get something from him.
-[^2]: The oldest on the list is actually a line from the aeneid, which I've
-been contemplating since 2011: 'stat sua cuique dies'. As much as I think it
-would be cool, I imagine it'd drive me crazy having to explain the meaning to
-every single person who saw it.
+[^1]:
+    I had even found and contacted an artist on [instagram](https://www.instagram.com/black.fishhh/). His stuff looks
+    awesome, and I'm still hoping to get something from him.
+
+[^2]:
+    The oldest on the list is actually a line from the aeneid, which I've
+    been contemplating since 2011: 'stat sua cuique dies'. As much as I think it
+    would be cool, I imagine it'd drive me crazy having to explain the meaning to
+    every single person who saw it.

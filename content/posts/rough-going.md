@@ -1,10 +1,10 @@
 ---
 title: "Rough Going"
 date: 2020-09-09T14:16:23+02:00
-draft: true
+draft: false
 tags:
-  - journal
-  - biketrip
+    - journal
+    - biketrip
 ---
 
 **Location**: Lac Gileppe -> Sourbrodt
@@ -48,7 +48,7 @@ shirt clung to my back. I had hoped to make it the entire trip without getting
 a flat.
 
 I removed my bags from my bike, removed the tire, and then took off the
-innertube.  I first tried patching the tire. After putting on a glueless patch
+innertube. I first tried patching the tire. After putting on a glueless patch
 over the small tear in the innertube, I found two more. I patched them. And
 then I found even more rips and decided to use a fresh innertube.
 

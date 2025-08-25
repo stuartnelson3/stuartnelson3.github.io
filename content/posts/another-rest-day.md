@@ -1,7 +1,7 @@
 ---
 title: "Another Rest Day"
 date: 2020-09-17T13:15:39+02:00
-draft: true
+draft: false
 tags:
   - journal
   - reflection

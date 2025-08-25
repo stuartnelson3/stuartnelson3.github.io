@@ -1,10 +1,10 @@
 ---
 title: "Travel Companion"
 date: 2020-09-16T09:50:16+02:00
-draft: true
+draft: false
 tags:
-  - journal
-  - biketrip
+    - journal
+    - biketrip
 ---
 
 **Location**: Givet -> Revin
@@ -77,5 +77,6 @@ and parted ways.
 
 "See you around," I said to him wryly.
 
-[^1]: Learning french is compulsory in flanders; the walloons (french-speaking
-  belgians) have no requirement to learn dutch.
+[^1]:
+    Learning french is compulsory in flanders; the walloons (french-speaking
+    belgians) have no requirement to learn dutch.

@@ -1,9 +1,9 @@
 ---
 title: "Paycheck Disconnect"
 date: 2021-04-09T10:09:34+02:00
-draft: true
+draft: false
 tags:
-  - reflection
+    - reflection
 ---
 
 This post was inspired by [Future100: Design Students Rethink the
@@ -29,8 +29,8 @@ strengthens the analogy.
 This is a roundabout way of getting to what I see as a disconnect between
 getting paid for specific deliverables (i.e. I build you a chair, you give me
 $50) and getting paid a salary. Now, in the chair-building example, I would
-assume the final cost is some function of __(item cost + time spent +
-craftsman demand)__, where you just sum the three and tell the customer. The
+assume the final cost is some function of **(item cost + time spent +
+craftsman demand)**, where you just sum the three and tell the customer. The
 customer isn't going to pay because you bought the materials and started
 making the chair but for whatever reason it was never finished (materials
 couldn't be sourced, a new more important project came in, e.g.).

@@ -1,10 +1,10 @@
 ---
 title: "Going for a Hike"
 date: 2020-09-13T10:31:56+02:00
-draft: true
+draft: false
 tags:
-  - journal
-  - reflection
+    - journal
+    - reflection
 ---
 
 **Location:** La Roche-en-Ardenne
@@ -33,7 +33,6 @@ two.
 
 <img style="max-width: 100%; width: auto; height: auto;" loading="lazy" src="/images/roche_butcher.jpg" alt="the butcher shop">
 <figcaption><small>I bought meat here several times.</small></figcaption>
-
 
 I had a relaxed evening. I spoke with my parents and watched a couple old
 episodes of [No

@@ -1,10 +1,10 @@
 ---
 title: "Overloaded"
 date: 2020-09-11T19:15:50+02:00
-draft: true
+draft: false
 tags:
-  - journal
-  - biketrip
+    - journal
+    - biketrip
 ---
 
 **Location**: Viersalm -> La Roche-en-Ardenne
@@ -63,7 +63,7 @@ dangled the flaccid innertube. My left hand held the phone to my ear.
 "Hello, Stuart! How are you?"<br>
 "Well, I'm on a country road in Belgium fixing a flat tire, how are you?"<br>
 "Uhm.. I'm good. Is now not a good time?"<br>
-Me: *looks at innertube*<br>
+Me: _looks at innertube_<br>
 "Nah, it's fine."
 
 She told me about their job offer. She is going to send me an email containing
@@ -154,13 +154,15 @@ They live in Ghent and are moving in together. Despite having bought a house,
 they still managed to fill it immediately with their stuff. Your belongings
 grow to fill their container, be it a house, suitcase, or bike bags.
 
-[^1]: Note for next time: Buy a tent and get a better sleeping bag. Not only
-  would I have slept better, I could also would have been able to bring less
-  clothing to keep warm at night. This would have made the ride easier and
-  prevented some of my popped tires.
+[^1]:
+    Note for next time: Buy a tent and get a better sleeping bag. Not only
+    would I have slept better, I could also would have been able to bring less
+    clothing to keep warm at night. This would have made the ride easier and
+    prevented some of my popped tires.
 
-[^2]: [La Roche-en-Ardenne](https://en.wikipedia.org/wiki/La_Roche-en-Ardenne)
-  had never been a place I considered visiting. I found the village so charming
-  that I spent three nights there. It was my favorite village of the trip.
+[^2]:
+    [La Roche-en-Ardenne](https://en.wikipedia.org/wiki/La_Roche-en-Ardenne)
+    had never been a place I considered visiting. I found the village so charming
+    that I spent three nights there. It was my favorite village of the trip.
 
 [^3]: When you feel relieved to speak german, you know you've made it.

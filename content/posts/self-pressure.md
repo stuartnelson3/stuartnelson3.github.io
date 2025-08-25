@@ -1,7 +1,7 @@
 ---
 title: "Self Pressure"
 date: 2021-04-12T11:59:23+02:00
-draft: true
+draft: false
 tags:
     - reflection
 ---
@@ -20,8 +20,8 @@ For this post, I'm experimenting with embedding bandcamp links. So here
 you go, have a listen. If you like music, you should buy it from [bandcamp](https://bandcamp.com/).
 
 Stay loose, stay wild, stay free.
-<iframe style="border: 0; width: 330px; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=154003675/size=small/bgcol=ffffff/linkcol=0687f5/track=1871608777/transparent=true/" seamless><a href="https://heavydeeds.bandcamp.com/album/light-lunch">Light Lunch by Heavy Deeds</a></iframe>
 
+<iframe style="border: 0; width: 330px; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=154003675/size=small/bgcol=ffffff/linkcol=0687f5/track=1871608777/transparent=true/" seamless><a href="https://heavydeeds.bandcamp.com/album/light-lunch">Light Lunch by Heavy Deeds</a></iframe>
 
 # Dual Citizenship
 

@@ -1,7 +1,7 @@
 ---
 title: "A Day in Reims"
 date: 2020-09-20T11:54:23+01:00
-draft: true
+draft: false
 tags:
   - journal
   - biketrip

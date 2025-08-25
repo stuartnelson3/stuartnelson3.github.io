@@ -20,112 +20,111 @@ My goal is to create reliable, well monitored, auditable processes that simply, 
 
 ### **SWAN BITCOIN**
 
-**senior risk/platform engineer** *(2022 \- current)*
+**senior risk/platform engineer** _(2022 \- current)_
 
-* re-designed risk classification system for pull payments
-  * signals sent to external vendors are aggregated and returned to platform as a risk classification
-  * classification influences all aspects of the platform related to pull payments: daily/monthly limits, funds hold periods, progressive fund unlock schedules
-* developed system to calculate user funds allowed to leave swan platform
-  * single unified concept "withdrawal energy"
-  * control amount of money available to leave platform to protect swan from loss of funds via pull payment
-  * money available based on re-designed risk classification system
-  * translate funds to both usd and btc currencies
-  * allow users to convert freely between btc \+ usd on-platform
-* integrated [have i been pwned](https://haveibeenpwned.com) service to monitor ongoing breaches
-  * monitor api for new breaches
-  * scan for and store new breaches involving individual users
-  * make breaches visible from user's admin backend page for agents making account take-over (ATO) assessments
-* created automated system for managing receiving, storing, uploading, and tracking customer documents (passport/license, ssn card, proof of address, proof of funds)
-  * receive and store documents in s3
-  * track individual user document upload requirements and status for swan's partner bitcoin custodians
-  * automatically upload documents to custodians
-  * allow swan agents to manually trigger uploads to custodians via admin backend
-  * monitor and alert on per-custodian upload metrics
-* re-designed private customer and business onboarding
-  * managed \+ implemented integrations between swan and external identity verifications vendors
-  * securely store clients' personal information and id documents
-  * transmit documents and customer information to open accounts at bitcoin custodians
-* created withdrawals queue for managing btc withdrawals
-  * asynchronously validate user, bitcoin wallet, and withdrawal information
-  * a failed validation triggers a manual review by a human risk agent; they approve or block the withdrawal
-  * all steps create an auditable event stream for each individual withdrawal
-* converted synchronous handling of incoming 3rd party webhooks (bitcoin custodians, risk services vendors) to operating on auditable database-persisted representations of the webhooks
-  * webhooks are parsed and relevant information is stored, along with raw webhook json
-  * asynchronous jobs handle and store processing results
-  * error handling differentiates between retryable and non-retryable processing failures
-* lead bi-weekly conference talk \+ programming video club. example topics include:
-  * programming principles (eg. OO patterns, SOLID, etc)
-  * technical fundamentals (eg. kademlia, CRUSH, consistent hashing)
-  * anything with john carmack or john romero
+- re-designed risk classification system for pull payments
+    - signals sent to external vendors are aggregated and returned to platform as a risk classification
+    - classification influences all aspects of the platform related to pull payments: daily/monthly limits, funds hold periods, progressive fund unlock schedules
+- developed system to calculate user funds allowed to leave swan platform
+    - single unified concept "withdrawal energy"
+    - control amount of money available to leave platform to protect swan from loss of funds via pull payment
+    - money available based on re-designed risk classification system
+    - translate funds to both usd and btc currencies
+    - allow users to convert freely between btc \+ usd on-platform
+- integrated [have i been pwned](https://haveibeenpwned.com) service to monitor ongoing breaches
+    - monitor api for new breaches
+    - scan for and store new breaches involving individual users
+    - make breaches visible from user's admin backend page for agents making account take-over (ATO) assessments
+- created automated system for managing receiving, storing, uploading, and tracking customer documents (passport/license, ssn card, proof of address, proof of funds)
+    - receive and store documents in s3
+    - track individual user document upload requirements and status for swan's partner bitcoin custodians
+    - automatically upload documents to custodians
+    - allow swan agents to manually trigger uploads to custodians via admin backend
+    - monitor and alert on per-custodian upload metrics
+- re-designed private customer and business onboarding
+    - managed \+ implemented integrations between swan and external identity verifications vendors
+    - securely store clients' personal information and id documents
+    - transmit documents and customer information to open accounts at bitcoin custodians
+- created withdrawals queue for managing btc withdrawals
+    - asynchronously validate user, bitcoin wallet, and withdrawal information
+    - a failed validation triggers a manual review by a human risk agent; they approve or block the withdrawal
+    - all steps create an auditable event stream for each individual withdrawal
+- converted synchronous handling of incoming 3rd party webhooks (bitcoin custodians, risk services vendors) to operating on auditable database-persisted representations of the webhooks
+    - webhooks are parsed and relevant information is stored, along with raw webhook json
+    - asynchronous jobs handle and store processing results
+    - error handling differentiates between retryable and non-retryable processing failures
+- lead bi-weekly conference talk \+ programming video club. example topics include:
+    - programming principles (eg. OO patterns, SOLID, etc)
+    - technical fundamentals (eg. kademlia, CRUSH, consistent hashing)
+    - anything with john carmack or john romero
 
 ### **ELASTIC**
 
-**senior software engineer** *(2021 \- 2022\)*
+**senior software engineer** _(2021 \- 2022\)_
 
-* created kubernetes mutating webhook \+ helmchart for auto-instrumentation of customer deployments
-* developed core observability products: apm-server, apm-agent-go, elastic-agent, and libbeat
-
-### **SOUNDCLOUD**
-
-**anti-abuse team lead** *(2019 \- 2020\)*
-
-* created async services and batch jobs that consume data from bigquery and kafka, calculated thresholds across moving time windows, and identified and blocked bots
-* added "shadow mode" to all anti-abuse services to compare results from new rules sets to old that would not block users
-* advocated for introducing anti-abuse protections to increase overall user experience and user quality at the cost of increased signup friction
+- created kubernetes mutating webhook \+ helmchart for auto-instrumentation of customer deployments
+- developed core observability products: apm-server, apm-agent-go, elastic-agent, and libbeat
 
 ### **SOUNDCLOUD**
 
-**senior production engineer** *(2018-2019)*
+**anti-abuse team lead** _(2019 \- 2020\)_
 
-**production engineer** *(2014-2017)*
+- created async services and batch jobs that consume data from bigquery and kafka, calculated thresholds across moving time windows, and identified and blocked bots
+- added "shadow mode" to all anti-abuse services to compare results from new rules sets to old that would not block users
+- advocated for introducing anti-abuse protections to increase overall user experience and user quality at the cost of increased signup friction
 
-* created first bare kubernetes soundcloud cluster in aws
-* introduced horizontal kubernetes pod and node autoscaling for on-prem and aws kubernetes clusters
-* created machine image provisioning service using hashicorp packer
-  * single "golden image" was created and used by both aws and bare-metal machines
-* assisted teams in prometheus-based service instrumentation, alerting, and grafana dashboarding
-* developed golang services to limit logged-in users to one active audio stream
+### **SOUNDCLOUD**
+
+**senior production engineer** _(2018-2019)_
+
+**production engineer** _(2014-2017)_
+
+- created first bare kubernetes soundcloud cluster in aws
+- introduced horizontal kubernetes pod and node autoscaling for on-prem and aws kubernetes clusters
+- created machine image provisioning service using hashicorp packer
+    - single "golden image" was created and used by both aws and bare-metal machines
+- assisted teams in prometheus-based service instrumentation, alerting, and grafana dashboarding
+- developed golang services to limit logged-in users to one active audio stream
 
 ### **DIGITALOCEAN**
 
-**senior software engineer** *(2017-2018)*
+**senior software engineer** _(2017-2018)_
 
-* worked on virtual machine monitoring and alerting product for end-users
+- worked on virtual machine monitoring and alerting product for end-users
 
 ### **NEO INNOVATION**
 
-**software engineer** *(2013-2014)*
+**software engineer** _(2013-2014)_
 
-* consultant working on projects in ruby, golang, and javascript
+- consultant working on projects in ruby, golang, and javascript
 
 ### **SPORTNGIN**
 
-**software engineer** *(2012-2013)*
+**software engineer** _(2012-2013)_
 
-* worked on monolithic rails app
+- worked on monolithic rails app
 
 ### **QUINCY APPAREL**
 
-**software engineer** *(2012)*
+**software engineer** _(2012)_
 
-* created ruby/sinatra web app to extend functionality of shopify e-commerce site
+- created ruby/sinatra web app to extend functionality of shopify e-commerce site
 
 **open source**
 
 ### **ALERTMANAGER – [github.com/prometheus/alertmanager](http://github.com/prometheus/alertmanager)**
 
-**maintainer** *(2017-2020)*
+**maintainer** _(2017-2020)_
 
-*conference talk:[PromCon 2018: Life of an Alert](https://youtu.be/PUdjca23Qa4)*
+_conference talk:[PromCon 2018: Life of an Alert](https://youtu.be/PUdjca23Qa4)_
 
 **education**
 
 ### **ST. OLAF COLLEGE**
 
-bachelors of arts, chemistry; bachelors of arts, classics *(2006-2010)*
+bachelors of arts, chemistry; bachelors of arts, classics _(2006-2010)_
 
 **personal**
 
-* american citizen (birth)
-* german citizen (naturalized)
-
+- american citizen (birth)
+- german citizen (naturalized)

@@ -1,10 +1,10 @@
 ---
 title: "Off to the Brewery"
 date: 2020-09-14T11:41:07+02:00
-draft: true
+draft: false
 tags:
-  - journal
-  - biketrip
+    - journal
+    - biketrip
 ---
 
 **Location**: La Roche-en-Ardenne -> Hotton -> Jemelle
@@ -131,4 +131,3 @@ I sat in Jemelle on a bench across from the church and drank the amber.
 The night was going to be warm, only 16C at the lowest. I had hopes of finally
 not waking up cold in the middle of the night. On the plus side, a morning
 after a cold night means any left over beer is already chilled for breakfast.
-

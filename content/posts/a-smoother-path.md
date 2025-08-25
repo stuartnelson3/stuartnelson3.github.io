@@ -1,7 +1,7 @@
 ---
 title: "A Smoother Path"
 date: 2020-09-10T15:08:27+02:00
-draft: true
+draft: false
 tags:
   - journal
   - biketrip

@@ -1,10 +1,10 @@
 ---
 title: "Warsaw Uprising Museum"
 date: 2020-10-08T11:38:02+01:00
-draft: true
+draft: false
 tags:
-  - journal
-  - warsaw
+    - journal
+    - warsaw
 ---
 
 **Location:** Warsaw
@@ -13,7 +13,7 @@ tags:
 despite having gone to the Warsaw Uprising museum. I've included that
 sentence, but this is a post almost entirely of pictures.
 
-*You can miss something but not want it.*
+_You can miss something but not want it._
 
 ## Photos
 

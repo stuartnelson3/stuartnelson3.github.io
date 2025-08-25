@@ -1,10 +1,10 @@
 ---
 title: "First Day Homeless"
 date: 2020-09-07T10:52:06+02:00
-draft: true
+draft: false
 tags:
-  - reflection
-  - biketrip
+    - reflection
+    - biketrip
 ---
 
 **Location:** Berlin
@@ -25,7 +25,7 @@ asking if I was sure I wanted to leave.
 can't here? You're not particularly happy, but you're also not particularly
 unhappy, There's a very good chance being alone in a country where you don't
 speak the language, or know anyone, trying to camp for three weeks (did I
-mention alone?) will make you *more* unhappy."
+mention alone?) will make you _more_ unhappy."
 
 "That's a very good point, little voice", I said as I handed over my keys. But
 being "just happy enough" is not how I want to lead my life. Giving in to fear
