@@ -23,6 +23,11 @@ unsafe= true
         url = "/about/"
         weight = 1
   [[menu.main]]
+        identifier = "posts"
+        name = "posts"
+        url = "/posts/"
+        weight = 1
+  [[menu.main]]
         identifier = "resume"
         name = "resume"
         url = "/resume/"
