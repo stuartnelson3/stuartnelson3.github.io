@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
 <body>
 	<header>
 	===================<br>
-	== <a href="https://stuartnelson.xyz/">stuart nelson</a> ==<br>
+	== <a href="http://localhost:1313/">stuart nelson</a> ==<br>
 	===================
 	<div style="float: right;"></div><br>
 	<p>
@@ -23,6 +23,8 @@
 			
 			
 			<a href="/about/"><b>about</b></a>
+			
+			<a href="/posts/"><b>posts</b></a>
 			
 			<a href="/resume/"><b>resume</b></a>
 			
@@ -52,19 +54,26 @@
 <h3 id="swan-bitcoin"><strong>SWAN BITCOIN</strong></h3>
 <p><strong>senior risk/platform engineer</strong> <em>(2022 - current)</em></p>
 <ul>
-<li>integrated <a href="https://haveibeenpwned.com">have i been pwned</a> service to monitor ongoing breaches
+<li>re-designed risk classification system for pull payments
 <ul>
-<li>monitor api for new breaches</li>
-<li>scan for and store new breaches involving individual users</li>
-<li>make breaches visible from user&rsquo;s admin backend page for agents making account take-over (ATO) assessments</li>
+<li>signals sent to external vendors are aggregated and returned to platform as a risk classification</li>
+<li>classification influences all aspects of the platform related to pull payments: daily/monthly limits, funds hold periods, progressive fund unlock schedules</li>
 </ul>
 </li>
 <li>developed system to calculate user funds allowed to leave swan platform
 <ul>
 <li>single unified concept &ldquo;withdrawal energy&rdquo;</li>
-<li>control amount of money available to leave platform to protect swan from loss of funds via ach reversal</li>
-<li>translates to both usd and btc currencies</li>
+<li>control amount of money available to leave platform to protect swan from loss of funds via pull payment</li>
+<li>money available based on re-designed risk classification system</li>
+<li>translate funds to both usd and btc currencies</li>
 <li>allow users to convert freely between btc + usd on-platform</li>
+</ul>
+</li>
+<li>integrated <a href="https://haveibeenpwned.com">have i been pwned</a> service to monitor ongoing breaches
+<ul>
+<li>monitor api for new breaches</li>
+<li>scan for and store new breaches involving individual users</li>
+<li>make breaches visible from user&rsquo;s admin backend page for agents making account take-over (ATO) assessments</li>
 </ul>
 </li>
 <li>created automated system for managing receiving, storing, uploading, and tracking customer documents (passport/license, ssn card, proof of address, proof of funds)
@@ -76,10 +85,10 @@
 <li>monitor and alert on per-custodian upload metrics</li>
 </ul>
 </li>
-<li>re-designed customer onboarding
+<li>re-designed private customer and business onboarding
 <ul>
-<li>managed + implemented integration between swan and external identity verification vendor</li>
-<li>securely store customers&rsquo; personal information and id documents</li>
+<li>managed + implemented integrations between swan and external identity verifications vendors</li>
+<li>securely store clients&rsquo; personal information and id documents</li>
 <li>transmit documents and customer information to open accounts at bitcoin custodians</li>
 </ul>
 </li>
@@ -177,13 +186,23 @@
 			
 			
 			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 		</div>
 	</div>
 </aside>
 
 
 	<footer>
-	<p>&copy; 2025 <a href="https://stuartnelson.xyz/"><b>stuart nelson</b></a>.
+	<p>&copy; 2025 <a href="http://localhost:1313/"><b>stuart nelson</b></a>.
 	<a href="https://github.com/stuartnelson3"><b>github</b></a>
 	<a href="mailto:this.address.is@garbage.com"><b>hi [@] stuartnelson [.] xyz</b></a>
 	</p>
