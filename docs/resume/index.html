@@ -40,139 +40,37 @@
 		       
 
 			<div>
-				<p><strong>profile</strong></p>
-<p>My goal is to create reliable, well monitored, auditable processes that simply, efficiently, and flexibly provide value to the business and its customers. If it fails, fail visibly and explicitly for the engineers, and gracefully with minimal impact to the customers.</p>
-<p><strong>tools</strong></p>
+				<p>Senior software engineer. Build reliable, well-monitored, auditable systems that move real money. Work RFC-first on multi-quarter initiatives; ship force-multiplier work (shared packages, lint rules, internal skills, CI guards, dashboards) that compounds the team.</p>
+<p><strong>Skills:</strong> TypeScript, Go, Ruby, Rust · PostgreSQL (Sequelize, tuning, autovacuum, indexes), Redis, Kafka · BullMQ, event-sourced workflows · Datadog (APM, dashboards, monitors-as-code), Prometheus, Alertmanager · Kubernetes, Terraform, Chef · Linux (Debian)</p>
+<hr>
+<p><strong>Swan Bitcoin — Senior Software Engineer</strong> <em>Jul 2022 – Present</em></p>
+<p>Primary owner of money-movement correctness at a Bitcoin brokerage: ACH deposits, custodial BTC purchases, KYC/AML, withdrawals, fraud, security. ~1,600 merged changes across 3.5 years.</p>
 <ul>
-<li>languages (descending by experience): golang, ruby, typescript, rust</li>
-<li>os: linux (debian+friends)</li>
-<li>orchestration/provisioning: kubernetes, chef</li>
-<li>observability: prometheus, alertmanager</li>
-<li>storage (as a user): kafka, postgres</li>
+<li>Authored the parent RFC and built a cross-domain <strong>invariant-checking framework</strong> spanning every money-movement domain (reversals, balances, withdrawals, trades, bills, limit orders, deposits) — surfaced and drove fixes for latent financial-correctness bugs in production. Automated triage attaches a domain hypothesis, recent-commit correlation, and relevant log signal to every firing alert.</li>
+<li>Drove a <strong>database performance push</strong> that cut p95 latency on the two highest-traffic account endpoints by ~45% and <code>GET /me/balance</code> p95 by ~77% (5.5s→1.3s), moving core-api Apdex from 0.88 to ~0.97 over ~3 weeks. Approach: covering indexes + VACUUM, per-table autovacuum tuning, pool sizing, session-level timeouts, controller parallelization, stale-while-revalidate price cache.</li>
+<li>Designed and built the <strong>ACH reversal remediation system</strong> end-to-end — deficit calc, repossession sells, surplus detection, async custodian reconciliation — iterated across three major phases over 2.5 years.</li>
+<li>Built the <strong>event-sourced withdrawal processing system</strong> end-to-end in a 4-month sprint: validation, Sift scoring, manual review queue, batched disbursement, selfie re-verification, SIM-swap detection.</li>
+<li>Owned <strong>Sift fraud integration</strong> end-to-end; primary maintainer of the <strong>Persona KYC</strong> webhook system; built the <strong>Prove phone-verification</strong> integration.</li>
+<li><strong>Custodian decoupling:</strong> built the <code>CustodianClient</code> TS interface and shared test mock; added an ESLint import-boundary rule; deleted ~34,000 lines of dead PrimeTrust/Fortress code. Migrated 50+ JS modules to TypeScript and established the team&rsquo;s conversion patterns.</li>
+<li><strong>Agentic engineering workflow:</strong> direct research agents that surface prior art into RFC drafts; run agent-driven DB-performance validation against staging and prod traffic, with agents querying Datadog to compute latency deltas finer-grained than the dashboard. Authored the Agentic Bug Pipeline and Agentic Knowledge Lifecycle RFCs.</li>
+<li>Force-multiplier work: 6+ custom ESLint rules; <code>@swan-bitcoin/utils</code> and <code>@swan-bitcoin/constants</code> packages; CI guard for destructive migrations; Bug Brigade scoring rubric.</li>
+<li><strong>Vigil (second Swan product):</strong> security ownership — multi-tenant <code>householdId</code> WHERE-clause assertions, DKIM/SPF on inbound-email webhooks, session revocation on LOCKDOWN, serialized audit-log appends, removal of a portal grant-bypass path.</li>
 </ul>
-<p><strong>experience</strong></p>
-<h3 id="swan-bitcoin"><strong>SWAN BITCOIN</strong></h3>
-<p><strong>senior risk/platform engineer</strong> <em>(2022 - current)</em></p>
-<ul>
-<li>re-designed risk classification system for pull payments
-<ul>
-<li>signals sent to external vendors are aggregated and returned to platform as a risk classification</li>
-<li>classification influences all aspects of the platform related to pull payments: daily/monthly limits, funds hold periods, progressive fund unlock schedules</li>
-</ul>
-</li>
-<li>developed system to calculate user funds allowed to leave swan platform
-<ul>
-<li>single unified concept &ldquo;withdrawal energy&rdquo;</li>
-<li>control amount of money available to leave platform to protect swan from loss of funds via pull payment</li>
-<li>money available based on re-designed risk classification system</li>
-<li>translate funds to both usd and btc currencies</li>
-<li>allow users to convert freely between btc + usd on-platform</li>
-</ul>
-</li>
-<li>integrated <a href="https://haveibeenpwned.com">have i been pwned</a> service to monitor ongoing breaches
-<ul>
-<li>monitor api for new breaches</li>
-<li>scan for and store new breaches involving individual users</li>
-<li>make breaches visible from user&rsquo;s admin backend page for agents making account take-over (ATO) assessments</li>
-</ul>
-</li>
-<li>created automated system for managing receiving, storing, uploading, and tracking customer documents (passport/license, ssn card, proof of address, proof of funds)
-<ul>
-<li>receive and store documents in s3</li>
-<li>track individual user document upload requirements and status for swan&rsquo;s partner bitcoin custodians</li>
-<li>automatically upload documents to custodians</li>
-<li>allow swan agents to manually trigger uploads to custodians via admin backend</li>
-<li>monitor and alert on per-custodian upload metrics</li>
-</ul>
-</li>
-<li>re-designed private customer and business onboarding
-<ul>
-<li>managed + implemented integrations between swan and external identity verifications vendors</li>
-<li>securely store clients&rsquo; personal information and id documents</li>
-<li>transmit documents and customer information to open accounts at bitcoin custodians</li>
-</ul>
-</li>
-<li>created withdrawals queue for managing btc withdrawals
-<ul>
-<li>asynchronously validate user, bitcoin wallet, and withdrawal information</li>
-<li>a failed validation triggers a manual review by a human risk agent; they approve or block the withdrawal</li>
-<li>all steps create an auditable event stream for each individual withdrawal</li>
-</ul>
-</li>
-<li>converted synchronous handling of incoming 3rd party webhooks (bitcoin custodians, risk services vendors) to operating on auditable database-persisted representations of the webhooks
-<ul>
-<li>webhooks are parsed and relevant information is stored, along with raw webhook json</li>
-<li>asynchronous jobs handle and store processing results</li>
-<li>error handling differentiates between retryable and non-retryable processing failures</li>
-</ul>
-</li>
-<li>lead bi-weekly conference talk + programming video club. example topics include:
-<ul>
-<li>programming principles (eg. OO patterns, SOLID, etc)</li>
-<li>technical fundamentals (eg. kademlia, CRUSH, consistent hashing)</li>
-<li>anything with john carmack or john romero</li>
-</ul>
-</li>
-</ul>
-<h3 id="elastic"><strong>ELASTIC</strong></h3>
-<p><strong>senior software engineer</strong> <em>(2021 - 2022)</em></p>
-<ul>
-<li>created kubernetes mutating webhook + helmchart for auto-instrumentation of customer deployments</li>
-<li>developed core observability products: apm-server, apm-agent-go, elastic-agent, and libbeat</li>
-</ul>
-<h3 id="soundcloud"><strong>SOUNDCLOUD</strong></h3>
-<p><strong>anti-abuse team lead</strong> <em>(2019 - 2020)</em></p>
-<ul>
-<li>created async services and batch jobs that consume data from bigquery and kafka, calculated thresholds across moving time windows, and identified and blocked bots</li>
-<li>added &ldquo;shadow mode&rdquo; to all anti-abuse services to compare results from new rules sets to old that would not block users</li>
-<li>advocated for introducing anti-abuse protections to increase overall user experience and user quality at the cost of increased signup friction</li>
-</ul>
-<h3 id="soundcloud-1"><strong>SOUNDCLOUD</strong></h3>
-<p><strong>senior production engineer</strong> <em>(2018-2019)</em></p>
-<p><strong>production engineer</strong> <em>(2014-2017)</em></p>
-<ul>
-<li>created first bare kubernetes soundcloud cluster in aws</li>
-<li>introduced horizontal kubernetes pod and node autoscaling for on-prem and aws kubernetes clusters</li>
-<li>created machine image provisioning service using hashicorp packer
-<ul>
-<li>single &ldquo;golden image&rdquo; was created and used by both aws and bare-metal machines</li>
-</ul>
-</li>
-<li>assisted teams in prometheus-based service instrumentation, alerting, and grafana dashboarding</li>
-<li>developed golang services to limit logged-in users to one active audio stream</li>
-</ul>
-<h3 id="digitalocean"><strong>DIGITALOCEAN</strong></h3>
-<p><strong>senior software engineer</strong> <em>(2017-2018)</em></p>
-<ul>
-<li>worked on virtual machine monitoring and alerting product for end-users</li>
-</ul>
-<h3 id="neo-innovation"><strong>NEO INNOVATION</strong></h3>
-<p><strong>software engineer</strong> <em>(2013-2014)</em></p>
-<ul>
-<li>consultant working on projects in ruby, golang, and javascript</li>
-</ul>
-<h3 id="sportngin"><strong>SPORTNGIN</strong></h3>
-<p><strong>software engineer</strong> <em>(2012-2013)</em></p>
-<ul>
-<li>worked on monolithic rails app</li>
-</ul>
-<h3 id="quincy-apparel"><strong>QUINCY APPAREL</strong></h3>
-<p><strong>software engineer</strong> <em>(2012)</em></p>
-<ul>
-<li>created ruby/sinatra web app to extend functionality of shopify e-commerce site</li>
-</ul>
-<p><strong>open source</strong></p>
-<h3 id="alertmanager-"><strong>ALERTMANAGER – <a href="http://github.com/prometheus/alertmanager">github.com/prometheus/alertmanager</a></strong></h3>
-<p><strong>maintainer</strong> <em>(2017-2020)</em></p>
-<p><em>conference talk:<a href="https://youtu.be/PUdjca23Qa4">PromCon 2018: Life of an Alert</a></em></p>
-<p><strong>education</strong></p>
-<h3 id="st-olaf-college"><strong>ST. OLAF COLLEGE</strong></h3>
-<p>bachelors of arts, chemistry; bachelors of arts, classics <em>(2006-2010)</em></p>
-<p><strong>personal</strong></p>
-<ul>
-<li>american citizen (birth)</li>
-<li>german citizen (naturalized)</li>
-</ul>
+<p><strong>Elastic — Senior Software Engineer</strong> <em>2021 – 2022</em></p>
+<p>Built Kubernetes mutating webhooks for the APM operator; worked on core observability products (APM server and agents).</p>
+<p><strong>SoundCloud — Anti-Abuse Team Lead</strong> <em>2019 – 2020</em></p>
+<p>Built async services that identify and block bots; introduced shadow-mode testing so detection rules could be validated against live traffic before enforcement.</p>
+<p><strong>SoundCloud — Senior Production Engineer</strong> <em>2018 – 2019</em></p>
+<p>Led infrastructure modernization. Established SoundCloud&rsquo;s first production Kubernetes clusters and introduced autoscaling.</p>
+<p><strong>DigitalOcean — Senior Software Engineer</strong> <em>2017 – 2018</em></p>
+<p>Contributed to VM monitoring and alerting products.</p>
+<p><strong>SoundCloud — Production Engineer</strong> <em>2014 – 2017</em></p>
+<p>Production operations and infrastructure engineering across the platform.</p>
+<p>Earlier: Neo Innovation (consultant), SportNgin, Quincy Apparel.</p>
+<hr>
+<p><strong>Open source:</strong> Alertmanager maintainer (Prometheus ecosystem) 2017–2020 · PromCon 2018 speaker
+<strong>Education:</strong> St. Olaf College — B.A., Chemistry and Classics (2010)
+<strong>Personal:</strong> American citizen · German citizen</p>
 
 			</div>
 		</article>
@@ -202,7 +100,7 @@
 
 
 	<footer>
-	<p>&copy; 2025 <a href="https://stuartnelson.xyz/"><b>stuart nelson</b></a>.
+	<p>&copy; 2026 <a href="https://stuartnelson.xyz/"><b>stuart nelson</b></a>.
 	<a href="https://github.com/stuartnelson3"><b>github</b></a>
 	<a href="mailto:this.address.is@garbage.com"><b>hi [@] stuartnelson [.] xyz</b></a>
 	</p>
