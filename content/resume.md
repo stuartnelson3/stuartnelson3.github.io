@@ -4,127 +4,50 @@ layout: "simple-static"
 date: 2025-06-19T12:36:28+02:00
 ---
 
-**profile**
+Senior software engineer. Build reliable, well-monitored, auditable systems that move real money. Work RFC-first on multi-quarter initiatives; ship force-multiplier work (shared packages, lint rules, internal skills, CI guards, dashboards) that compounds the team.
 
-My goal is to create reliable, well monitored, auditable processes that simply, efficiently, and flexibly provide value to the business and its customers. If it fails, fail visibly and explicitly for the engineers, and gracefully with minimal impact to the customers.
+**Skills:** TypeScript, Go, Ruby, Rust · PostgreSQL (Sequelize, tuning, autovacuum, indexes), Redis, Kafka · BullMQ, event-sourced workflows · Datadog (APM, dashboards, monitors-as-code), Prometheus, Alertmanager · Kubernetes, Terraform, Chef · Linux (Debian)
 
-**tools**
+---
 
-- languages (descending by experience): golang, ruby, typescript, rust
-- os: linux (debian+friends)
-- orchestration/provisioning: kubernetes, chef
-- observability: prometheus, alertmanager
-- storage (as a user): kafka, postgres
+**Swan Bitcoin — Senior Software Engineer** *Jul 2022 – Present*
 
-**experience**
+Primary owner of money-movement correctness at a Bitcoin brokerage: ACH deposits, custodial BTC purchases, KYC/AML, withdrawals, fraud, security. ~1,600 merged changes across 3.5 years.
 
-### **SWAN BITCOIN**
+- Authored the parent RFC and built a cross-domain **invariant-checking framework** spanning every money-movement domain (reversals, balances, withdrawals, trades, bills, limit orders, deposits) — surfaced and drove fixes for latent financial-correctness bugs in production. Automated triage attaches a domain hypothesis, recent-commit correlation, and relevant log signal to every firing alert.
+- Drove a **database performance push** that cut p95 latency on the two highest-traffic account endpoints by ~45% and `GET /me/balance` p95 by ~77% (5.5s→1.3s), moving core-api Apdex from 0.88 to ~0.97 over ~3 weeks. Approach: covering indexes + VACUUM, per-table autovacuum tuning, pool sizing, session-level timeouts, controller parallelization, stale-while-revalidate price cache.
+- Designed and built the **ACH reversal remediation system** end-to-end — deficit calc, repossession sells, surplus detection, async custodian reconciliation — iterated across three major phases over 2.5 years.
+- Built the **event-sourced withdrawal processing system** end-to-end in a 4-month sprint: validation, Sift scoring, manual review queue, batched disbursement, selfie re-verification, SIM-swap detection.
+- Owned **Sift fraud integration** end-to-end; primary maintainer of the **Persona KYC** webhook system; built the **Prove phone-verification** integration.
+- **Custodian decoupling:** built the `CustodianClient` TS interface and shared test mock; added an ESLint import-boundary rule; deleted ~34,000 lines of dead PrimeTrust/Fortress code. Migrated 50+ JS modules to TypeScript and established the team's conversion patterns.
+- **Agentic engineering workflow:** direct research agents that surface prior art into RFC drafts; run agent-driven DB-performance validation against staging and prod traffic, with agents querying Datadog to compute latency deltas finer-grained than the dashboard. Authored the Agentic Bug Pipeline and Agentic Knowledge Lifecycle RFCs.
+- Force-multiplier work: 6+ custom ESLint rules; `@swan-bitcoin/utils` and `@swan-bitcoin/constants` packages; CI guard for destructive migrations; Bug Brigade scoring rubric.
+- **Vigil (second Swan product):** security ownership — multi-tenant `householdId` WHERE-clause assertions, DKIM/SPF on inbound-email webhooks, session revocation on LOCKDOWN, serialized audit-log appends, removal of a portal grant-bypass path.
 
-**senior risk/platform engineer** _(2022 \- current)_
+**Elastic — Senior Software Engineer** *2021 – 2022*
 
-- re-designed risk classification system for pull payments
-    - signals sent to external vendors are aggregated and returned to platform as a risk classification
-    - classification influences all aspects of the platform related to pull payments: daily/monthly limits, funds hold periods, progressive fund unlock schedules
-- developed system to calculate user funds allowed to leave swan platform
-    - single unified concept "withdrawal energy"
-    - control amount of money available to leave platform to protect swan from loss of funds via pull payment
-    - money available based on re-designed risk classification system
-    - translate funds to both usd and btc currencies
-    - allow users to convert freely between btc \+ usd on-platform
-- integrated [have i been pwned](https://haveibeenpwned.com) service to monitor ongoing breaches
-    - monitor api for new breaches
-    - scan for and store new breaches involving individual users
-    - make breaches visible from user's admin backend page for agents making account take-over (ATO) assessments
-- created automated system for managing receiving, storing, uploading, and tracking customer documents (passport/license, ssn card, proof of address, proof of funds)
-    - receive and store documents in s3
-    - track individual user document upload requirements and status for swan's partner bitcoin custodians
-    - automatically upload documents to custodians
-    - allow swan agents to manually trigger uploads to custodians via admin backend
-    - monitor and alert on per-custodian upload metrics
-- re-designed private customer and business onboarding
-    - managed \+ implemented integrations between swan and external identity verifications vendors
-    - securely store clients' personal information and id documents
-    - transmit documents and customer information to open accounts at bitcoin custodians
-- created withdrawals queue for managing btc withdrawals
-    - asynchronously validate user, bitcoin wallet, and withdrawal information
-    - a failed validation triggers a manual review by a human risk agent; they approve or block the withdrawal
-    - all steps create an auditable event stream for each individual withdrawal
-- converted synchronous handling of incoming 3rd party webhooks (bitcoin custodians, risk services vendors) to operating on auditable database-persisted representations of the webhooks
-    - webhooks are parsed and relevant information is stored, along with raw webhook json
-    - asynchronous jobs handle and store processing results
-    - error handling differentiates between retryable and non-retryable processing failures
-- lead bi-weekly conference talk \+ programming video club. example topics include:
-    - programming principles (eg. OO patterns, SOLID, etc)
-    - technical fundamentals (eg. kademlia, CRUSH, consistent hashing)
-    - anything with john carmack or john romero
+Built Kubernetes mutating webhooks for the APM operator; worked on core observability products (APM server and agents).
 
-### **ELASTIC**
+**SoundCloud — Anti-Abuse Team Lead** *2019 – 2020*
 
-**senior software engineer** _(2021 \- 2022\)_
+Built async services that identify and block bots; introduced shadow-mode testing so detection rules could be validated against live traffic before enforcement.
 
-- created kubernetes mutating webhook \+ helmchart for auto-instrumentation of customer deployments
-- developed core observability products: apm-server, apm-agent-go, elastic-agent, and libbeat
+**SoundCloud — Senior Production Engineer** *2018 – 2019*
 
-### **SOUNDCLOUD**
+Led infrastructure modernization. Established SoundCloud's first production Kubernetes clusters and introduced autoscaling.
 
-**anti-abuse team lead** _(2019 \- 2020\)_
+**DigitalOcean — Senior Software Engineer** *2017 – 2018*
 
-- created async services and batch jobs that consume data from bigquery and kafka, calculated thresholds across moving time windows, and identified and blocked bots
-- added "shadow mode" to all anti-abuse services to compare results from new rules sets to old that would not block users
-- advocated for introducing anti-abuse protections to increase overall user experience and user quality at the cost of increased signup friction
+Contributed to VM monitoring and alerting products.
 
-### **SOUNDCLOUD**
+**SoundCloud — Production Engineer** *2014 – 2017*
 
-**senior production engineer** _(2018-2019)_
+Production operations and infrastructure engineering across the platform.
 
-**production engineer** _(2014-2017)_
+Earlier: Neo Innovation (consultant), SportNgin, Quincy Apparel.
 
-- created first bare kubernetes soundcloud cluster in aws
-- introduced horizontal kubernetes pod and node autoscaling for on-prem and aws kubernetes clusters
-- created machine image provisioning service using hashicorp packer
-    - single "golden image" was created and used by both aws and bare-metal machines
-- assisted teams in prometheus-based service instrumentation, alerting, and grafana dashboarding
-- developed golang services to limit logged-in users to one active audio stream
+---
 
-### **DIGITALOCEAN**
-
-**senior software engineer** _(2017-2018)_
-
-- worked on virtual machine monitoring and alerting product for end-users
-
-### **NEO INNOVATION**
-
-**software engineer** _(2013-2014)_
-
-- consultant working on projects in ruby, golang, and javascript
-
-### **SPORTNGIN**
-
-**software engineer** _(2012-2013)_
-
-- worked on monolithic rails app
-
-### **QUINCY APPAREL**
-
-**software engineer** _(2012)_
-
-- created ruby/sinatra web app to extend functionality of shopify e-commerce site
-
-**open source**
-
-### **ALERTMANAGER – [github.com/prometheus/alertmanager](http://github.com/prometheus/alertmanager)**
-
-**maintainer** _(2017-2020)_
-
-_conference talk:[PromCon 2018: Life of an Alert](https://youtu.be/PUdjca23Qa4)_
-
-**education**
-
-### **ST. OLAF COLLEGE**
-
-bachelors of arts, chemistry; bachelors of arts, classics _(2006-2010)_
-
-**personal**
-
-- american citizen (birth)
-- german citizen (naturalized)
+**Open source:** Alertmanager maintainer (Prometheus ecosystem) 2017–2020 · PromCon 2018 speaker
+**Education:** St. Olaf College — B.A., Chemistry and Classics (2010)
+**Personal:** American citizen · German citizen
