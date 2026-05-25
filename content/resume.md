@@ -49,5 +49,7 @@ Earlier: Neo Innovation (consultant), SportNgin, Quincy Apparel.
 ---
 
 **Open source:** Alertmanager maintainer (Prometheus ecosystem) 2017–2020 · PromCon 2018 speaker
+
 **Education:** St. Olaf College — B.A., Chemistry and Classics (2010)
+
 **Personal:** American citizen · German citizen
