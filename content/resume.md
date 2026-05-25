@@ -44,7 +44,7 @@ Contributed to VM monitoring and alerting products.
 
 Production operations and infrastructure engineering across the platform.
 
-Earlier: Neo Innovation (consultant), SportNgin, Quincy Apparel.
+Earlier: Neo Innovation, SportNgin, Quincy Apparel.
 
 ---
 
