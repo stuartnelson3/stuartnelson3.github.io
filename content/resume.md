@@ -29,25 +29,37 @@ Primary owner of money-movement correctness at a Bitcoin brokerage: ACH deposits
 - **Agentic engineering workflow:** find and integrate peer-reviewed literature into RFC drafts with agentic assistance; run agent-driven DB-performance validation against staging and prod traffic; built the Cygnet AI invariant-error-analysis strategy. Authored the Agentic Bug Pipeline and Agentic Knowledge Lifecycle RFCs. Built internal engineering skills: `extract-to-package`, `simple-made-easy`, `security-abuse-review`, `self-review`, `trace-pg-query-to-code`.
 - Force-multiplier work: 6+ custom ESLint rules; `@swan-bitcoin/utils` and `@swan-bitcoin/constants` packages; Bug Brigade scoring rubric; RFC-to-tickets workflow.
 
+---
+
 **Elastic — Senior Software Engineer** *2021 – 2022*
 
 Built Kubernetes mutating webhooks for the APM operator; worked on core observability products (APM server and agents).
+
+---
 
 **SoundCloud — Anti-Abuse Team Lead** *2019 – 2020*
 
 Built async services that identify and block bots; introduced shadow-mode testing so detection rules could be validated against live traffic before enforcement.
 
+---
+
 **SoundCloud — Senior Production Engineer** *2018 – 2019*
 
 Led infrastructure modernization. Established SoundCloud's first production Kubernetes clusters and introduced autoscaling.
+
+---
 
 **DigitalOcean — Senior Software Engineer** *2017 – 2018*
 
 Contributed to VM monitoring and alerting products.
 
+---
+
 **SoundCloud — Production Engineer** *2014 – 2017*
 
 Production operations and infrastructure engineering across the platform.
+
+---
 
 **Earlier**: Neo Innovation, SportNgin, Quincy Apparel.
 
