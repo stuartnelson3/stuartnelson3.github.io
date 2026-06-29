@@ -25,7 +25,7 @@
 				<link>https://stuartnelson.xyz/resume/</link>
 				<pubDate>Thu, 19 Jun 2025 12:36:28 +0200</pubDate>
 				<guid>https://stuartnelson.xyz/resume/</guid>
-				<description>&lt;p&gt;Senior software engineer. Build reliable, well-monitored, auditable systems that move real money. Work RFC-first on multi-quarter initiatives; ship force-multiplier work (shared packages, lint rules, internal skills, CI guards, dashboards) that compounds the team.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Skills:&lt;/strong&gt; TypeScript, Go, Ruby, Rust · PostgreSQL (Sequelize, tuning, autovacuum, indexes), Redis, Kafka · BullMQ, event-sourced workflows · Datadog (APM, dashboards, monitors-as-code), Prometheus, Alertmanager · Kubernetes, Terraform, Chef · Linux (Debian)&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;Swan Bitcoin — Senior Software Engineer&lt;/strong&gt; &lt;em&gt;Jul 2022 – Present&lt;/em&gt;&lt;/p&gt;</description>
+				<description>&lt;p&gt;Senior software engineer. Build reliable, well-monitored, auditable systems that move real money. Work RFC-first on multi-quarter initiatives; ship force-multiplier work (shared packages, lint rules, internal skills, CI guards, dashboards) that compounds the team. Treat tech debt and dead code need to be addressed, not ignored. Performance is a feature.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Skills:&lt;/strong&gt; TypeScript, Go, Ruby, Rust · PostgreSQL (Sequelize, tuning, autovacuum, indexes), Redis, Kafka · BullMQ, event-sourced workflows · Datadog (APM, dashboards, monitors-as-code), Prometheus, Alertmanager · AI-assisted engineering (agentic triage, invariant analysis, refactoring) · Kubernetes, Terraform, Chef · Linux (Debian)&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Easy first day</title>

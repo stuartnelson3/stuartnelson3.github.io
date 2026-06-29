@@ -9,7 +9,7 @@
 	
 	
 	<link rel="stylesheet" href="/css/style.css">
-	
+	<link rel="stylesheet" href="/css/custom.css?rnd=1782748257">
 	
 </head>
 <body>
@@ -42,36 +42,47 @@
 		       
 
 			<div>
-				<p>Senior software engineer. Build reliable, well-monitored, auditable systems that move real money. Work RFC-first on multi-quarter initiatives; ship force-multiplier work (shared packages, lint rules, internal skills, CI guards, dashboards) that compounds the team.</p>
-<p><strong>Skills:</strong> TypeScript, Go, Ruby, Rust · PostgreSQL (Sequelize, tuning, autovacuum, indexes), Redis, Kafka · BullMQ, event-sourced workflows · Datadog (APM, dashboards, monitors-as-code), Prometheus, Alertmanager · Kubernetes, Terraform, Chef · Linux (Debian)</p>
+				<p>Senior software engineer. Build reliable, well-monitored, auditable systems that move real money. Work RFC-first on multi-quarter initiatives; ship force-multiplier work (shared packages, lint rules, internal skills, CI guards, dashboards) that compounds the team. Treat tech debt and dead code need to be addressed, not ignored. Performance is a feature.</p>
+<p><strong>Skills:</strong> TypeScript, Go, Ruby, Rust · PostgreSQL (Sequelize, tuning, autovacuum, indexes), Redis, Kafka · BullMQ, event-sourced workflows · Datadog (APM, dashboards, monitors-as-code), Prometheus, Alertmanager · AI-assisted engineering (agentic triage, invariant analysis, refactoring) · Kubernetes, Terraform, Chef · Linux (Debian)</p>
 <hr>
 <p><strong>Swan Bitcoin — Senior Software Engineer</strong> <em>Jul 2022 – Present</em></p>
 <p>Primary owner of money-movement correctness at a Bitcoin brokerage: ACH deposits, custodial BTC purchases, KYC/AML, withdrawals, fraud, security.</p>
 <ul>
-<li>Authored the parent RFC and built a cross-domain <strong>invariant-checking framework</strong> spanning every money-movement domain (reversals, balances, withdrawals, trades, bills, limit orders, deposits) — surfaced and drove fixes for latent financial-correctness bugs in production. Automated triage attaches a domain hypothesis, recent-commit correlation, and relevant log signal to every firing alert.</li>
-<li>Drove a <strong>database performance push</strong> that cut p95 latency on the two highest-traffic account endpoints by ~45% and <code>GET /me/balance</code> p95 by ~77% (5.5s→1.3s), moving core-api Apdex from 0.88 to ~0.97 over ~3 weeks. Approach: covering indexes + VACUUM, per-table autovacuum tuning, pool sizing, session-level timeouts, controller parallelization, stale-while-revalidate price cache.</li>
-<li>Designed and built the <strong>ACH reversal remediation system</strong> end-to-end — deficit calc, repossession sells, surplus detection, async custodian reconciliation — iterated across three major phases over 2.5 years.</li>
-<li>Built the <strong>event-sourced withdrawal processing system</strong> end-to-end in a 4-month sprint: validation, Sift scoring, manual review queue, batched disbursement, selfie re-verification, SIM-swap detection.</li>
-<li>Owned <strong>Sift fraud integration</strong> end-to-end; primary maintainer of the <strong>Persona KYC</strong> webhook system; built the <strong>Prove phone-verification</strong> integration.</li>
-<li><strong>Custodian decoupling:</strong> built the <code>CustodianClient</code> TS interface and shared test mock; added an ESLint import-boundary rule; deleted ~34,000 lines of dead PrimeTrust/Fortress code. Migrated 50+ JS modules to TypeScript and established the team&rsquo;s conversion patterns.</li>
-<li><strong>Agentic engineering workflow:</strong> direct research agents that surface prior art into RFC drafts; run agent-driven DB-performance validation against staging and prod traffic, with agents querying Datadog to compute latency deltas finer-grained than the dashboard. Authored the Agentic Bug Pipeline and Agentic Knowledge Lifecycle RFCs.</li>
-<li>Force-multiplier work: 6+ custom ESLint rules; <code>@swan-bitcoin/utils</code> and <code>@swan-bitcoin/constants</code> packages; CI guard for destructive migrations; Bug Brigade scoring rubric.</li>
-<li><strong>Vigil (second Swan product):</strong> security ownership — multi-tenant <code>householdId</code> WHERE-clause assertions, DKIM/SPF on inbound-email webhooks, session revocation on LOCKDOWN, serialized audit-log appends, removal of a portal grant-bypass path.</li>
+<li>Authored the parent RFC and built a cross-domain <strong>invariant-checking framework</strong> spanning every money-movement domain (reversals, balances, withdrawals, trades, bills, limit orders, deposits): surfaced and drove fixes for latent financial-correctness bugs in production. Automated triage attaches a domain hypothesis, recent-commit correlation, and relevant log signal to every firing alert.</li>
+<li>Designed and built the <strong>ACH reversal remediation system</strong> end-to-end: deficit calc, repossession sells, surplus detection, async custodian reconciliation. Iterated across three major phases over 2.5 years.</li>
+<li>Built the <strong>event-sourced withdrawal processing system</strong> end-to-end in a 4-month sprint: validation, Sift scoring, manual review queue, batched disbursement, selfie re-verification, SIM-swap detection. Subsequently redesigned the decision path as <em>decisions-as-data</em>: decomposed into signals/validations/policy, a pure policy engine over composable adder rules and an override lattice, a fast-pass predicate framework testing human and AI suggestions, and a shadow-comparison harness for zero-risk cutover.</li>
+<li>Established a repeatable <strong>API query-performance program:</strong> per-endpoint p99 attribution via custom Datadog spans, covering indexes, per-table autovacuum tuning, pool sizing, session-level timeouts, a FULL OUTER JOIN pre-scope that cut the admin billing query ~25–30×, SWR + tiered-staleness BTC price cache, and removal of full-keyspace Redis <code>SCAN</code>/<code>KEYS</code> from auth and settings hot paths. Cut p95 on the two highest-traffic account endpoints by ~45% and <code>GET /me/balance</code> p95 by ~77% (5.5s→1.3s), moving core-api Apdex from 0.88 to ~0.97.</li>
+<li>Built <strong>GDPR/PII redaction</strong> correctness and remediation: atomic single-<code>UPDATE</code> redaction, drift detection with throttled chunked SIGTERM-graceful backfill, legacy-tombstone handling, and hard-deletion of mobile device keys at account close.</li>
+<li><strong>Fraud &amp; risk:</strong> owned the Sift integration end-to-end: risk-based ACH unlock timing, dynamic instant-buy limits, blocked-entity management, real-time withdrawal decisions via webhooks. Refactored user→Sift coupling to an event bus. Co-authored the design to migrate risk decisions and review queues from Sift to Sardine.</li>
+<li><strong>KYC &amp; identity:</strong> primary maintainer of the Persona webhook system; led decomposition of a monolithic 1000+ line webhook handler into single-responsibility TypeScript modules. Built the full Prove phone-verification integration.</li>
+<li><strong>Custodian decoupling:</strong> built the <code>CustodianClient</code> TS interface and shared test mock; added an ESLint import-boundary rule; deleted ~34,000 lines of dead code from previous custodians. Migrated 50+ JS modules to TypeScript and established the team&rsquo;s conversion patterns.</li>
+<li>Ongoing <strong>god-file decomposition:</strong> split 12+ massive files (1000–1700 lines each) into focused single-responsibility modules using a consistent validate/prepare/execute pattern.</li>
+<li><strong>&ldquo;Stop the line&rdquo; reliability:</strong> machine-readable <code>errorCode</code> adoption across the API, deposit/withdrawal SLOs + Datadog metrics, CI guard against destructive migrations, feature-flag audit logging.</li>
+<li><strong>Security gates:</strong> JA4 TLS fingerprint tarpitting driven by Datadog alerts, abuse-score onboarding gates, SIM-swap checks on high-value withdrawals, login observability hardening.</li>
+<li><strong>Vigil (second Swan product):</strong> security ownership: multi-tenant <code>householdId</code> WHERE-clause assertions, DKIM/SPF on inbound-email webhooks, session revocation on LOCKDOWN, serialized audit-log appends, removal of a portal grant-bypass path.</li>
+<li><strong>Agentic engineering workflow:</strong> find and integrate peer-reviewed literature into RFC drafts with agentic assistance; run agent-driven DB-performance validation against staging and prod traffic; built the Cygnet AI invariant-error-analysis strategy. Authored the Agentic Bug Pipeline and Agentic Knowledge Lifecycle RFCs. Built internal engineering skills: <code>extract-to-package</code>, <code>simple-made-easy</code>, <code>security-abuse-review</code>, <code>self-review</code>, <code>trace-pg-query-to-code</code>.</li>
+<li>Force-multiplier work: 6+ custom ESLint rules; <code>@swan-bitcoin/utils</code> and <code>@swan-bitcoin/constants</code> packages; Bug Brigade scoring rubric; RFC-to-tickets workflow.</li>
 </ul>
+<hr>
 <p><strong>Elastic — Senior Software Engineer</strong> <em>2021 – 2022</em></p>
 <p>Built Kubernetes mutating webhooks for the APM operator; worked on core observability products (APM server and agents).</p>
+<hr>
 <p><strong>SoundCloud — Anti-Abuse Team Lead</strong> <em>2019 – 2020</em></p>
 <p>Built async services that identify and block bots; introduced shadow-mode testing so detection rules could be validated against live traffic before enforcement.</p>
+<hr>
 <p><strong>SoundCloud — Senior Production Engineer</strong> <em>2018 – 2019</em></p>
 <p>Led infrastructure modernization. Established SoundCloud&rsquo;s first production Kubernetes clusters and introduced autoscaling.</p>
+<hr>
 <p><strong>DigitalOcean — Senior Software Engineer</strong> <em>2017 – 2018</em></p>
 <p>Contributed to VM monitoring and alerting products.</p>
+<hr>
 <p><strong>SoundCloud — Production Engineer</strong> <em>2014 – 2017</em></p>
 <p>Production operations and infrastructure engineering across the platform.</p>
+<hr>
 <p><strong>Earlier</strong>: Neo Innovation, SportNgin, Quincy Apparel.</p>
 <hr>
 <p><strong>Open source:</strong> Alertmanager maintainer (Prometheus ecosystem) 2017–2020 · PromCon 2018 speaker</p>
-<p><strong>Education:</strong> St. Olaf College — B.A., Chemistry and Classics (2010)</p>
+<p><strong>Education:</strong> St. Olaf College: B.A., Chemistry and Classics (2010)</p>
 <p><strong>Personal:</strong> American citizen · German citizen</p>
 
 			</div>
