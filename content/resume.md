@@ -12,7 +12,7 @@ Senior software engineer. Build reliable, well-monitored, auditable systems that
 
 **Swan Bitcoin — Senior Software Engineer** *Jul 2022 – Present*
 
-Primary owner of money-movement correctness at a Bitcoin brokerage: ACH deposits, custodial BTC purchases, KYC/AML, withdrawals, fraud, security. ~1,600 merged changes across 3.5 years.
+Primary owner of money-movement correctness at a Bitcoin brokerage: ACH deposits, custodial BTC purchases, KYC/AML, withdrawals, fraud, security.
 
 - Authored the parent RFC and built a cross-domain **invariant-checking framework** spanning every money-movement domain (reversals, balances, withdrawals, trades, bills, limit orders, deposits) — surfaced and drove fixes for latent financial-correctness bugs in production. Automated triage attaches a domain hypothesis, recent-commit correlation, and relevant log signal to every firing alert.
 - Drove a **database performance push** that cut p95 latency on the two highest-traffic account endpoints by ~45% and `GET /me/balance` p95 by ~77% (5.5s→1.3s), moving core-api Apdex from 0.88 to ~0.97 over ~3 weeks. Approach: covering indexes + VACUUM, per-table autovacuum tuning, pool sizing, session-level timeouts, controller parallelization, stale-while-revalidate price cache.
