@@ -44,7 +44,7 @@
 <p><strong>Skills:</strong> TypeScript, Go, Ruby, Rust · PostgreSQL (Sequelize, tuning, autovacuum, indexes), Redis, Kafka · BullMQ, event-sourced workflows · Datadog (APM, dashboards, monitors-as-code), Prometheus, Alertmanager · Kubernetes, Terraform, Chef · Linux (Debian)</p>
 <hr>
 <p><strong>Swan Bitcoin — Senior Software Engineer</strong> <em>Jul 2022 – Present</em></p>
-<p>Primary owner of money-movement correctness at a Bitcoin brokerage: ACH deposits, custodial BTC purchases, KYC/AML, withdrawals, fraud, security. ~1,600 merged changes across 3.5 years.</p>
+<p>Primary owner of money-movement correctness at a Bitcoin brokerage: ACH deposits, custodial BTC purchases, KYC/AML, withdrawals, fraud, security.</p>
 <ul>
 <li>Authored the parent RFC and built a cross-domain <strong>invariant-checking framework</strong> spanning every money-movement domain (reversals, balances, withdrawals, trades, bills, limit orders, deposits) — surfaced and drove fixes for latent financial-correctness bugs in production. Automated triage attaches a domain hypothesis, recent-commit correlation, and relevant log signal to every firing alert.</li>
 <li>Drove a <strong>database performance push</strong> that cut p95 latency on the two highest-traffic account endpoints by ~45% and <code>GET /me/balance</code> p95 by ~77% (5.5s→1.3s), moving core-api Apdex from 0.88 to ~0.97 over ~3 weeks. Approach: covering indexes + VACUUM, per-table autovacuum tuning, pool sizing, session-level timeouts, controller parallelization, stale-while-revalidate price cache.</li>

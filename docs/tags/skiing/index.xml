@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Skiing on stuart nelson</title>
-    <link>https://stuartnelson.xyz/tags/skiing/</link>
-    <description>Recent content in Skiing on stuart nelson</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 23 Feb 2024 11:54:23 +0100</lastBuildDate>
-    <atom:link href="https://stuartnelson.xyz/tags/skiing/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Easy first day</title>
-      <link>https://stuartnelson.xyz/posts/easy-first-day/</link>
-      <pubDate>Fri, 23 Feb 2024 11:54:23 +0100</pubDate>
-      <guid>https://stuartnelson.xyz/posts/easy-first-day/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;: Mestia&lt;/p&gt;&#xA;&lt;p&gt;The first day started with a short avalanche rescue refresher: using beacons,&#xA;digging, that sort of thing. After we finished that, we had a short tour (~900&#xA;vertical meters), rode ~350m down, then climbed back up, and skied out.&lt;/p&gt;&#xA;&lt;div style=&#34;text-align:center;&#34;&gt;&#xA;&lt;img style=&#34;max-width: 90%; width: auto; height: auto;&#34; loading=&#34;lazy&#34; src=&#34;https://stuartnelson.xyz/images/first-day-blue-sky.jpg&#34; alt=&#34;blue sky with a snowy foreground&#34;&gt;&#xA;&lt;figcaption&gt;&lt;small&gt;As far as &#34;easy first day tours&#34; go, this one was nice.&lt;/small&gt;&lt;/figcaption&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;The ski out took us back through the village we had initially walked through.&#xA;It was fun, but also full of cow shit. And, surprise, also the cows. The cows&#xA;decided to congregate around our vehicles, which made it difficult to take our&#xA;skis off and walk the final bit back. Second most cow-shit I&amp;rsquo;ve ever had to&#xA;wash off my ski boots after a tour.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Long-travel Day</title>
-      <link>https://stuartnelson.xyz/posts/long-travel-day/</link>
-      <pubDate>Wed, 21 Feb 2024 11:54:23 +0100</pubDate>
-      <guid>https://stuartnelson.xyz/posts/long-travel-day/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;: Innsbruck -&amp;gt; Munich -&amp;gt; Tbilisi -&amp;gt; Mestia&lt;/p&gt;&#xA;&lt;p&gt;Train from Innsbruck to Munich, flight from Munich to Tbilisi, taxi to the hostel.&lt;/p&gt;&#xA;&lt;p&gt;It was chaos leaving the airport. Everyone tries to get you into their taxi. I&#xA;was told to book with bolt, and uber-esque app.&lt;/p&gt;&#xA;&lt;p&gt;The drivers ask you where you are going, and when you say you are going to book&#xA;with bolt, they say &amp;ldquo;yes, yes I have bolt!&amp;rdquo;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Non-travel Day</title>
-      <link>https://stuartnelson.xyz/posts/non-travel-day/</link>
-      <pubDate>Tue, 20 Feb 2024 11:54:23 +0100</pubDate>
-      <guid>https://stuartnelson.xyz/posts/non-travel-day/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;: Innsbruck&lt;/p&gt;&#xA;&lt;p&gt;Feb 19: The plan was to fly to Georgia direct from Munich on Feb 20 at 21:45,&#xA;land in Tbilisi, Georgia, at 04.45, shuttle to the hostel, nap, sauna and&#xA;massage, city tour, and then hang out in the city.&lt;/p&gt;&#xA;&lt;p&gt;German airport groundcrews were on strike only on Feb 20, for the entire day. I&#xA;saw the email and text from Lufthansa Feb 19 in the morning (they sent it the&#xA;previous evening, Sunday). After a couple hours of trying to rebook via the&#xA;Lufthansa site, I got a flight for the day after.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Skiing on stuart nelson</title>
+		<link>https://stuartnelson.xyz/tags/skiing/</link>
+		<description>Recent content in Skiing on stuart nelson</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 23 Feb 2024 11:54:23 +0100</lastBuildDate>
+		
+			<atom:link href="https://stuartnelson.xyz/tags/skiing/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Easy first day</title>
+				<link>https://stuartnelson.xyz/posts/easy-first-day/</link>
+				<pubDate>Fri, 23 Feb 2024 11:54:23 +0100</pubDate>
+				<guid>https://stuartnelson.xyz/posts/easy-first-day/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;: Mestia&lt;/p&gt;&#xA;&lt;p&gt;The first day started with a short avalanche rescue refresher: using beacons,&#xA;digging, that sort of thing. After we finished that, we had a short tour (~900&#xA;vertical meters), rode ~350m down, then climbed back up, and skied out.&lt;/p&gt;&#xA;&lt;div style=&#34;text-align:center;&#34;&gt;&#xA;&lt;img style=&#34;max-width: 90%; width: auto; height: auto;&#34; loading=&#34;lazy&#34; src=&#34;https://stuartnelson.xyz/images/first-day-blue-sky.jpg&#34; alt=&#34;blue sky with a snowy foreground&#34;&gt;&#xA;&lt;figcaption&gt;&lt;small&gt;As far as &#34;easy first day tours&#34; go, this one was nice.&lt;/small&gt;&lt;/figcaption&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;The ski out took us back through the village we had initially walked through.&#xA;It was fun, but also full of cow shit. And, surprise, also the cows. The cows&#xA;decided to congregate around our vehicles, which made it difficult to take our&#xA;skis off and walk the final bit back. Second most cow-shit I&amp;rsquo;ve ever had to&#xA;wash off my ski boots after a tour.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Long-travel Day</title>
+				<link>https://stuartnelson.xyz/posts/long-travel-day/</link>
+				<pubDate>Wed, 21 Feb 2024 11:54:23 +0100</pubDate>
+				<guid>https://stuartnelson.xyz/posts/long-travel-day/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;: Innsbruck -&amp;gt; Munich -&amp;gt; Tbilisi -&amp;gt; Mestia&lt;/p&gt;&#xA;&lt;p&gt;Train from Innsbruck to Munich, flight from Munich to Tbilisi, taxi to the hostel.&lt;/p&gt;&#xA;&lt;p&gt;It was chaos leaving the airport. Everyone tries to get you into their taxi. I&#xA;was told to book with bolt, and uber-esque app.&lt;/p&gt;&#xA;&lt;p&gt;The drivers ask you where you are going, and when you say you are going to book&#xA;with bolt, they say &amp;ldquo;yes, yes I have bolt!&amp;rdquo;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Non-travel Day</title>
+				<link>https://stuartnelson.xyz/posts/non-travel-day/</link>
+				<pubDate>Tue, 20 Feb 2024 11:54:23 +0100</pubDate>
+				<guid>https://stuartnelson.xyz/posts/non-travel-day/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;: Innsbruck&lt;/p&gt;&#xA;&lt;p&gt;Feb 19: The plan was to fly to Georgia direct from Munich on Feb 20 at 21:45,&#xA;land in Tbilisi, Georgia, at 04.45, shuttle to the hostel, nap, sauna and&#xA;massage, city tour, and then hang out in the city.&lt;/p&gt;&#xA;&lt;p&gt;German airport groundcrews were on strike only on Feb 20, for the entire day. I&#xA;saw the email and text from Lufthansa Feb 19 in the morning (they sent it the&#xA;previous evening, Sunday). After a couple hours of trying to rebook via the&#xA;Lufthansa site, I got a flight for the day after.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>
