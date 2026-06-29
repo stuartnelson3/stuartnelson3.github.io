@@ -32,6 +32,11 @@ unsafe= true
         name = "resume"
         url = "/resume/"
         weight = 1
+  [[menu.main]]
+        identifier = "utxo-trace"
+        name = "utxo trace"
+        url = "/utxo-trace/"
+        weight = 2
 
 # Footer
   [[menu.footer]]
