@@ -158,25 +158,28 @@ main {
 }
 
 .chord-symbol {
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 12vw, 4rem);
   font-weight: 700;
   letter-spacing: 0.02em;
+  text-align: center;
 }
 
 .tone-indicators {
   display: flex;
-  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .tone-indicator {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 3.75rem;
+  height: 3.75rem;
   border-radius: 50%;
   border: 2px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: var(--muted);
   transition: background 0.15s, border-color 0.15s, color 0.15s;
 }

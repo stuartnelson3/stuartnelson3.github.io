@@ -1,9 +1,11 @@
 /** @typedef {'maj7'|'dom7'|'min7'|'m7b5'|'sus4'} QualityKey */
 /** @typedef {'concert'|'alto'|'tenor'} Instrument */
+/** @typedef {'b9'|'9'|'#9'} NinthVariant */
 /**
  * @typedef {Object} Chord
  * @property {number} root - pitch class, 0-11
  * @property {QualityKey} quality
+ * @property {NinthVariant} ninth - which 9th got added; every chord has one
  * @property {number[]} tones - pitch classes, one per chord tone
  */
 
@@ -11,18 +13,33 @@ export const NOTE_NAMES = [
   'C', 'Db', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'Ab', 'A', 'Bb', 'B',
 ];
 
-/** @type {Record<QualityKey, {symbol: string, intervals: number[]}>} */
+// Every chord always carries a 9th as its 5th tone. `ninths` lists the
+// variants that are actually idiomatic over that quality (dom7 and sus4
+// take altered 9ths; maj7/min7/m7b5 only ever take the natural 9th), each
+// mapped to the resulting jazz chord symbol. Jazz notation isn't a regular
+// grammar here — a dominant chord with a natural 9th is called "9", not
+// "7,9" — so the symbol is looked up per variant rather than assembled.
+// `label` is the plain, ninth-free quality name shown in the settings
+// panel, where there's no specific chord (and so no specific ninth) yet.
+/** @type {Record<QualityKey, { label: string, intervals: number[], ninths: Partial<Record<NinthVariant, string>> }>} */
 export const CHORD_QUALITIES = {
-  maj7:  { symbol: 'maj7',  intervals: [0, 4, 7, 11] },
-  dom7:  { symbol: '7',     intervals: [0, 4, 7, 10] },
-  min7:  { symbol: 'm7',    intervals: [0, 3, 7, 10] },
-  m7b5:  { symbol: 'm7b5',  intervals: [0, 3, 6, 10] },
-  sus4:  { symbol: '7sus4', intervals: [0, 5, 7, 10] },
+  maj7: { label: 'maj7',  intervals: [0, 4, 7, 11], ninths: { '9': 'maj9' } },
+  dom7: { label: '7',     intervals: [0, 4, 7, 10], ninths: { b9: '7b9', '9': '9', '#9': '7#9' } },
+  min7: { label: 'm7',    intervals: [0, 3, 7, 10], ninths: { '9': 'm9' } },
+  m7b5: { label: 'm7b5',  intervals: [0, 3, 6, 10], ninths: { '9': 'm9b5' } },
+  sus4: { label: '7sus4', intervals: [0, 5, 7, 10], ninths: { '9': '9sus4', b9: '7sus4b9' } },
 };
 
-// Function labels for each interval position, in the order intervals are
-// listed above (root, 3rd-equivalent, 5th-equivalent, 7th).
-export const TONE_FUNCTIONS = ['Root', '3rd', '5th', '7th'];
+// Semitones above the root for each 9th variant. None of these collide
+// with any quality's base intervals above (checked by hand) — if they did,
+// hitSet (a Set of pitch classes) could never reach chord.tones.length,
+// since two "different" required tones would share one pitch class.
+/** @type {Record<NinthVariant, number>} */
+const NINTH_INTERVALS = { b9: 1, '9': 2, '#9': 3 };
+
+// Function labels for each tone position, in the order tones are built
+// below (root, 3rd-equivalent, 5th-equivalent, 7th, 9th-equivalent).
+export const TONE_FUNCTIONS = ['Root', '3rd', '5th', '7th', '9th'];
 
 // Concert-pitch → written-pitch offset, in semitones, for each instrument.
 // written_pc = (concert_pc + offset) mod 12
@@ -40,8 +57,10 @@ export const TRANSPOSITION_OFFSET = {
  */
 export function generateChord(rootPc, qualityKey) {
   const quality = CHORD_QUALITIES[qualityKey];
-  const tones = quality.intervals.map(i => (rootPc + i) % 12);
-  return { root: rootPc, quality: qualityKey, tones };
+  const ninthVariants = /** @type {NinthVariant[]} */ (Object.keys(quality.ninths));
+  const ninth = ninthVariants[Math.floor(Math.random() * ninthVariants.length)];
+  const tones = [...quality.intervals, NINTH_INTERVALS[ninth]].map(i => (rootPc + i) % 12);
+  return { root: rootPc, quality: qualityKey, ninth, tones };
 }
 
 /**
@@ -58,10 +77,11 @@ export function randomChord(rootPool, qualityPool) {
 /**
  * @param {number} rootPc
  * @param {QualityKey} qualityKey
+ * @param {NinthVariant} ninth
  * @param {Instrument} [instrument]
  * @returns {string}
  */
-export function chordSymbol(rootPc, qualityKey, instrument = 'concert') {
+export function chordSymbol(rootPc, qualityKey, ninth, instrument = 'concert') {
   const writtenPc = (rootPc + TRANSPOSITION_OFFSET[instrument]) % 12;
-  return `${NOTE_NAMES[writtenPc]}${CHORD_QUALITIES[qualityKey].symbol}`;
+  return `${NOTE_NAMES[writtenPc]}${CHORD_QUALITIES[qualityKey].ninths[ninth]}`;
 }

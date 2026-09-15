@@ -77,7 +77,7 @@ export function initSettingsPanel(defaults, onChange) {
     checkbox.checked = defaults.qualityPool.includes(key);
     checkbox.addEventListener('change', guardNonEmptyGroup(el.qualityPool, checkbox, onChange));
     label.appendChild(checkbox);
-    label.append(CHORD_QUALITIES[key].symbol);
+    label.append(CHORD_QUALITIES[key].label);
     el.qualityPool.appendChild(label);
   }
 
@@ -154,7 +154,7 @@ export function render(state, instrument) {
 
   if (!chord) return;
 
-  el.chordSymbol.textContent = chordSymbol(chord.root, chord.quality, instrument);
+  el.chordSymbol.textContent = chordSymbol(chord.root, chord.quality, chord.ninth, instrument);
 
   if (phase === 'preroll') {
     el.timer.textContent = 'Get ready…';
