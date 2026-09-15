@@ -9,7 +9,7 @@ import * as ui from './ui.js';
 /** @type {Settings} */
 const defaultSettings = {
   timerSeconds: 8,
-  instrument: 'concert',
+  instrument: 'C',
   autoAdvance: false,
   autoAdvanceDelaySeconds: 1.5,
   includeExtensions: true,

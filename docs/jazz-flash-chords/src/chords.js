@@ -1,5 +1,5 @@
 /** @typedef {'maj7'|'dom7'|'min7'|'m7b5'|'sus4'} QualityKey */
-/** @typedef {'concert'|'alto'|'tenor'} Instrument */
+/** @typedef {'C'|'Bb'|'Eb'} Instrument */
 /** @typedef {'b9'|'9'|'#9'} NinthVariant */
 /**
  * @typedef {Object} Chord
@@ -41,13 +41,13 @@ const NINTH_INTERVALS = { b9: 1, '9': 2, '#9': 3 };
 // below (root, 3rd-equivalent, 5th-equivalent, 7th, 9th-equivalent).
 export const TONE_FUNCTIONS = ['Root', '3rd', '5th', '7th', '9th'];
 
-// Concert-pitch → written-pitch offset, in semitones, for each instrument.
-// written_pc = (concert_pc + offset) mod 12
+// Concert-pitch → written-pitch offset, in semitones, for each transposition
+// key. written_pc = (concert_pc + offset) mod 12
 /** @type {Record<Instrument, number>} */
 export const TRANSPOSITION_OFFSET = {
-  concert: 0,
-  alto: 9,   // Eb instrument: written C sounds concert Eb
-  tenor: 2,  // Bb instrument: written C sounds concert Bb
+  C: 0,
+  Eb: 9,  // written C sounds concert Eb
+  Bb: 2,  // written C sounds concert Bb
 };
 
 /**
@@ -87,7 +87,7 @@ export function randomChord(rootPool, qualityPool, includeExtensions = true) {
  * @param {Instrument} [instrument]
  * @returns {string}
  */
-export function chordSymbol(rootPc, qualityKey, ninth, instrument = 'concert') {
+export function chordSymbol(rootPc, qualityKey, ninth, instrument = 'C') {
   const writtenPc = (rootPc + TRANSPOSITION_OFFSET[instrument]) % 12;
   const symbol = ninth === null ? CHORD_QUALITIES[qualityKey].label : CHORD_QUALITIES[qualityKey].ninths[ninth];
   return `${NOTE_NAMES[writtenPc]}${symbol}`;
