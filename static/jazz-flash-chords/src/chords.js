@@ -13,6 +13,19 @@ export const NOTE_NAMES = [
   'C', 'Db', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'Ab', 'A', 'Bb', 'B',
 ];
 
+// The enharmonic spelling for each pitch class NOTE_NAMES only spells
+// one way. Only the chord symbol shows this second name — settings
+// panel labels (the root checkboxes) stay single-name, since those are
+// just picking a pitch class, not reading a specific chord off a page.
+/** @type {Partial<Record<number, string>>} */
+const ENHARMONICS = {
+  1: 'C#',
+  3: 'D#',
+  6: 'Gb',
+  8: 'G#',
+  10: 'A#',
+};
+
 // Every chord always carries a 9th as its 5th tone. `ninths` lists the
 // variants that are actually idiomatic over that quality (dom7 and sus4
 // take altered 9ths; maj7/min7/m7b5 only ever take the natural 9th), each
@@ -110,5 +123,7 @@ export function randomChord(rootPool, qualityPool, includeExtensions = true) {
 export function chordSymbol(rootPc, qualityKey, ninth, instrument = 'C') {
   const writtenPc = (rootPc + TRANSPOSITION_OFFSET[instrument]) % 12;
   const symbol = ninth === null ? CHORD_QUALITIES[qualityKey].label : CHORD_QUALITIES[qualityKey].ninths[ninth];
-  return `${NOTE_NAMES[writtenPc]}${symbol}`;
+  const enharmonic = ENHARMONICS[writtenPc];
+  const rootName = enharmonic ? `${NOTE_NAMES[writtenPc]}/${enharmonic}` : NOTE_NAMES[writtenPc];
+  return `${rootName}${symbol}`;
 }
