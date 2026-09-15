@@ -142,14 +142,23 @@ export function onStartClick(handler) {
   el.startButton.addEventListener('click', handler);
 }
 
+// Space skips to a new chord at any point in a round, not only
+// once a result appears. Whether to act must not depend on DOM
+// state, such as el.resultBanner.hidden — an indirect, easy-to-desync
+// proxy for whether a round is active. The real answer already lives
+// in GameState, and skip() already checks it. This still checks only
+// one thing: whether to hijack space at all. It skips space when a
+// settings field has focus. That way, a checkbox toggle or a
+// number-input edit does not also skip the round.
 /** @param {() => void} handler */
-export function onNext(handler) {
+export function onAdvance(handler) {
   el.nextButton.addEventListener('click', handler);
   document.addEventListener('keydown', (e) => {
-    if (e.code === 'Space' && !el.resultBanner.hidden) {
-      e.preventDefault();
-      handler();
-    }
+    if (e.code !== 'Space') return;
+    const target = /** @type {Element | null} */ (e.target);
+    if (target instanceof HTMLInputElement || target instanceof HTMLSelectElement) return;
+    if (!el.gameScreen.hidden) e.preventDefault();
+    handler();
   });
 }
 

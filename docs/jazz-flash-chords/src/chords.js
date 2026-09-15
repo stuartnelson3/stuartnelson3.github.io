@@ -16,23 +16,27 @@ export const NOTE_NAMES = [
 // Every chord always carries a 9th as its 5th tone. `ninths` lists the
 // variants that are actually idiomatic over that quality (dom7 and sus4
 // take altered 9ths; maj7/min7/m7b5 only ever take the natural 9th), each
-// mapped to the resulting jazz chord symbol. Jazz notation isn't a regular
-// grammar here — a dominant chord with a natural 9th is called "9", not
-// "7,9" — so the symbol is looked up per variant rather than assembled.
-// `label` is the plain, ninth-free quality name shown in the settings
-// panel, where there's no specific chord (and so no specific ninth) yet.
-// `toneFunctions` names the scale degree at each of the 4 base intervals
-// above, in order — every quality has a genuine 3rd there except sus4,
-// which replaces it with a 4th, so this can't be one shared array (that
-// was the bug: a fixed ['Root','3rd','5th','7th'] mislabeled sus4's 4th
-// as a 3rd).
+// mapped to the resulting jazz chord symbol. Jazz notation is not a
+// regular grammar here — a dominant chord with a natural 9th is called
+// "9", not "7,9" — so the symbol is looked up per variant rather than
+// assembled. `label` is the plain, ninth-free quality name shown in the
+// settings panel, where there is no specific chord (and so no specific
+// ninth) yet.
+// The `toneFunctions` array names the scale degree at each of the 4 base
+// intervals, in order. It shows the accidental (b3, b5, b7) only where
+// that quality actually flats the degree. Otherwise it stays plain (3rd,
+// 5th, 7th), the same pattern the ninth already uses for b9, 9, or #9
+// instead of a generic "9th". This does not reveal more than the chord
+// symbol already does — "Gm9b5" already spells out the b5. sus4 replaces
+// the 3rd with a real 4th, a different degree, so one shared array
+// cannot cover every quality.
 /** @type {Record<QualityKey, { label: string, intervals: number[], toneFunctions: string[], ninths: Partial<Record<NinthVariant, string>> }>} */
 export const CHORD_QUALITIES = {
   maj7: { label: 'maj7',  intervals: [0, 4, 7, 11], toneFunctions: ['Root', '3rd', '5th', '7th'], ninths: { '9': 'maj9' } },
-  dom7: { label: '7',     intervals: [0, 4, 7, 10], toneFunctions: ['Root', '3rd', '5th', '7th'], ninths: { b9: '7b9', '9': '9', '#9': '7#9' } },
-  min7: { label: 'm7',    intervals: [0, 3, 7, 10], toneFunctions: ['Root', '3rd', '5th', '7th'], ninths: { '9': 'm9' } },
-  m7b5: { label: 'm7b5',  intervals: [0, 3, 6, 10], toneFunctions: ['Root', '3rd', '5th', '7th'], ninths: { '9': 'm9b5' } },
-  sus4: { label: '7sus4', intervals: [0, 5, 7, 10], toneFunctions: ['Root', '4th', '5th', '7th'], ninths: { '9': '9sus4', b9: '7sus4b9' } },
+  dom7: { label: '7',     intervals: [0, 4, 7, 10], toneFunctions: ['Root', '3rd', '5th', 'b7'],  ninths: { b9: '7b9', '9': '9', '#9': '7#9' } },
+  min7: { label: 'm7',    intervals: [0, 3, 7, 10], toneFunctions: ['Root', 'b3', '5th', 'b7'],   ninths: { '9': 'm9' } },
+  m7b5: { label: 'm7b5',  intervals: [0, 3, 6, 10], toneFunctions: ['Root', 'b3', 'b5', 'b7'],    ninths: { '9': 'm9b5' } },
+  sus4: { label: '7sus4', intervals: [0, 5, 7, 10], toneFunctions: ['Root', '4th', '5th', 'b7'],  ninths: { '9': '9sus4', b9: '7sus4b9' } },
 };
 
 // Semitones above the root for each 9th variant. None of these collide
@@ -43,12 +47,11 @@ export const CHORD_QUALITIES = {
 const NINTH_INTERVALS = { b9: 1, '9': 2, '#9': 3 };
 
 /**
- * Labels for every tone in a chord, in the order generateChord() builds
- * them: the quality's 4 base degrees, then the ninth variant if present.
- * The ninth's own label (b9/9/#9) is shown as-is rather than a generic
- * "9th" — the chord symbol already spells out the alteration (e.g.
- * "C7b9"), so naming it here doesn't give away anything the symbol
- * hasn't already.
+ * Labels for every tone, in the order generateChord() builds them: the
+ * quality's 4 base degrees, then the ninth variant if present. The
+ * ninth's own label (b9, 9, #9) shows as-is, not a generic "9th". The
+ * chord symbol already spells out the alteration, for example "C7b9".
+ * So naming it here does not reveal anything new.
  * @param {QualityKey} qualityKey
  * @param {NinthVariant | null} ninth
  * @returns {string[]}

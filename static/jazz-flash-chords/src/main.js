@@ -35,7 +35,7 @@ ui.initSettingsPanel(defaultSettings, () => {
 
 gameState.subscribe((state) => ui.render(state, gameState.settings.instrument));
 
-ui.onNext(() => gameState.next());
+ui.onAdvance(() => gameState.skip());
 
 ui.onStartClick(() => {
   if (running) {

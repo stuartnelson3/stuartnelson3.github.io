@@ -27,7 +27,7 @@ import { yinPitchDetect, frequencyToPitchClass, rms } from './pitch-detect.js';
  */
 
 // Fixed: the pause between a chord appearing and the app starting to
-// listen. Unlike the auto-advance pause, this isn't user-configurable.
+// listen. Unlike the auto-advance pause, this is not user-configurable.
 const PREROLL_MS = 1000;
 const MIN_CONSECUTIVE = 3;
 const RMS_THRESHOLD = 0.01; // gate out silence/noise before running YIN
@@ -94,10 +94,11 @@ export class GameState {
     this.settings = settings;
   }
 
-  // Starts the first round of a fresh run: clears any elimination
-  // progress from a previous run before picking a chord. Everything after
-  // the first round goes through startRound() directly (via next() or
-  // auto-advance), which keeps whatever elimination progress exists.
+  // Starts the first round of a fresh run. It first clears any
+  // elimination progress from a previous run, then picks a chord.
+  // Everything after the first round goes through startRound() directly
+  // (via skip() or auto-advance), which keeps whatever elimination
+  // progress exists.
   startSession() {
     this.remainingPool = null;
     this.startRound();
@@ -117,14 +118,20 @@ export class GameState {
     this._emit();
   }
 
-  next() {
-    if (this.phase !== 'result') return;
+  // skip() abandons the current round during preroll, listening, or
+  // result, and starts a new one right away. This is the "give me a
+  // different chord" action, bound to space and the Next button. A skip
+  // mid-round does not count as a pass or a fail, so it never touches an
+  // elimination-mode pool. idle is the one phase where it is a no-op,
+  // since there is no round yet to abandon.
+  skip() {
+    if (this.phase === 'idle') return;
     this.startRound();
   }
 
-  // Ends the run outright (the Stop button), as opposed to next()'s
-  // move-to-the-next-round. Mic teardown happens in main.js; this just
-  // resets round/session state so a later Start begins clean.
+  // stop() ends the run outright, from the Stop button. skip() only
+  // moves to the next round. Mic teardown happens in main.js. This just
+  // resets round and session state, so a later Start begins clean.
   stop() {
     this.phase = 'idle';
     this.chord = null;
@@ -231,7 +238,7 @@ export class GameState {
   }
 
   // A pitch class only counts — as a hit or as a confirmed wrong note —
-  // once it's sustained for MIN_CONSECUTIVE frames in a row. That debounce
+  // once it is sustained for MIN_CONSECUTIVE frames in a row. That debounce
   // applies equally to both, so a stray transient can misfire as a wrong
   // note no more easily than it could misfire as a hit.
   /**
