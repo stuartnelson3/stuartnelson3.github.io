@@ -22,6 +22,7 @@ const el = {
   micError: requireElement('mic-error'),
   gameScreen: requireElement('game-screen'),
   timer: requireElement('timer'),
+  poolRemaining: requireElement('pool-remaining'),
   chordSymbol: requireElement('chord-symbol'),
   toneIndicators: requireElement('tone-indicators'),
   resultBanner: requireElement('result-banner'),
@@ -36,6 +37,7 @@ const el = {
   rootPool: requireElement('root-pool'),
   autoAdvance: /** @type {HTMLInputElement} */ (requireElement('auto-advance')),
   includeExtensions: /** @type {HTMLInputElement} */ (requireElement('include-extensions')),
+  eliminationMode: /** @type {HTMLInputElement} */ (requireElement('elimination-mode')),
 };
 
 // A checkbox group (qualities, roots) must always keep at least one box
@@ -99,10 +101,12 @@ export function initSettingsPanel(defaults, onChange) {
   el.instrument.value = defaults.instrument;
   el.autoAdvance.checked = defaults.autoAdvance;
   el.includeExtensions.checked = defaults.includeExtensions;
+  el.eliminationMode.checked = defaults.eliminationMode;
   el.timerSeconds.addEventListener('change', onChange);
   el.instrument.addEventListener('change', onChange);
   el.autoAdvance.addEventListener('change', onChange);
   el.includeExtensions.addEventListener('change', onChange);
+  el.eliminationMode.addEventListener('change', onChange);
 }
 
 /** @returns {Settings} */
@@ -115,7 +119,8 @@ export function readSettings() {
   const instrument = /** @type {Instrument} */ (el.instrument.value);
   const autoAdvance = el.autoAdvance.checked;
   const includeExtensions = el.includeExtensions.checked;
-  return { qualityPool, rootPool, timerSeconds, instrument, autoAdvance, includeExtensions };
+  const eliminationMode = el.eliminationMode.checked;
+  return { qualityPool, rootPool, timerSeconds, instrument, autoAdvance, includeExtensions, eliminationMode };
 }
 
 /** @param {() => void} handler */
@@ -145,6 +150,17 @@ export function showGameScreen() {
   el.gameScreen.hidden = false;
 }
 
+export function showStartScreen() {
+  el.gameScreen.hidden = true;
+  el.startScreen.hidden = false;
+}
+
+/** @param {boolean} isRunning */
+export function setRunning(isRunning) {
+  el.startButton.textContent = isRunning ? 'Stop' : 'Start';
+  el.startButton.classList.toggle('running', isRunning);
+}
+
 /** @param {number} ms */
 function formatSeconds(ms) {
   return (Math.max(0, ms) / 1000).toFixed(1);
@@ -155,11 +171,18 @@ function formatSeconds(ms) {
  * @param {Instrument} instrument
  */
 export function render(state, instrument) {
-  const { phase, chord, hitSet, wrongSet, timeRemainingMs, passed } = state;
+  const { phase, chord, hitSet, wrongSet, remainingPool, timeRemainingMs, passed } = state;
 
   if (!chord) return;
 
   el.chordSymbol.textContent = chordSymbol(chord.root, chord.quality, chord.ninth, instrument);
+
+  if (remainingPool) {
+    el.poolRemaining.textContent = `${remainingPool.length} left in the pool`;
+    el.poolRemaining.hidden = false;
+  } else {
+    el.poolRemaining.hidden = true;
+  }
 
   if (phase === 'preroll') {
     el.timer.textContent = 'Get ready…';

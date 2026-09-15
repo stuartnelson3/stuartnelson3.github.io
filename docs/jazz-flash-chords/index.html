@@ -11,7 +11,10 @@
 <body>
   <header>
     <h1>Jazz Flash Chords</h1>
-    <button id="settings-toggle" type="button" aria-expanded="false">Settings</button>
+    <div class="header-actions">
+      <button id="start-button" type="button">Start</button>
+      <button id="settings-toggle" type="button" aria-expanded="false">Settings</button>
+    </div>
   </header>
 
   <section id="settings-panel" hidden>
@@ -43,6 +46,13 @@
       </label>
     </div>
 
+    <div class="setting-row setting-row-inline">
+      <label for="elimination-mode">
+        <input id="elimination-mode" type="checkbox" />
+        Elimination mode (remove each chord once you get it right)
+      </label>
+    </div>
+
     <div class="setting-row">
       <span class="setting-label">Chord qualities</span>
       <div id="quality-pool" class="checkbox-grid"></div>
@@ -56,12 +66,13 @@
 
   <main>
     <section id="start-screen">
-      <button id="start-button" type="button">Start</button>
+      <p class="hint">Click Start to begin.</p>
       <p id="mic-error" class="error" hidden></p>
     </section>
 
     <section id="game-screen" hidden>
       <div id="timer" class="timer">--</div>
+      <p id="pool-remaining" class="pool-remaining" hidden></p>
       <div id="chord-symbol" class="chord-symbol">—</div>
 
       <div id="tone-indicators" class="tone-indicators"></div>

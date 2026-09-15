@@ -1,5 +1,5 @@
 import { CHORD_QUALITIES } from './chords.js';
-import { initAudioInput, readBuffer } from './audio-input.js';
+import { initAudioInput, readBuffer, stopAudioInput } from './audio-input.js';
 import { GameState } from './game-state.js';
 import * as ui from './ui.js';
 
@@ -12,16 +12,20 @@ const defaultSettings = {
   instrument: 'concert',
   autoAdvance: false,
   includeExtensions: true,
+  eliminationMode: false,
   qualityPool: /** @type {import('./chords.js').QualityKey[]} */ (Object.keys(CHORD_QUALITIES)),
   rootPool: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
 };
 
 const gameState = new GameState(defaultSettings);
 
-/** @type {{ audioContext: AudioContext, analyser: AnalyserNode } | null} */
+/** @type {{ audioContext: AudioContext, analyser: AnalyserNode, stream: MediaStream } | null} */
 let audioSession = null;
 /** @type {number | null} */
 let lastFrameTime = null;
+/** @type {number | null} */
+let rafHandle = null;
+let running = false;
 
 ui.initSettingsToggle();
 ui.initSettingsPanel(defaultSettings, () => {
@@ -32,7 +36,15 @@ gameState.subscribe((state) => ui.render(state, gameState.settings.instrument));
 
 ui.onNext(() => gameState.next());
 
-ui.onStartClick(async () => {
+ui.onStartClick(() => {
+  if (running) {
+    stopSession();
+  } else {
+    startSession();
+  }
+});
+
+async function startSession() {
   try {
     audioSession = await initAudioInput();
   } catch (err) {
@@ -42,11 +54,28 @@ ui.onStartClick(async () => {
     return;
   }
 
+  running = true;
+  ui.setRunning(true);
   ui.showGameScreen();
-  gameState.startRound();
+  gameState.startSession();
   lastFrameTime = performance.now();
-  requestAnimationFrame(loop);
-});
+  rafHandle = requestAnimationFrame(loop);
+}
+
+function stopSession() {
+  running = false;
+  ui.setRunning(false);
+  if (rafHandle !== null) {
+    cancelAnimationFrame(rafHandle);
+    rafHandle = null;
+  }
+  if (audioSession) {
+    stopAudioInput(audioSession);
+    audioSession = null;
+  }
+  gameState.stop();
+  ui.showStartScreen();
+}
 
 /** @param {number} now */
 function loop(now) {
@@ -62,5 +91,5 @@ function loop(now) {
 
   gameState.tick(deltaMs, audio);
 
-  requestAnimationFrame(loop);
+  rafHandle = requestAnimationFrame(loop);
 }

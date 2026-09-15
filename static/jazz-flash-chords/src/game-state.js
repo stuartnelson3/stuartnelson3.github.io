@@ -1,4 +1,4 @@
-import { randomChord } from './chords.js';
+import { generateChord, randomChord } from './chords.js';
 import { yinPitchDetect, frequencyToPitchClass, rms } from './pitch-detect.js';
 
 /** @typedef {import('./chords.js').QualityKey} QualityKey */
@@ -11,11 +11,13 @@ import { yinPitchDetect, frequencyToPitchClass, rms } from './pitch-detect.js';
  * @property {Instrument} instrument
  * @property {boolean} autoAdvance
  * @property {boolean} includeExtensions
+ * @property {boolean} eliminationMode
  * @property {QualityKey[]} qualityPool
  * @property {number[]} rootPool
  */
 
 /** @typedef {'idle'|'preroll'|'listening'|'result'} Phase */
+/** @typedef {{ root: number, quality: QualityKey }} PoolEntry */
 
 /**
  * @typedef {Object} AudioFrame
@@ -27,6 +29,21 @@ const PREROLL_MS = 1000;
 const MIN_CONSECUTIVE = 3;
 const RMS_THRESHOLD = 0.01; // gate out silence/noise before running YIN
 const AUTO_ADVANCE_MS = 1500; // pause on the result screen before auto-advancing
+
+/**
+ * @param {number[]} rootPool
+ * @param {QualityKey[]} qualityPool
+ * @returns {PoolEntry[]}
+ */
+function buildPool(rootPool, qualityPool) {
+  const pool = [];
+  for (const root of rootPool) {
+    for (const quality of qualityPool) {
+      pool.push({ root, quality });
+    }
+  }
+  return pool;
+}
 
 // Phases: 'idle' -> 'preroll' -> 'listening' -> 'result' -> (next) -> 'preroll' ...
 export class GameState {
@@ -41,6 +58,11 @@ export class GameState {
     this.hitSet = new Set();
     /** @type {Set<number>} */
     this.wrongSet = new Set();
+    // Elimination mode's remaining pool. null means "not tracking" (mode
+    // off) or "not built yet" (mode just turned on, or a fresh session) —
+    // either way, the next startRound() builds a full one from settings.
+    /** @type {PoolEntry[] | null} */
+    this.remainingPool = null;
     /** @type {{ lastPc: number | null, count: number }} */
     this.consecutiveMatches = { lastPc: null, count: 0 };
     this.prerollRemainingMs = 0;
@@ -70,9 +92,18 @@ export class GameState {
     this.settings = settings;
   }
 
+  // Starts the first round of a fresh run: clears any elimination
+  // progress from a previous run before picking a chord. Everything after
+  // the first round goes through startRound() directly (via next() or
+  // auto-advance), which keeps whatever elimination progress exists.
+  startSession() {
+    this.remainingPool = null;
+    this.startRound();
+  }
+
   startRound() {
-    const { rootPool, qualityPool, timerSeconds, includeExtensions } = this.settings;
-    this.chord = randomChord(rootPool, qualityPool, includeExtensions);
+    const { timerSeconds } = this.settings;
+    this.chord = this._pickChord();
     this.hitSet = new Set();
     this.wrongSet = new Set();
     this.consecutiveMatches = { lastPc: null, count: 0 };
@@ -87,6 +118,34 @@ export class GameState {
   next() {
     if (this.phase !== 'result') return;
     this.startRound();
+  }
+
+  // Ends the run outright (the Stop button), as opposed to next()'s
+  // move-to-the-next-round. Mic teardown happens in main.js; this just
+  // resets round/session state so a later Start begins clean.
+  stop() {
+    this.phase = 'idle';
+    this.chord = null;
+    this.hitSet = new Set();
+    this.wrongSet = new Set();
+    this.remainingPool = null;
+    this.passed = null;
+    this._emit();
+  }
+
+  /** @returns {Chord} */
+  _pickChord() {
+    const { rootPool, qualityPool, includeExtensions, eliminationMode } = this.settings;
+    if (!eliminationMode) {
+      this.remainingPool = null;
+      return randomChord(rootPool, qualityPool, includeExtensions);
+    }
+    if (!this.remainingPool || this.remainingPool.length === 0) {
+      this.remainingPool = buildPool(rootPool, qualityPool);
+    }
+    const index = Math.floor(Math.random() * this.remainingPool.length);
+    const entry = this.remainingPool[index];
+    return generateChord(entry.root, entry.quality, includeExtensions);
   }
 
   /**
@@ -117,10 +176,10 @@ export class GameState {
       }
 
       if (this.hitSet.size === chord.tones.length) {
-        this._finishRound(true);
+        this._finishRound(chord, true);
       } else if (this.timeRemainingMs <= 0) {
         this.timeRemainingMs = 0;
-        this._finishRound(false);
+        this._finishRound(chord, false);
       } else {
         this._emit();
       }
@@ -135,8 +194,16 @@ export class GameState {
     }
   }
 
-  /** @param {boolean} passed */
-  _finishRound(passed) {
+  /**
+   * @param {Chord} chord
+   * @param {boolean} passed
+   */
+  _finishRound(chord, passed) {
+    if (passed && this.remainingPool) {
+      this.remainingPool = this.remainingPool.filter(
+        (entry) => !(entry.root === chord.root && entry.quality === chord.quality)
+      );
+    }
     this.passed = passed;
     this.phase = 'result';
     this.resultElapsedMs = 0;

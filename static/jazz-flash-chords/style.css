@@ -33,6 +33,12 @@ header {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
+  gap: 0.75rem;
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.5rem;
 }
 
 h1 {
@@ -124,13 +130,21 @@ main {
   padding: 3rem 0;
 }
 
+.hint {
+  color: var(--muted);
+}
+
 #start-button {
-  font-size: 1.1rem;
-  padding: 0.8rem 2rem;
   background: var(--accent);
   border-color: var(--accent);
   color: #0a0a0c;
   font-weight: 600;
+}
+
+#start-button.running {
+  background: var(--fail);
+  border-color: var(--fail);
+  color: #fff;
 }
 
 .error {
@@ -155,6 +169,12 @@ main {
 
 .timer.urgent {
   color: var(--fail);
+}
+
+.pool-remaining {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 
 .chord-symbol {
