@@ -5,7 +5,7 @@
  * @typedef {Object} Chord
  * @property {number} root - pitch class, 0-11
  * @property {QualityKey} quality
- * @property {NinthVariant} ninth - which 9th got added; every chord has one
+ * @property {NinthVariant | null} ninth - which 9th got added, or null for a plain 1/3/5/7 chord
  * @property {number[]} tones - pitch classes, one per chord tone
  */
 
@@ -53,10 +53,15 @@ export const TRANSPOSITION_OFFSET = {
 /**
  * @param {number} rootPc
  * @param {QualityKey} qualityKey
+ * @param {boolean} [includeExtensions] - false gives a plain 1/3/5/7 chord
  * @returns {Chord}
  */
-export function generateChord(rootPc, qualityKey) {
+export function generateChord(rootPc, qualityKey, includeExtensions = true) {
   const quality = CHORD_QUALITIES[qualityKey];
+  if (!includeExtensions) {
+    const tones = quality.intervals.map(i => (rootPc + i) % 12);
+    return { root: rootPc, quality: qualityKey, ninth: null, tones };
+  }
   const ninthVariants = /** @type {NinthVariant[]} */ (Object.keys(quality.ninths));
   const ninth = ninthVariants[Math.floor(Math.random() * ninthVariants.length)];
   const tones = [...quality.intervals, NINTH_INTERVALS[ninth]].map(i => (rootPc + i) % 12);
@@ -66,22 +71,24 @@ export function generateChord(rootPc, qualityKey) {
 /**
  * @param {number[]} rootPool
  * @param {QualityKey[]} qualityPool
+ * @param {boolean} [includeExtensions]
  * @returns {Chord}
  */
-export function randomChord(rootPool, qualityPool) {
+export function randomChord(rootPool, qualityPool, includeExtensions = true) {
   const root = rootPool[Math.floor(Math.random() * rootPool.length)];
   const quality = qualityPool[Math.floor(Math.random() * qualityPool.length)];
-  return generateChord(root, quality);
+  return generateChord(root, quality, includeExtensions);
 }
 
 /**
  * @param {number} rootPc
  * @param {QualityKey} qualityKey
- * @param {NinthVariant} ninth
+ * @param {NinthVariant | null} ninth
  * @param {Instrument} [instrument]
  * @returns {string}
  */
 export function chordSymbol(rootPc, qualityKey, ninth, instrument = 'concert') {
   const writtenPc = (rootPc + TRANSPOSITION_OFFSET[instrument]) % 12;
-  return `${NOTE_NAMES[writtenPc]}${CHORD_QUALITIES[qualityKey].ninths[ninth]}`;
+  const symbol = ninth === null ? CHORD_QUALITIES[qualityKey].label : CHORD_QUALITIES[qualityKey].ninths[ninth];
+  return `${NOTE_NAMES[writtenPc]}${symbol}`;
 }

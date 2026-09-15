@@ -35,6 +35,7 @@ const el = {
   qualityPool: requireElement('quality-pool'),
   rootPool: requireElement('root-pool'),
   autoAdvance: /** @type {HTMLInputElement} */ (requireElement('auto-advance')),
+  includeExtensions: /** @type {HTMLInputElement} */ (requireElement('include-extensions')),
 };
 
 // A checkbox group (qualities, roots) must always keep at least one box
@@ -97,9 +98,11 @@ export function initSettingsPanel(defaults, onChange) {
   el.timerSeconds.value = String(defaults.timerSeconds);
   el.instrument.value = defaults.instrument;
   el.autoAdvance.checked = defaults.autoAdvance;
+  el.includeExtensions.checked = defaults.includeExtensions;
   el.timerSeconds.addEventListener('change', onChange);
   el.instrument.addEventListener('change', onChange);
   el.autoAdvance.addEventListener('change', onChange);
+  el.includeExtensions.addEventListener('change', onChange);
 }
 
 /** @returns {Settings} */
@@ -111,7 +114,8 @@ export function readSettings() {
   const timerSeconds = Math.max(2, Number(el.timerSeconds.value) || 8);
   const instrument = /** @type {Instrument} */ (el.instrument.value);
   const autoAdvance = el.autoAdvance.checked;
-  return { qualityPool, rootPool, timerSeconds, instrument, autoAdvance };
+  const includeExtensions = el.includeExtensions.checked;
+  return { qualityPool, rootPool, timerSeconds, instrument, autoAdvance, includeExtensions };
 }
 
 /** @param {() => void} handler */

@@ -11,6 +11,7 @@ const defaultSettings = {
   timerSeconds: 8,
   instrument: 'concert',
   autoAdvance: false,
+  includeExtensions: true,
   qualityPool: /** @type {import('./chords.js').QualityKey[]} */ (Object.keys(CHORD_QUALITIES)),
   rootPool: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
 };

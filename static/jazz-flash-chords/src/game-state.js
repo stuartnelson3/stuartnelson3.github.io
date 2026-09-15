@@ -10,6 +10,7 @@ import { yinPitchDetect, frequencyToPitchClass, rms } from './pitch-detect.js';
  * @property {number} timerSeconds
  * @property {Instrument} instrument
  * @property {boolean} autoAdvance
+ * @property {boolean} includeExtensions
  * @property {QualityKey[]} qualityPool
  * @property {number[]} rootPool
  */
@@ -70,8 +71,8 @@ export class GameState {
   }
 
   startRound() {
-    const { rootPool, qualityPool, timerSeconds } = this.settings;
-    this.chord = randomChord(rootPool, qualityPool);
+    const { rootPool, qualityPool, timerSeconds, includeExtensions } = this.settings;
+    this.chord = randomChord(rootPool, qualityPool, includeExtensions);
     this.hitSet = new Set();
     this.wrongSet = new Set();
     this.consecutiveMatches = { lastPc: null, count: 0 };
