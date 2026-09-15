@@ -38,6 +38,8 @@ export class GameState {
     this.chord = null;
     /** @type {Set<number>} */
     this.hitSet = new Set();
+    /** @type {Set<number>} */
+    this.wrongSet = new Set();
     /** @type {{ lastPc: number | null, count: number }} */
     this.consecutiveMatches = { lastPc: null, count: 0 };
     this.prerollRemainingMs = 0;
@@ -71,6 +73,7 @@ export class GameState {
     const { rootPool, qualityPool, timerSeconds } = this.settings;
     this.chord = randomChord(rootPool, qualityPool);
     this.hitSet = new Set();
+    this.wrongSet = new Set();
     this.consecutiveMatches = { lastPc: null, count: 0 };
     this.prerollRemainingMs = PREROLL_MS;
     this.timeRemainingMs = timerSeconds * 1000;
@@ -154,27 +157,31 @@ export class GameState {
       this.consecutiveMatches.count = 0;
       return;
     }
-    this._checkHit(chord, frequency);
+    this._checkPitch(chord, frequency);
   }
 
+  // A pitch class only counts — as a hit or as a confirmed wrong note —
+  // once it's sustained for MIN_CONSECUTIVE frames in a row. That debounce
+  // applies equally to both, so a stray transient can misfire as a wrong
+  // note no more easily than it could misfire as a hit.
   /**
    * @param {Chord} chord
    * @param {number} detectedFrequency
    */
-  _checkHit(chord, detectedFrequency) {
+  _checkPitch(chord, detectedFrequency) {
     const pc = frequencyToPitchClass(detectedFrequency);
-    if (!chord.tones.includes(pc)) {
-      this.consecutiveMatches.count = 0;
-      return;
-    }
     if (this.consecutiveMatches.lastPc === pc) {
       this.consecutiveMatches.count++;
     } else {
       this.consecutiveMatches.lastPc = pc;
       this.consecutiveMatches.count = 1;
     }
-    if (this.consecutiveMatches.count >= MIN_CONSECUTIVE) {
+    if (this.consecutiveMatches.count < MIN_CONSECUTIVE) return;
+
+    if (chord.tones.includes(pc)) {
       this.hitSet.add(pc);
+    } else {
+      this.wrongSet.add(pc);
     }
   }
 }

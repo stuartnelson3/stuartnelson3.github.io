@@ -26,6 +26,7 @@ const el = {
   toneIndicators: requireElement('tone-indicators'),
   resultBanner: requireElement('result-banner'),
   resultText: requireElement('result-text'),
+  resultDetail: requireElement('result-detail'),
   nextButton: requireElement('next-button'),
   settingsToggle: requireElement('settings-toggle'),
   settingsPanel: requireElement('settings-panel'),
@@ -150,7 +151,7 @@ function formatSeconds(ms) {
  * @param {Instrument} instrument
  */
 export function render(state, instrument) {
-  const { phase, chord, hitSet, timeRemainingMs, passed } = state;
+  const { phase, chord, hitSet, wrongSet, timeRemainingMs, passed } = state;
 
   if (!chord) return;
 
@@ -178,6 +179,13 @@ export function render(state, instrument) {
     el.resultBanner.classList.toggle('pass', Boolean(passed));
     el.resultBanner.classList.toggle('fail', !passed);
     el.resultText.textContent = passed ? 'Pass!' : 'Missed it';
+
+    if (wrongSet.size > 0) {
+      el.resultDetail.textContent = `Fished for it — ${wrongSet.size} wrong note${wrongSet.size === 1 ? '' : 's'} along the way.`;
+      el.resultDetail.hidden = false;
+    } else {
+      el.resultDetail.hidden = true;
+    }
   } else {
     el.resultBanner.hidden = true;
     el.resultBanner.classList.remove('pass', 'fail');
