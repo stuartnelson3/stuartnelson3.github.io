@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'">
+  <title>Jazz Flash Chords</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Jazz Flash Chords</h1>
+    <button id="settings-toggle" type="button" aria-expanded="false">Settings</button>
+  </header>
+
+  <section id="settings-panel" hidden>
+    <div class="setting-row">
+      <label for="timer-seconds">Timer (seconds)</label>
+      <input id="timer-seconds" type="number" min="2" max="60" value="8" />
+    </div>
+
+    <div class="setting-row">
+      <label for="instrument">Transposition</label>
+      <select id="instrument">
+        <option value="concert">Concert</option>
+        <option value="alto">Alto Sax (Eb)</option>
+        <option value="tenor">Tenor Sax (Bb)</option>
+      </select>
+    </div>
+
+    <div class="setting-row setting-row-inline">
+      <label for="auto-advance">
+        <input id="auto-advance" type="checkbox" />
+        Auto-advance to next chord
+      </label>
+    </div>
+
+    <div class="setting-row">
+      <span class="setting-label">Chord qualities</span>
+      <div id="quality-pool" class="checkbox-grid"></div>
+    </div>
+
+    <div class="setting-row">
+      <span class="setting-label">Roots</span>
+      <div id="root-pool" class="checkbox-grid"></div>
+    </div>
+  </section>
+
+  <main>
+    <section id="start-screen">
+      <button id="start-button" type="button">Start</button>
+      <p id="mic-error" class="error" hidden></p>
+    </section>
+
+    <section id="game-screen" hidden>
+      <div id="timer" class="timer">--</div>
+      <div id="chord-symbol" class="chord-symbol">—</div>
+
+      <div id="tone-indicators" class="tone-indicators"></div>
+
+      <div id="result-banner" class="result-banner" hidden>
+        <p id="result-text"></p>
+        <button id="next-button" type="button">Next chord (space)</button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
