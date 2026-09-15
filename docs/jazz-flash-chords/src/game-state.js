@@ -10,6 +10,7 @@ import { yinPitchDetect, frequencyToPitchClass, rms } from './pitch-detect.js';
  * @property {number} timerSeconds
  * @property {Instrument} instrument
  * @property {boolean} autoAdvance
+ * @property {number} autoAdvanceDelaySeconds
  * @property {boolean} includeExtensions
  * @property {boolean} eliminationMode
  * @property {QualityKey[]} qualityPool
@@ -25,10 +26,11 @@ import { yinPitchDetect, frequencyToPitchClass, rms } from './pitch-detect.js';
  * @property {number} sampleRate
  */
 
+// Fixed: the pause between a chord appearing and the app starting to
+// listen. Unlike the auto-advance pause, this isn't user-configurable.
 const PREROLL_MS = 1000;
 const MIN_CONSECUTIVE = 3;
 const RMS_THRESHOLD = 0.01; // gate out silence/noise before running YIN
-const AUTO_ADVANCE_MS = 1500; // pause on the result screen before auto-advancing
 
 /**
  * @param {number[]} rootPool
@@ -188,7 +190,7 @@ export class GameState {
 
     if (this.phase === 'result' && this.settings.autoAdvance) {
       this.resultElapsedMs += deltaMs;
-      if (this.resultElapsedMs >= AUTO_ADVANCE_MS) {
+      if (this.resultElapsedMs >= this.settings.autoAdvanceDelaySeconds * 1000) {
         this.startRound();
       }
     }

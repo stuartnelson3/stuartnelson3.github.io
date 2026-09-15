@@ -36,6 +36,7 @@ const el = {
   qualityPool: requireElement('quality-pool'),
   rootPool: requireElement('root-pool'),
   autoAdvance: /** @type {HTMLInputElement} */ (requireElement('auto-advance')),
+  autoAdvanceDelay: /** @type {HTMLInputElement} */ (requireElement('auto-advance-delay')),
   includeExtensions: /** @type {HTMLInputElement} */ (requireElement('include-extensions')),
   eliminationMode: /** @type {HTMLInputElement} */ (requireElement('elimination-mode')),
 };
@@ -100,11 +101,13 @@ export function initSettingsPanel(defaults, onChange) {
   el.timerSeconds.value = String(defaults.timerSeconds);
   el.instrument.value = defaults.instrument;
   el.autoAdvance.checked = defaults.autoAdvance;
+  el.autoAdvanceDelay.value = String(defaults.autoAdvanceDelaySeconds);
   el.includeExtensions.checked = defaults.includeExtensions;
   el.eliminationMode.checked = defaults.eliminationMode;
   el.timerSeconds.addEventListener('change', onChange);
   el.instrument.addEventListener('change', onChange);
   el.autoAdvance.addEventListener('change', onChange);
+  el.autoAdvanceDelay.addEventListener('change', onChange);
   el.includeExtensions.addEventListener('change', onChange);
   el.eliminationMode.addEventListener('change', onChange);
 }
@@ -118,9 +121,20 @@ export function readSettings() {
   const timerSeconds = Math.max(2, Number(el.timerSeconds.value) || 8);
   const instrument = /** @type {Instrument} */ (el.instrument.value);
   const autoAdvance = el.autoAdvance.checked;
+  // 0 is a valid delay (instant auto-advance), so `|| fallback` would
+  // wrongly replace it (Number('0') || 1.5 is 1.5) — and Number('') is 0,
+  // not NaN, so a blank field needs its own check too, or it would
+  // silently become a valid-looking 0 instead of falling back.
+  const rawDelay = el.autoAdvanceDelay.value.trim();
+  const parsedDelay = Number(rawDelay);
+  const autoAdvanceDelaySeconds =
+    rawDelay === '' || Number.isNaN(parsedDelay) ? 1.5 : Math.max(0, parsedDelay);
   const includeExtensions = el.includeExtensions.checked;
   const eliminationMode = el.eliminationMode.checked;
-  return { qualityPool, rootPool, timerSeconds, instrument, autoAdvance, includeExtensions, eliminationMode };
+  return {
+    qualityPool, rootPool, timerSeconds, instrument,
+    autoAdvance, autoAdvanceDelaySeconds, includeExtensions, eliminationMode,
+  };
 }
 
 /** @param {() => void} handler */
