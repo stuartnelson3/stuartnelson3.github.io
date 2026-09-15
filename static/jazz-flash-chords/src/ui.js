@@ -1,4 +1,4 @@
-import { CHORD_QUALITIES, NOTE_NAMES, toneFunctionLabels, chordSymbol } from './chords.js';
+import { CHORD_QUALITIES, rootLabel, toneFunctionLabels, chordSymbol } from './chords.js';
 
 /** @typedef {import('./chords.js').QualityKey} QualityKey */
 /** @typedef {import('./chords.js').Instrument} Instrument */
@@ -94,7 +94,7 @@ export function initSettingsPanel(defaults, onChange) {
     checkbox.checked = defaults.rootPool.includes(pc);
     checkbox.addEventListener('change', guardNonEmptyGroup(el.rootPool, checkbox, onChange));
     label.appendChild(checkbox);
-    label.append(NOTE_NAMES[pc] ?? '');
+    label.append(rootLabel(pc));
     el.rootPool.appendChild(label);
   }
 
@@ -198,7 +198,7 @@ export function render(state, instrument) {
 
   if (!chord) return;
 
-  el.chordSymbol.textContent = chordSymbol(chord.root, chord.quality, chord.ninth, instrument);
+  el.chordSymbol.textContent = chordSymbol(chord.root, chord.quality, chord.ninth, instrument, chord.preferEnharmonic);
 
   if (remainingPool) {
     el.poolRemaining.textContent = `${remainingPool.length} left in the pool`;
