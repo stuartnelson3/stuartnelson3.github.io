@@ -38,6 +38,11 @@ unsafe= true
         name = "utxo trace"
         url = "/utxo-trace/"
         weight = 2
+  [[menu.main]]
+        identifier = "jazz-flash-chords"
+        name = "jazz flash chords"
+        url = "/jazz-flash-chords/"
+        weight = 3
 
 # Footer
   [[menu.footer]]
