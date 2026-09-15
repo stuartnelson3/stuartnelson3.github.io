@@ -1,4 +1,4 @@
-import { CHORD_QUALITIES, NOTE_NAMES, TONE_FUNCTIONS, chordSymbol } from './chords.js';
+import { CHORD_QUALITIES, NOTE_NAMES, toneFunctionLabels, chordSymbol } from './chords.js';
 
 /** @typedef {import('./chords.js').QualityKey} QualityKey */
 /** @typedef {import('./chords.js').Instrument} Instrument */
@@ -207,11 +207,12 @@ export function render(state, instrument) {
   }
 
   el.toneIndicators.innerHTML = '';
+  const toneFunctions = toneFunctionLabels(chord.quality, chord.ninth);
   chord.tones.forEach((pc, i) => {
     const indicator = document.createElement('div');
     indicator.className = 'tone-indicator';
     if (hitSet.has(pc)) indicator.classList.add('hit');
-    indicator.textContent = TONE_FUNCTIONS[i] ?? '';
+    indicator.textContent = toneFunctions[i] ?? '';
     el.toneIndicators.appendChild(indicator);
   });
 

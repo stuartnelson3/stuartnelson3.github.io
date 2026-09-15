@@ -21,13 +21,18 @@ export const NOTE_NAMES = [
 // "7,9" — so the symbol is looked up per variant rather than assembled.
 // `label` is the plain, ninth-free quality name shown in the settings
 // panel, where there's no specific chord (and so no specific ninth) yet.
-/** @type {Record<QualityKey, { label: string, intervals: number[], ninths: Partial<Record<NinthVariant, string>> }>} */
+// `toneFunctions` names the scale degree at each of the 4 base intervals
+// above, in order — every quality has a genuine 3rd there except sus4,
+// which replaces it with a 4th, so this can't be one shared array (that
+// was the bug: a fixed ['Root','3rd','5th','7th'] mislabeled sus4's 4th
+// as a 3rd).
+/** @type {Record<QualityKey, { label: string, intervals: number[], toneFunctions: string[], ninths: Partial<Record<NinthVariant, string>> }>} */
 export const CHORD_QUALITIES = {
-  maj7: { label: 'maj7',  intervals: [0, 4, 7, 11], ninths: { '9': 'maj9' } },
-  dom7: { label: '7',     intervals: [0, 4, 7, 10], ninths: { b9: '7b9', '9': '9', '#9': '7#9' } },
-  min7: { label: 'm7',    intervals: [0, 3, 7, 10], ninths: { '9': 'm9' } },
-  m7b5: { label: 'm7b5',  intervals: [0, 3, 6, 10], ninths: { '9': 'm9b5' } },
-  sus4: { label: '7sus4', intervals: [0, 5, 7, 10], ninths: { '9': '9sus4', b9: '7sus4b9' } },
+  maj7: { label: 'maj7',  intervals: [0, 4, 7, 11], toneFunctions: ['Root', '3rd', '5th', '7th'], ninths: { '9': 'maj9' } },
+  dom7: { label: '7',     intervals: [0, 4, 7, 10], toneFunctions: ['Root', '3rd', '5th', '7th'], ninths: { b9: '7b9', '9': '9', '#9': '7#9' } },
+  min7: { label: 'm7',    intervals: [0, 3, 7, 10], toneFunctions: ['Root', '3rd', '5th', '7th'], ninths: { '9': 'm9' } },
+  m7b5: { label: 'm7b5',  intervals: [0, 3, 6, 10], toneFunctions: ['Root', '3rd', '5th', '7th'], ninths: { '9': 'm9b5' } },
+  sus4: { label: '7sus4', intervals: [0, 5, 7, 10], toneFunctions: ['Root', '4th', '5th', '7th'], ninths: { '9': '9sus4', b9: '7sus4b9' } },
 };
 
 // Semitones above the root for each 9th variant. None of these collide
@@ -37,9 +42,21 @@ export const CHORD_QUALITIES = {
 /** @type {Record<NinthVariant, number>} */
 const NINTH_INTERVALS = { b9: 1, '9': 2, '#9': 3 };
 
-// Function labels for each tone position, in the order tones are built
-// below (root, 3rd-equivalent, 5th-equivalent, 7th, 9th-equivalent).
-export const TONE_FUNCTIONS = ['Root', '3rd', '5th', '7th', '9th'];
+/**
+ * Labels for every tone in a chord, in the order generateChord() builds
+ * them: the quality's 4 base degrees, then the ninth variant if present.
+ * The ninth's own label (b9/9/#9) is shown as-is rather than a generic
+ * "9th" — the chord symbol already spells out the alteration (e.g.
+ * "C7b9"), so naming it here doesn't give away anything the symbol
+ * hasn't already.
+ * @param {QualityKey} qualityKey
+ * @param {NinthVariant | null} ninth
+ * @returns {string[]}
+ */
+export function toneFunctionLabels(qualityKey, ninth) {
+  const base = CHORD_QUALITIES[qualityKey].toneFunctions;
+  return ninth === null ? base : [...base, ninth];
+}
 
 // Concert-pitch → written-pitch offset, in semitones, for each transposition
 // key. written_pc = (concert_pc + offset) mod 12
