@@ -40,24 +40,26 @@ const ENHARMONICS = {
 // settings panel, where there is no specific chord (and so no specific
 // ninth) yet.
 // The `toneFunctions` array names the scale degree at each of the 4 base
-// intervals, in order. It shows the accidental (b3, b5, b7) only where
-// that quality actually flats the degree. Otherwise it stays plain (3rd,
-// 5th, 7th), the same pattern the ninth already uses for b9, 9, or #9
-// instead of a generic "9th". This does not reveal more than the chord
-// symbol already does — "Gm9b5" already spells out the b5. sus4 replaces
-// the 3rd with a real 4th, a different degree, so one shared array
-// cannot cover every quality.
+// intervals, in order, as a bare number (3, 5, 7) or, wherever that
+// quality actually flats the degree, with its accidental (b3, b5, b7).
+// No degree gets an ordinal suffix ("3rd", "5th"), matching how the
+// ninth already shows b9, 9, or #9 rather than a generic "9th". This
+// does not reveal more than the chord symbol already does — "Gm9b5"
+// already spells out the b5. sus4 replaces the 3rd with a real 4, a
+// different degree, so one shared array cannot cover every quality.
+// Root is the one label that stays a word, since "1" reads as a typo
+// more than a degree.
 // Symbols follow common lead-sheet notation: Δ7 for major 7 (not
 // "maj7"), -7 for minor 7 (not "m7"), and ø7 for half-diminished (not
 // "m7b5") — ø already implies the b5, so it is never spelled out
 // separately.
 /** @type {Record<QualityKey, { label: string, intervals: number[], toneFunctions: string[], ninths: Partial<Record<NinthVariant, string>> }>} */
 export const CHORD_QUALITIES = {
-  maj7: { label: 'Δ7',    intervals: [0, 4, 7, 11], toneFunctions: ['Root', '3rd', '5th', '7th'], ninths: { '9': 'Δ9' } },
-  dom7: { label: '7',     intervals: [0, 4, 7, 10], toneFunctions: ['Root', '3rd', '5th', 'b7'],  ninths: { b9: '7b9', '9': '9', '#9': '7#9' } },
-  min7: { label: '-7',    intervals: [0, 3, 7, 10], toneFunctions: ['Root', 'b3', '5th', 'b7'],   ninths: { '9': '-9' } },
-  m7b5: { label: 'ø7',    intervals: [0, 3, 6, 10], toneFunctions: ['Root', 'b3', 'b5', 'b7'],    ninths: { '9': 'ø9' } },
-  sus4: { label: '7sus4', intervals: [0, 5, 7, 10], toneFunctions: ['Root', '4th', '5th', 'b7'],  ninths: { '9': '9sus4', b9: '7sus4b9' } },
+  maj7: { label: 'Δ7',    intervals: [0, 4, 7, 11], toneFunctions: ['Root', '3', '5', '7'],   ninths: { '9': 'Δ9' } },
+  dom7: { label: '7',     intervals: [0, 4, 7, 10], toneFunctions: ['Root', '3', '5', 'b7'],  ninths: { b9: '7b9', '9': '9', '#9': '7#9' } },
+  min7: { label: '-7',    intervals: [0, 3, 7, 10], toneFunctions: ['Root', 'b3', '5', 'b7'], ninths: { '9': '-9' } },
+  m7b5: { label: 'ø7',    intervals: [0, 3, 6, 10], toneFunctions: ['Root', 'b3', 'b5', 'b7'], ninths: { '9': 'ø9' } },
+  sus4: { label: '7sus4', intervals: [0, 5, 7, 10], toneFunctions: ['Root', '4', '5', 'b7'],  ninths: { '9': '9sus4', b9: '7sus4b9' } },
 };
 
 // Semitones above the root for each 9th variant. None of these collide
