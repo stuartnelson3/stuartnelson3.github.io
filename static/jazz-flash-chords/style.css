@@ -7,6 +7,7 @@
   --muted: #8b8f98;
   --accent: #4da3ff;
   --hit: #3ecf8e;
+  --caution: #e0a83e;
   --fail: #e5534b;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
@@ -211,6 +212,14 @@ main {
   font-weight: 600;
 }
 
+/* All tones hit — the round is a full pass, not just "hit so far". */
+.tone-indicator.complete {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0a0a0c;
+  font-weight: 600;
+}
+
 .result-banner {
   display: flex;
   flex-direction: column;
@@ -222,7 +231,11 @@ main {
 }
 
 .result-banner.pass {
-  background: rgba(62, 207, 142, 0.12);
+  background: rgba(77, 163, 255, 0.12);
+}
+
+.result-banner.on-track {
+  background: rgba(224, 168, 62, 0.12);
 }
 
 .result-banner.fail {
@@ -236,7 +249,11 @@ main {
 }
 
 .result-banner.pass #result-text {
-  color: var(--hit);
+  color: var(--accent);
+}
+
+.result-banner.on-track #result-text {
+  color: var(--caution);
 }
 
 .result-banner.fail #result-text {

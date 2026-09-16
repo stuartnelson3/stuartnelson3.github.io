@@ -215,30 +215,53 @@ export function render(state, instrument) {
     el.timer.classList.toggle('urgent', timeRemainingMs < 3000);
   }
 
+  // A full pass gets its own color on the circles too (accent blue, via
+  // .complete), not the same green a tone gets the moment it is hit —
+  // green means "this note is right", blue means "the whole chord is
+  // done". Since a pass only happens once every tone is hit, this marks
+  // every circle at once rather than picking out any one of them.
+  const complete = phase === 'result' && passed;
   el.toneIndicators.innerHTML = '';
   const toneFunctions = toneFunctionLabels(chord.quality, chord.ninth);
   chord.tones.forEach((pc, i) => {
     const indicator = document.createElement('div');
     indicator.className = 'tone-indicator';
-    if (hitSet.has(pc)) indicator.classList.add('hit');
+    if (hitSet.has(pc)) indicator.classList.add(complete ? 'complete' : 'hit');
     indicator.textContent = toneFunctions[i] ?? '';
     el.toneIndicators.appendChild(indicator);
   });
 
   if (phase === 'result') {
     el.resultBanner.hidden = false;
+
+    // Failing does not automatically mean red: playing only real chord
+    // tones and simply running out of time is closer to a near miss
+    // than a wrong answer, so it gets its own "on track" color rather
+    // than being lumped in with a round that included a wrong note.
+    const onTrack = !passed && wrongSet.size === 0 && hitSet.size > 0;
     el.resultBanner.classList.toggle('pass', Boolean(passed));
-    el.resultBanner.classList.toggle('fail', !passed);
-    el.resultText.textContent = passed ? 'Pass!' : 'Missed it';
+    el.resultBanner.classList.toggle('on-track', onTrack);
+    el.resultBanner.classList.toggle('fail', !passed && !onTrack);
+
+    if (passed) {
+      el.resultText.textContent = 'Pass!';
+    } else if (onTrack) {
+      el.resultText.textContent = 'On the right track';
+    } else {
+      el.resultText.textContent = 'Missed it';
+    }
 
     if (wrongSet.size > 0) {
       el.resultDetail.textContent = `Fished for it — ${wrongSet.size} wrong note${wrongSet.size === 1 ? '' : 's'} along the way.`;
+      el.resultDetail.hidden = false;
+    } else if (onTrack) {
+      el.resultDetail.textContent = 'No wrong notes — just out of time.';
       el.resultDetail.hidden = false;
     } else {
       el.resultDetail.hidden = true;
     }
   } else {
     el.resultBanner.hidden = true;
-    el.resultBanner.classList.remove('pass', 'fail');
+    el.resultBanner.classList.remove('pass', 'on-track', 'fail');
   }
 }
