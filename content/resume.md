@@ -1,61 +1,57 @@
 ---
 type: "pages"
 layout: "simple-static"
-date: 2025-06-19T12:36:28+02:00
+date: 2026-09-26T12:00:00+02:00
 ---
 
-Senior software engineer. Build reliable, well-monitored, auditable systems that move real money. Work RFC-first on multi-quarter initiatives; ship force-multiplier work (shared packages, lint rules, internal skills, CI guards, dashboards) that compounds the team. Treat tech debt and dead code need to be addressed, not ignored. Performance is a feature.
+Software engineer who owns correctness for systems that move money. Four years as primary owner of money movement at a Bitcoin brokerage. Before that, Prometheus Alertmanager maintainer and anti-abuse team lead at SoundCloud. Turns loosely defined problems into RFCs, wins buy-in, and ships them. Performance is a feature.
 
-**Skills:** TypeScript, Go, Ruby, Rust · PostgreSQL (Sequelize, tuning, autovacuum, indexes), Redis, Kafka · BullMQ, event-sourced workflows · Datadog (APM, dashboards, monitors-as-code), Prometheus, Alertmanager · AI-assisted engineering (agentic triage, invariant analysis, refactoring) · Kubernetes, Terraform, Chef · Linux (Debian)
+**Backend:** TypeScript/Node.js, Go, Ruby, Rust · **Data:** PostgreSQL (query tuning, indexing, autovacuum), Redis, Kafka · **Frontend:** React (production), Retool, Elm, Angular · **Infra & observability:** Kubernetes, Terraform, Datadog, Prometheus, Alertmanager
 
 ---
 
-**Swan Bitcoin — Senior Software Engineer** *Jul 2022 – Present*
+**Swan Bitcoin: Senior Software Engineer (contract)** *2022 – 2026*
 
 Primary owner of money-movement correctness at a Bitcoin brokerage: ACH deposits, custodial BTC purchases, KYC/AML, withdrawals, fraud, security.
 
-- Authored the parent RFC and built a cross-domain **invariant-checking framework** spanning every money-movement domain (reversals, balances, withdrawals, trades, bills, limit orders, deposits): surfaced and drove fixes for latent financial-correctness bugs in production. Automated triage attaches a domain hypothesis, recent-commit correlation, and relevant log signal to every firing alert.
-- Designed and built the **ACH reversal remediation system** end-to-end: deficit calc, repossession sells, surplus detection, async custodian reconciliation. Iterated across three major phases over 2.5 years.
-- Built the **event-sourced withdrawal processing system** end-to-end in a 4-month sprint: validation, Sift scoring, manual review queue, batched disbursement, selfie re-verification, SIM-swap detection. Subsequently redesigned the decision path as *decisions-as-data*: decomposed into signals/validations/policy, a pure policy engine over composable adder rules and an override lattice, a fast-pass predicate framework testing human and AI suggestions, and a shadow-comparison harness for zero-risk cutover.
-- Established a repeatable **API query-performance program:** per-endpoint p99 attribution via custom Datadog spans, covering indexes, per-table autovacuum tuning, pool sizing, session-level timeouts, a FULL OUTER JOIN pre-scope that cut the admin billing query ~25–30×, SWR + tiered-staleness BTC price cache, and removal of full-keyspace Redis `SCAN`/`KEYS` from auth and settings hot paths. Cut p95 on the two highest-traffic account endpoints by ~45% and `GET /me/balance` p95 by ~77% (5.5s→1.3s), moving core-api Apdex from 0.88 to ~0.97.
-- Built **GDPR/PII redaction** correctness and remediation: atomic single-`UPDATE` redaction, drift detection with throttled chunked SIGTERM-graceful backfill, legacy-tombstone handling, and hard-deletion of mobile device keys at account close.
-- **Fraud & risk:** owned the Sift integration end-to-end: risk-based ACH unlock timing, dynamic instant-buy limits, blocked-entity management, real-time withdrawal decisions via webhooks. Refactored user→Sift coupling to an event bus. Co-authored the design to migrate risk decisions and review queues from Sift to Sardine.
-- **KYC & identity:** primary maintainer of the Persona webhook system; led decomposition of a monolithic 1000+ line webhook handler into single-responsibility TypeScript modules. Built the full Prove phone-verification integration.
-- **Custodian decoupling:** built the `CustodianClient` TS interface and shared test mock; added an ESLint import-boundary rule; deleted ~34,000 lines of dead code from previous custodians. Migrated 50+ JS modules to TypeScript and established the team's conversion patterns.
-- Ongoing **god-file decomposition:** split 12+ massive files (1000–1700 lines each) into focused single-responsibility modules using a consistent validate/prepare/execute pattern.
-- **"Stop the line" reliability:** machine-readable `errorCode` adoption across the API, deposit/withdrawal SLOs + Datadog metrics, CI guard against destructive migrations, feature-flag audit logging.
-- **Security gates:** JA4 TLS fingerprint tarpitting driven by Datadog alerts, abuse-score onboarding gates, SIM-swap checks on high-value withdrawals, login observability hardening.
-- **Vigil (second Swan product):** security ownership: multi-tenant `householdId` WHERE-clause assertions, DKIM/SPF on inbound-email webhooks, session revocation on LOCKDOWN, serialized audit-log appends, removal of a portal grant-bypass path.
-- **Agentic engineering workflow:** find and integrate peer-reviewed literature into RFC drafts with agentic assistance; run agent-driven DB-performance validation against staging and prod traffic; built the Cygnet AI invariant-error-analysis strategy. Authored the Agentic Bug Pipeline and Agentic Knowledge Lifecycle RFCs. Built internal engineering skills: `extract-to-package`, `simple-made-easy`, `security-abuse-review`, `self-review`, `trace-pg-query-to-code`.
-- Force-multiplier work: 6+ custom ESLint rules; `@swan-bitcoin/utils` and `@swan-bitcoin/constants` packages; Bug Brigade scoring rubric; RFC-to-tickets workflow.
+- **Invariant-checking framework.** Reversal bugs were reaching production and being found by hand, some by the ops team. Identified the need for invariant checks against production data, wrote the RFC, presented it to engineering and product leadership, and built the framework alone: 50+ checks across every money-movement domain, run on a schedule with alerting managed in Terraform. The first production run found real violations from bugs that predated the checks, and the framework kept catching new ones as features interacted. Each alert arrives with automated triage: likely domain, correlated recent commits, and relevant logs.
+- **Withdrawal system.** Turned a loosely defined brief from the CTO into a spec, then shipped the event-sourced withdrawal system with one other engineer in four months: validation, fraud scoring, manual review queue, batched disbursement, SIM-swap and selfie checks. Most manual reviews ended in approval, so later rebuilt the decision path as a pure, tested policy engine with a shadow-comparison cutover, and designed an AI-assisted triage framework, grounded in human-automation research, that shrinks the queue without letting AI make the decision.
+- **Risk review system (in progress at contract end).** Conceived, designed and led a cross-functional project that grew out of the AI-triage work, part of the move from Sift to Sardine; the design was peer-reviewed by the team before the build started. The system keeps an append-only record of every fraud investigation, modeled on medical charting in hospitals: each alert and escalation becomes a link in an ordered chain carrying the user's risk history, risk signals, and the analyst's notes and decision. Goals: analysts see everything they need in one place and can hand a case off mid-investigation, compliance can see why each decision was made, and the chains become data for new automated rules. About half built when the contract ended.
+- **KYC document storage.** Proposed, designed and built KYC document storage in S3 with automated delivery to custodians. Primary maintainer of the Persona identity-verification webhooks; built the Prove phone-verification integration.
+- **API performance program.** Built per-endpoint p99 attribution, then fixed what it found: covering indexes, per-table autovacuum tuning, pool sizing, caching, and removal of Redis keyspace scans from hot paths. Cut p95 latency by ~45% on the two highest-traffic account endpoints and by ~77% on the account balance endpoint.
+- **ACH reversal remediation.** Designed and built the system that recovers funds when ACH payments reverse after BTC was already bought, and hardened it across three phases over 2.5 years.
+- **Fraud, risk & security.** Owned the Sift integration: risk-based ACH unlock timing, dynamic instant-buy limits, real-time withdrawal decisions. Added JA4 TLS fingerprint tarpitting, abuse-score onboarding gates, atomic GDPR redaction with drift detection, and security reviews for Vigil, a second Swan product.
+- **Internal tools.** Built internal admin and ops tooling in Retool, plus the backend APIs behind it, used by the operations and compliance teams.
+- **Codebase health & reliability.** Put every custodian behind a typed `CustodianClient` interface with a lint rule that enforces the boundary, which made it possible to delete ~34,000 lines of dead code from former custodians. Migrated 50+ modules to TypeScript and set the conversion patterns the team adopted. Broke up the largest files into focused modules, and added lint rules, a CI guard against destructive migrations, and deposit/withdrawal SLOs so fixed classes of problems stay fixed.
+- **Team.** Presented engineering talks on invariant testing and AI-assisted triage. Interviewed engineering candidates. Ran a conference-talk discussion club for all four years with a steady core group. Wrote the Bug Brigade scoring rubric and the RFC-to-tickets workflow.
 
 ---
 
-**Elastic — Senior Software Engineer** *2021 – 2022*
+**Elastic: Senior Software Engineer** *2021 – 2022*
 
-Built Kubernetes mutating webhooks for the APM operator; worked on core observability products (APM server and agents).
-
----
-
-**SoundCloud — Anti-Abuse Team Lead** *2019 – 2020*
-
-Built async services that identify and block bots; introduced shadow-mode testing so detection rules could be validated against live traffic before enforcement.
+Built Kubernetes mutating webhooks for the APM operator; worked on core observability products (APM server and agents). Interviewed many engineering candidates.
 
 ---
 
-**SoundCloud — Senior Production Engineer** *2018 – 2019*
+**SoundCloud: Anti-Abuse Team Lead** *2019 – 2020*
+
+Led a three-person team. Mentored three engineers: a junior engineer and a data scientist moving into data engineering on the team, and a junior engineer on another team. Interviewed engineering candidates. Built async services that identify and block bots; introduced shadow-mode testing so detection rules could be validated against live traffic before enforcement.
+
+---
+
+**SoundCloud: Senior Production Engineer** *2018 – 2019*
 
 Led infrastructure modernization. Established SoundCloud's first production Kubernetes clusters and introduced autoscaling.
 
 ---
 
-**DigitalOcean — Senior Software Engineer** *2017 – 2018*
+**DigitalOcean: Senior Software Engineer** *2017 – 2018*
 
 Contributed to VM monitoring and alerting products.
 
 ---
 
-**SoundCloud — Production Engineer** *2014 – 2017*
+**SoundCloud: Production Engineer** *2014 – 2017*
 
 Production operations and infrastructure engineering across the platform.
 
@@ -65,7 +61,7 @@ Production operations and infrastructure engineering across the platform.
 
 ---
 
-**Open source:** Alertmanager maintainer (Prometheus ecosystem) 2017–2020 · PromCon 2018 speaker
+**Open source:** Alertmanager maintainer (Prometheus ecosystem) 2017–2020; rewrote the Alertmanager web UI in Elm · Wrote PromDash (Angular), Prometheus's first dashboarding frontend · PromCon 2018 speaker
 
 **Education:** St. Olaf College: B.A., Chemistry and Classics (2010)
 
