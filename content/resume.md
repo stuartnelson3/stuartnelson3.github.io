@@ -4,7 +4,7 @@ layout: "simple-static"
 date: 2026-09-26T12:00:00+02:00
 ---
 
-Software engineer who owns correctness for systems that move money. Four years as primary owner of money movement at a Bitcoin brokerage. Before that, Prometheus Alertmanager maintainer and anti-abuse team lead at SoundCloud. Turns loosely defined problems into RFCs, wins buy-in, and ships them. Performance is a feature.
+Software engineer who owns correctness for systems that move money. Four years as primary owner of money movement at a Bitcoin brokerage. Before that, built SoundCloud's first production Kubernetes cluster in AWS, led its anti-abuse team, and maintained Prometheus Alertmanager. Turns loosely defined problems into RFCs, wins buy-in, and ships them. Performance is a feature.
 
 **Backend:** TypeScript/Node.js, Go, Ruby, Rust · **Data:** PostgreSQL (query tuning, indexing, autovacuum), Redis, Kafka · **Frontend:** React (production), Retool, Elm, Angular · **Infra & observability:** Kubernetes, Terraform, Datadog, Prometheus, Alertmanager
 
@@ -41,7 +41,7 @@ Led a three-person team. Mentored three engineers: a junior engineer and a data 
 
 **SoundCloud: Senior Production Engineer** *2018 – 2019*
 
-Led infrastructure modernization. Established SoundCloud's first production Kubernetes clusters and introduced autoscaling.
+Led infrastructure modernization. Built SoundCloud's first production Kubernetes cluster in AWS, alongside the existing bare-metal infrastructure, and introduced autoscaling.
 
 ---
 
