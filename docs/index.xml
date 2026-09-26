@@ -10,22 +10,22 @@
 		
 		
 		
-			<lastBuildDate>Sun, 22 Jun 2025 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Sat, 26 Sep 2026 12:00:00 +0200</lastBuildDate>
 		
 			<atom:link href="https://stuartnelson.xyz/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title></title>
+				<link>https://stuartnelson.xyz/resume/</link>
+				<pubDate>Sat, 26 Sep 2026 12:00:00 +0200</pubDate>
+				<guid>https://stuartnelson.xyz/resume/</guid>
+				<description>&lt;p&gt;Software engineer who owns correctness for systems that move money. Four years as primary owner of money movement at a Bitcoin brokerage. Before that, built SoundCloud&amp;rsquo;s first production Kubernetes cluster in AWS, led its anti-abuse team, and maintained Prometheus Alertmanager. Turns loosely defined problems into RFCs, wins buy-in, and ships them. Performance is a feature.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Backend:&lt;/strong&gt; TypeScript/Node.js, Go, Ruby, Rust · &lt;strong&gt;Data:&lt;/strong&gt; PostgreSQL (query tuning, indexing, autovacuum), Redis, Kafka · &lt;strong&gt;Frontend:&lt;/strong&gt; React (production), Retool, Elm, Angular · &lt;strong&gt;Infra &amp;amp; observability:&lt;/strong&gt; Kubernetes, Terraform, Datadog, Prometheus, Alertmanager&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title></title>
 				<link>https://stuartnelson.xyz/about/</link>
 				<pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
 				<guid>https://stuartnelson.xyz/about/</guid>
 				<description>&lt;p&gt;This is my about me page.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I currently work as a software developer.&lt;/li&gt;&#xA;&lt;li&gt;I&amp;rsquo;m based in central europe.&lt;/li&gt;&#xA;&lt;li&gt;My focus is on backend development.&lt;/li&gt;&#xA;&lt;li&gt;I&amp;rsquo;ve lately been specializing in anti-fraud / anti-abuse programming.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-			</item>
-			<item>
-				<title></title>
-				<link>https://stuartnelson.xyz/resume/</link>
-				<pubDate>Thu, 19 Jun 2025 12:36:28 +0200</pubDate>
-				<guid>https://stuartnelson.xyz/resume/</guid>
-				<description>&lt;p&gt;Senior software engineer. Build reliable, well-monitored, auditable systems that move real money. Work RFC-first on multi-quarter initiatives; ship force-multiplier work (shared packages, lint rules, internal skills, CI guards, dashboards) that compounds the team. Treat tech debt and dead code need to be addressed, not ignored. Performance is a feature.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Skills:&lt;/strong&gt; TypeScript, Go, Ruby, Rust · PostgreSQL (Sequelize, tuning, autovacuum, indexes), Redis, Kafka · BullMQ, event-sourced workflows · Datadog (APM, dashboards, monitors-as-code), Prometheus, Alertmanager · AI-assisted engineering (agentic triage, invariant analysis, refactoring) · Kubernetes, Terraform, Chef · Linux (Debian)&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Easy first day</title>
