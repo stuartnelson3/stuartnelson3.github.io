@@ -10,13 +10,13 @@
 		
 		
 		
-			<lastBuildDate>Sat, 26 Sep 2026 12:00:00 +0200</lastBuildDate>
+			<lastBuildDate>Tue, 06 Oct 2026 09:00:00 +0200</lastBuildDate>
 		
 			<atom:link href="https://stuartnelson.xyz/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title></title>
 				<link>https://stuartnelson.xyz/resume/</link>
-				<pubDate>Sat, 26 Sep 2026 12:00:00 +0200</pubDate>
+				<pubDate>Tue, 06 Oct 2026 09:00:00 +0200</pubDate>
 				<guid>https://stuartnelson.xyz/resume/</guid>
 				<description>&lt;p&gt;Software engineer who owns correctness for systems that move money: four years at a Bitcoin brokerage, and before that, built SoundCloud&amp;rsquo;s first production Kubernetes cluster in AWS, led its anti-abuse team, and maintained Prometheus Alertmanager. Turns loosely defined problems into RFCs, wins buy-in, and ships them.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Backend:&lt;/strong&gt; TypeScript/Node.js, Go, Ruby, Rust · &lt;strong&gt;Data:&lt;/strong&gt; PostgreSQL (query tuning, indexing, autovacuum), Redis, Kafka · &lt;strong&gt;Frontend:&lt;/strong&gt; React (production), Retool, Elm, Angular · &lt;strong&gt;Infra &amp;amp; observability:&lt;/strong&gt; Kubernetes, Terraform, Datadog, Prometheus, Alertmanager&lt;/p&gt;</description>
 			</item>
