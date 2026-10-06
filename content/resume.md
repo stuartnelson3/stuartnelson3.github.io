@@ -55,7 +55,7 @@ Contributed to VM monitoring and alerting products.
 
 ---
 
-**Open source:** Alertmanager maintainer (Prometheus ecosystem) 2017–2020; rewrote the Alertmanager web UI in Elm · Conference talk: PromCon 2018: Life of an Alert
+**Open source:** [Alertmanager](https://github.com/prometheus/alertmanager) maintainer (Prometheus ecosystem) 2017–2020; rewrote the Alertmanager web UI in Elm · Conference talk: [PromCon 2018: Life of an Alert](https://youtu.be/PUdjca23Qa4)
 
 **Education:** St. Olaf College: B.A., Chemistry; B.A., Classics (2006 – 2010)
 
