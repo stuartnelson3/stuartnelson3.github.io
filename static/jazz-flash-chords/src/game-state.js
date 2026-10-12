@@ -89,9 +89,25 @@ export class GameState {
     for (const fn of this.listeners) fn(this);
   }
 
+  // A root or quality change mid-run has to reach the elimination pool
+  // right away. Otherwise unchecked chords keep coming up, newly checked
+  // ones wait for the next refill, and the "left" count is wrong. Progress
+  // carries over: a chord still allowed stays eliminated if it already
+  // was, and a newly allowed chord joins as not yet played.
   /** @param {Settings} settings */
   updateSettings(settings) {
+    const previous = this.settings;
     this.settings = settings;
+    if (!this.remainingPool) return;
+    const key = (/** @type {PoolEntry} */ e) => `${e.root}:${e.quality}`;
+    const remaining = new Set(this.remainingPool.map(key));
+    const previouslyAllowed = new Set(buildPool(previous.rootPool, previous.qualityPool).map(key));
+    this.remainingPool = buildPool(settings.rootPool, settings.qualityPool).filter(
+      (entry) => remaining.has(key(entry)) || !previouslyAllowed.has(key(entry))
+    );
+    // The result screen does not re-render on its own without
+    // auto-advance, so show the new count now.
+    this._emit();
   }
 
   // Starts the first round of a fresh run. It first clears any
